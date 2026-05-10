@@ -1,0 +1,37 @@
+# Core scientific stack
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+matplotlib>=3.7
+seaborn>=0.12
+plotly>=5.15
+networkx>=3.1
+tqdm>=4.65
+pyyaml>=6.0
+
+# XML / HTML parsing for TEI corpora
+lxml>=4.9
+beautifulsoup4>=4.12
+
+# NLP / tokenization
+transformers>=4.35
+tokenizers>=0.15
+sentencepiece>=0.1.99
+datasets>=2.14
+sacrebleu>=2.3
+cltk>=1.1
+
+# Deep learning (Phases 2-3)
+torch>=2.0
+pytorch-lightning>=2.0
+
+# Word alignment (Phase 0 / Phase 2)
+# eflomal and awesome-align are installed separately - see docs/setup.md
+
+# Notebook environment
+jupyter>=1.0
+ipykernel>=6.25
+
+# Testing
+pytest>=7.4
+pytest-cov>=4.1

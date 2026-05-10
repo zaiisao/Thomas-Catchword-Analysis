@@ -1,0 +1,12 @@
+logion_a,logion_b,verse_a,verse_b,syriac_a,syriac_b,gloss_a,gloss_b,coptic_a,coptic_b,link_type,perrin_p_value,source,notes
+10,11,10,11.3,nūrā,nuhrā,fire,light,,,phonological,0.068,"Perrin 2006 JETS p.74","Homophone pair. Probability quoted (6.8%) is for ALL THREE fire/light pairings (10/11, 16/17, 82/83) being incidental."
+16,17,16.2,17,nūrā,nuhrā,fire,light,,,phonological,0.068,"Perrin 2006 JETS p.74","Indirect: 17 has 'eyes' as metaphor for 'light' (Matt 6:22-23). Same p-value note as 10/11."
+82,83,82.1,"83.1 (bis)",nūrā,nuhrā,fire,light,,,phonological,0.068,"Perrin 2006 JETS p.74","'light' appears twice in 83.1. Same p-value note as 10/11."
+29,30,29.3,"30.1, 30.2",ʿetar,ʾatar,wealth,place,ʿmm ʿntr ʿmmao,ma,phonological,0.038,"Perrin 2006 JETS p.74","'wealth' (ʿetar) occurs only twice in collection; both times next to 'place' (ʾatar). p=3.8% for that co-occurrence."
+85,86,85.1,86.2,ʿetar,ʾatar,wealth,place,ʿmm ʿntr ʿmmao,ma,phonological,0.038,"Perrin 2006 JETS p.74","Second occurrence of the wealth/place pairing."
+14,15,14.5,15,naš,nesse,someone,women,,,phonological,0.000085,"Perrin 2006 JETS p.74","'women' (nesse) is in only 3 logia (15, 46.1, 114.1); each falls next to a logion containing 'someone' (naš). p=0.0085% across all 3 pairs."
+46,47,46.1,47.1,nesse,naš,women,someone,,,phonological,0.000085,"Perrin 2006 JETS p.74","Second nesse/naš pair."
+113,114,113.4,114.1,naš,nesse,someone,women,,,phonological,0.000085,"Perrin 2006 JETS p.74","Third nesse/naš pair."
+13,14,13.7,14.4,panni,penayim,returned,districts,,,etymological,,"Perrin 2006 JETS pp.76-77","Shared root play. Perrin argues 'and walk about the districts' was added by editor specifically to repeat panni's syllables in the next logion."
+16,17,16.1,17,idaʿ (verb),idaʿ (emphatic noun),know,hand,,,phonological,,"Perrin 2006 JETS p.78","'hand' in emphatic state is identical to verb 'to know'. Editor added 'what no hand has touched' to forge bridge between 16 (which has 'know') and 18 (which also has 'know')."
+17,18,17,18.2-3,idaʿ (emphatic noun),idaʿ (verb),hand,know,,,phonological,,"Perrin 2006 JETS p.78","Continuation of the 16/17/18 know/hand chain. 18.3: 'will know the end'."

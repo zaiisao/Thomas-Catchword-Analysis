@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual envs
+venv/
+env/
+.venv/
+.env/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Large raw corpora — track via lfs or download script, not in main repo
+data/raw/peshitta/**/*.xml
+data/raw/peshitta_repo/
+data/raw/coptic_nt/**/*.xml
+data/raw/coptic_nt/**/*.tt
+data/raw/coptic_repo/
+data/raw/greek_nt/**/*.xml
+data/raw/odes_of_solomon/**/*.xml
+data/raw/ephrem/**/*.xml
+data/external/sedra/
+
+# Run logs
+logs/
+
+# But DO track Perrin catchword data (small, hand-entered ground truth)
+!data/raw/perrin_catchwords/**
+
+# Processed artifacts (regeneratable from raw)
+data/processed/
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+*.bin
+checkpoints/
+runs/
+wandb/
+mlruns/
+lightning_logs/
+
+# Local env
+.env
+.env.local
+
+# Copyrighted Brill source material from Perrin (2002) — keep local only
+perrin_table_images.zip
+data/raw/perrin_table_images/
+data/raw/perrin_2002_table_pages/
+perrin_*_ocr.txt
+DIGITIZE_PERRIN_TABLE_TASK.md

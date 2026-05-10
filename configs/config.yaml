@@ -1,0 +1,88 @@
+# Gospel of Thomas Catchword Analysis - Master Config
+# Paths are relative to repo root unless absolute.
+
+paths:
+  data_raw: data/raw
+  data_processed: data/processed
+  data_external: data/external
+
+  peshitta_xml: data/raw/peshitta
+  coptic_nt_xml: data/raw/coptic_nt
+  greek_nt: data/raw/greek_nt
+  gospel_of_thomas: data/raw/gospel_of_thomas
+  odes_of_solomon: data/raw/odes_of_solomon
+  ephrem: data/raw/ephrem
+  perrin_catchwords: data/raw/perrin_catchwords
+
+  parallel_corpus: data/processed/parallel_corpus
+  lexical_mapping: data/processed/lexical_mapping
+  phonological_matrix: data/processed/phonological_matrix
+  got_logia: data/processed/got_logia
+
+  sedra: data/external/sedra
+
+# Catchword-detection thresholds (Phase 1).
+# Applied UNIFORMLY across Coptic, Greek, Syriac to address Williams' 2009 critique.
+catchword_detection:
+  phonological_threshold: 0.6      # min similarity score to count as catchword
+  phonological_near_match_score: 0.85  # 2-of-3 root consonants match + similar group
+  phonological_partial_score: 0.6      # 2-of-3 root consonants match (no similar group)
+  etymological_score: 0.8              # same root, different lemma
+  semantic_exact_score: 1.0            # same lemma or known synonym
+
+# Syriac confusion groups (consonants commonly conflated by ear or in script):
+# Sources: standard Syriac philology + Perrin 2006 examples (n-r/n-hr, etar/atar, etc.)
+syriac_confusion_groups:
+  - ["d", "r"]      # ܕ / ܪ - dalath / resh (visually + phonologically close)
+  - ["b", "p"]      # ܒ / ܦ - bet / pe
+  - ["t", "T"]      # ܬ / ܛ - taw / teth
+  - ["s", "S", "sh"]  # ܣ / ܫ
+  - ["E", "A"]      # ܥ / ܐ - ʿe / ʾalaph
+  - ["H", "h"]      # ܚ / ܗ - heth / he
+
+# Phase 1 - Monte Carlo
+monte_carlo:
+  n_simulations: 10000
+  random_seed: 42
+  parallel_workers: 8
+
+# Phase 2 - Neural translation
+neural_translation:
+  model_type: small_transformer   # alternatives: nllb, mt5, lora_llm
+  d_model: 256
+  nhead: 8
+  num_encoder_layers: 6
+  num_decoder_layers: 6
+  dim_feedforward: 1024
+  dropout: 0.1
+  batch_size: 32
+  learning_rate: 1.0e-4
+  num_epochs: 100
+  beam_size: 10
+  exclude_thomas_parallels: true  # CRITICAL - blind on Thomas at test time
+
+# Phase 3 - Contrastive
+contrastive:
+  d_model: 256
+  nhead: 8
+  num_layers: 6
+  projection_dim: 128
+  temperature_init: 0.07
+  batch_size: 64
+  learning_rate: 1.0e-4
+  num_epochs: 50
+  negative_pair_min_distance: 4   # don't sample negatives within this many strophes
+
+# Perrin's reported numbers (target values, from JETS 2006 + Thomas and Tatian 2002).
+# Phase 1 detector should approximately reproduce these on each respective text.
+perrin_targets:
+  total_catchwords:
+    coptic: 269
+    greek: 263
+    syriac: 502
+  connectivity:                   # share of logia (incl. Prologue) connected to neighbors
+    coptic:   {both: 0.49, one: 0.40, isolated: 0.11}
+    greek:    {both: 0.50, one: 0.38, isolated: 0.12}
+    syriac:   {both: 0.89, one: 0.11, isolated: 0.00}
+  source_paper: "Perrin 2006, Thomas: The Fifth Gospel?, JETS 49/1, 67-80"
+  source_book:  "Perrin 2002, Thomas and Tatian, Brill/SBL, pp. 57-155 (full table)"

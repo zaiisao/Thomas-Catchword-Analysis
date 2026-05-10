@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 scripts/parse_thomas_tei.py)",
+      "Bash(curl -s https://api.github.com/repos/ETCBC/syrnt)",
+      "Bash(curl -s https://api.github.com/repos/ETCBC/syrnt/contents/)",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -s https://api.github.com/repos/fhardison/peshitta-tools)",
+      "Bash(curl -s https://api.github.com/repos/fhardison/peshitta-tools/contents/)",
+      "Bash(curl -s https://api.github.com/repos/ETCBC/syrnt/contents/tf)",
+      "Bash(curl -s https://api.github.com/repos/ETCBC/syrnt/contents/plain)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(awk '-F\\\\t' '{ *)",
+      "Bash(python3 scripts/parse_peshitta_tei.py)",
+      "Bash(python3 scripts/annotate_peshitta_lemmas.py)",
+      "Bash(python3 -c \"import torch; print\\('torch:', torch.__version__\\); print\\('cuda:', torch.cuda.is_available\\(\\)\\)\")",
+      "Bash(python3 -c \"import transformers; print\\('transformers:', transformers.__version__\\)\")",
+      "Bash(eflomal --help)",
+      "Bash(python3 -c \"import awesome_align\")",
+      "Bash(nvidia-smi --query-gpu=name,memory.total --format=csv)",
+      "Bash(python3 scripts/build_lexical_map.py)"
+    ]
+  }
+}

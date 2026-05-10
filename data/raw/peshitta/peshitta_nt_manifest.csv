@@ -1,0 +1,28 @@
+corpus_file,book_code,book_name,book_order,testament,is_gospel,syriaca_url
+100.xml,Matt,Matthew,1,NT,1,https://syriaccorpus.org/100
+119.xml,Mark,Mark,2,NT,1,https://syriaccorpus.org/119
+120.xml,Luke,Luke,3,NT,1,https://syriaccorpus.org/120
+121.xml,John,John,4,NT,1,https://syriaccorpus.org/121
+122.xml,Acts,Acts,5,NT,0,https://syriaccorpus.org/122
+123.xml,Rom,Romans,6,NT,0,https://syriaccorpus.org/123
+124.xml,1Cor,1 Corinthians,7,NT,0,https://syriaccorpus.org/124
+126.xml,2Cor,2 Corinthians,8,NT,0,https://syriaccorpus.org/126
+127.xml,Gal,Galatians,9,NT,0,https://syriaccorpus.org/127
+128.xml,Eph,Ephesians,10,NT,0,https://syriaccorpus.org/128
+129.xml,Phil,Philippians,11,NT,0,https://syriaccorpus.org/129
+130.xml,Col,Colossians,12,NT,0,https://syriaccorpus.org/130
+131.xml,1Thess,1 Thessalonians,13,NT,0,https://syriaccorpus.org/131
+132.xml,2Thess,2 Thessalonians,14,NT,0,https://syriaccorpus.org/132
+133.xml,1Tim,1 Timothy,15,NT,0,https://syriaccorpus.org/133
+134.xml,2Tim,2 Timothy,16,NT,0,https://syriaccorpus.org/134
+135.xml,Titus,Titus,17,NT,0,https://syriaccorpus.org/135
+136.xml,Phlm,Philemon,18,NT,0,https://syriaccorpus.org/136
+137.xml,Heb,Hebrews,19,NT,0,https://syriaccorpus.org/137
+138.xml,Jas,James,20,NT,0,https://syriaccorpus.org/138
+139.xml,1Pet,1 Peter,21,NT,0,https://syriaccorpus.org/139
+140.xml,2Pet,2 Peter,22,NT,0,https://syriaccorpus.org/140
+141.xml,1John,1 John,23,NT,0,https://syriaccorpus.org/141
+142.xml,2John,2 John,24,NT,0,https://syriaccorpus.org/142
+143.xml,3John,3 John,25,NT,0,https://syriaccorpus.org/143
+144.xml,Jude,Jude,26,NT,0,https://syriaccorpus.org/144
+145.xml,Rev,Revelation,27,NT,0,https://syriaccorpus.org/145
