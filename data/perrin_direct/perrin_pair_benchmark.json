@@ -1,0 +1,21 @@
+{
+  "phon_threshold": 0.6,
+  "n_perrin_pairs": 990,
+  "n_random_pairs": 10000,
+  "perrin_class_counts": {
+    "semantic_or_etym": 75,
+    "below_threshold": 834,
+    "phonological": 81
+  },
+  "random_class_counts": {
+    "below_threshold": 9691,
+    "semantic_or_etym": 74,
+    "phonological": 235
+  },
+  "perrin_median_score": 0.25,
+  "random_median_score": 0.25,
+  "mannwhitney_perrin_gt_random_p": 8.516095267335075e-10,
+  "perrin_median_score_nonidentical": 0.25,
+  "random_median_score_nonidentical": 0.25,
+  "mannwhitney_nonidentical_p": 0.004884316452607132
+}

@@ -1,0 +1,33 @@
+{
+  "corpus": "thomas",
+  "lang": "syriac",
+  "variant": 0,
+  "is_source": true,
+  "tokenization": "surface_forms_no_sedra",
+  "detector": "default_syriac_profile",
+  "n_units_used": 115,
+  "n_blocked": 2,
+  "results": {
+    "all": {
+      "true_total": 1521,
+      "null_mean": 1297.3409,
+      "null_std": 60.25370434413141,
+      "z_score": 3.7119560105815146,
+      "p_value": 0.0002
+    },
+    "phon": {
+      "true_total": 1354,
+      "null_mean": 1166.573,
+      "null_std": 55.36443146100211,
+      "z_score": 3.3853323343891053,
+      "p_value": 0.0005
+    },
+    "sem": {
+      "true_total": 167,
+      "null_mean": 130.6499,
+      "null_std": 10.564257190640523,
+      "z_score": 3.4408571605209137,
+      "p_value": 0.0007
+    }
+  }
+}

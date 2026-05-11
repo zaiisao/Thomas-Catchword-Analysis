@@ -1,0 +1,37 @@
+{
+  "corpus": "thomas",
+  "lang": "coptic",
+  "n_logia": 115,
+  "n_blocked": 4,
+  "phon_threshold": 0.6,
+  "filter_pct": 80.0,
+  "diagnostic": {
+    "n_boundaries": 114,
+    "phonological_total": 1693,
+    "etymological_total": 0,
+    "semantic_total": 772
+  },
+  "results": {
+    "all": {
+      "true_total": 2465,
+      "null_mean": 2251.8191,
+      "null_std": 59.29004448632165,
+      "z_score": 3.595559791647334,
+      "p_value": 0.0002
+    },
+    "phon": {
+      "true_total": 1693,
+      "null_mean": 1580.491,
+      "null_std": 47.54239706830106,
+      "z_score": 2.3664982612964525,
+      "p_value": 0.0104
+    },
+    "sem": {
+      "true_total": 772,
+      "null_mean": 672.0392,
+      "null_std": 19.364407126478206,
+      "z_score": 5.162089360500849,
+      "p_value": 0.0
+    }
+  }
+}

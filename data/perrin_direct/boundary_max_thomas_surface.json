@@ -1,0 +1,29 @@
+{
+  "n_common_logia": 115,
+  "tokenization": "syriac=surface_forms, others=surface_forms",
+  "mean_max_phon_at_true_boundaries": {
+    "syriac": 0.8001670843776107,
+    "hebrew": 0.8290935672514621,
+    "greek": 0.8069104263183211,
+    "arabic": 0.7738512949039266
+  },
+  "winners_per_lang": {
+    "syriac": 26,
+    "hebrew": 50,
+    "greek": 30,
+    "arabic": 8
+  },
+  "winners_pct_per_lang": {
+    "syriac": 0.22807017543859648,
+    "hebrew": 0.43859649122807015,
+    "greek": 0.2631578947368421,
+    "arabic": 0.07017543859649122
+  },
+  "syriac_wins_test": {
+    "true_syriac_wins": 26,
+    "null_mean": 28.8116,
+    "null_std": 4.103889062828088,
+    "z_score": -0.6851062387301614,
+    "p_value": 0.7875
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "n_common_logia": 115,
+  "phon_threshold": 0.6,
+  "mean_max_phon_at_true_boundaries": {
+    "syriac": 0.7893796992481203,
+    "hebrew": 0.8290935672514621,
+    "greek": 0.8069104263183211,
+    "arabic": 0.7738512949039266
+  },
+  "median_max_phon_at_true_boundaries": {
+    "syriac": 0.8333333333333334,
+    "hebrew": 0.875,
+    "greek": 0.8333333333333334,
+    "arabic": 0.8
+  },
+  "winners_per_lang": {
+    "syriac": 23,
+    "hebrew": 52,
+    "greek": 28,
+    "arabic": 11
+  },
+  "winners_pct_per_lang": {
+    "syriac": 0.20175438596491227,
+    "hebrew": 0.45614035087719296,
+    "greek": 0.24561403508771928,
+    "arabic": 0.09649122807017543
+  },
+  "syriac_wins_test": {
+    "true_syriac_wins": 23,
+    "null_mean": 24.1528,
+    "null_std": 3.8538360318000033,
+    "z_score": -0.2991305261790194,
+    "p_value": 0.6617,
+    "n_perms": 10000
+  }
+}

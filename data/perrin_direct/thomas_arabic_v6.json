@@ -1,0 +1,44 @@
+{
+  "corpus": "thomas",
+  "lang": "arabic",
+  "variant": 6,
+  "is_source": false,
+  "phon_threshold": 0.6,
+  "filter_pct": 80.0,
+  "tag": "",
+  "n_units_used": 115,
+  "n_blocked": 1,
+  "diagnostic": {
+    "n_boundaries": 114,
+    "phonological_total": 1058,
+    "etymological_total": 0,
+    "semantic_total": 231
+  },
+  "results": {
+    "all": {
+      "true_total": 1289,
+      "null_mean": 1148.226,
+      "null_std": 45.04139123073354,
+      "z_score": 3.125436318759714,
+      "p_value": 0.002,
+      "n_perms": 1000
+    },
+    "phon": {
+      "true_total": 1058,
+      "null_mean": 953.612,
+      "null_std": 40.8557640486627,
+      "z_score": 2.555037273949033,
+      "p_value": 0.01,
+      "n_perms": 1000
+    },
+    "sem": {
+      "true_total": 231,
+      "null_mean": 194.614,
+      "null_std": 11.129555426880266,
+      "z_score": 3.2693129783171746,
+      "p_value": 0.002,
+      "n_perms": 1000
+    }
+  },
+  "elapsed_s": 169.11179637908936
+}
