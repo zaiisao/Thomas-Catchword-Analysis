@@ -1,0 +1,23 @@
+{
+  "variant": 1,
+  "n_loaded": 115,
+  "n_blocked": 2,
+  "true_recurring_2plus": 109,
+  "true_recurring_3plus": 51,
+  "true_max_freq": 23,
+  "null_mean_2plus": 87.187,
+  "null_std_2plus": 7.832881398310587,
+  "null_mean_3plus": 41.327,
+  "null_std_3plus": 4.749323214943367,
+  "p_2plus": 0.004,
+  "p_3plus": 0.023,
+  "z_2plus": 2.784798963597825,
+  "z_3plus": 2.0367112454180165,
+  "n_perms": 1000,
+  "config": {
+    "tokenization": "surface_forms_no_sedra",
+    "phon_threshold": 0.65,
+    "filter_pct": 80.0,
+    "seed": 42
+  }
+}

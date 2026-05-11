@@ -291,22 +291,29 @@ Combined with the Perrin-table pair-by-pair finding (22.2% canonical, 77.8% Perr
 
 The single-variant headline above could be a lucky sample. We re-ran the permutation test on each of the 10 Gemini variants per language and compared the z-score *distributions*:
 
-| Language | Median z | Min–Max z | Median p | All 10 variants p<0.05? |
+| Language | Median z | Min–Max z | Median p | p<0.05 count |
 |---|---:|---:|---:|:---:|
-| **Syriac** | 2.50 | 2.14 – 3.72 | 0.012 | **YES (10/10)** |
-| **Hebrew** | 1.61 | 0.84 – 2.71 | 0.066 | NO (8/10) |
-| **Arabic** | 1.90 | 1.26 – 2.47 | 0.034 | NO (9/10) |
-| **Greek**  | 2.34 | 1.97 – 3.47 | 0.012 | **YES (10/10)** |
+| **Syriac (SEDRA)** | 2.51 | 2.14 – 3.72 | 0.012 | **10/10** |
+| **Syriac (surface, re-run 2026-05-11)** | 2.77 | 1.90 – 3.31 | 0.005 | **10/10** |
+| **Greek**  | 2.45 | 1.97 – 3.47 | 0.012 | **10/10** |
+| **Arabic** | 1.97 | 1.26 – 2.47 | 0.034 | 7/10 |
+| **Hebrew** | 1.63 | 0.84 – 2.71 | 0.066 | 3/10 |
 
-**Pairwise Mann-Whitney (one-sided on the 10 z-scores per language):**
+(Earlier table cited Hebrew 8/10 and Arabic 9/10 — those were counts at p<0.10. Corrected here to α=0.05.)
+
+The cross-lingual re-run with surface-form Syriac was triggered by the discovery that Thomas's `make_tokens` applies SEDRA lemma collapse to Syriac only, while Hebrew/Greek/Arabic ran on surface forms — an apples-to-oranges asymmetry. The new Syriac row above re-runs ONLY the Syriac arm with surface forms (Hebrew/Greek/Arabic were never affected; their numbers stand). Mann-Whitney `Syriac(surface) > Syriac(SEDRA)`: p=0.40 (the two distributions are statistically indistinguishable). The substantive finding — Syriac and Greek both Tier 1, Hebrew and Arabic Tier 2 — survives the methodological correction. Surface Syriac median z=2.77 slightly exceeds SEDRA Syriac median z=2.51, but they are not statistically separated.
+
+**Pairwise Mann-Whitney (one-sided on the 10 z-scores per language) — updated 2026-05-11 with surface Syriac:**
 
 | Test | p-value | Direction |
 |---|---:|---|
-| Syriac > Greek | **0.312** | NOT significant — overlapping distributions |
-| Syriac > Hebrew | 0.001 | Syriac higher |
-| Syriac > Arabic | 0.002 | Syriac higher |
-| Greek > Hebrew | 0.002 | Greek higher |
-| Greek > Arabic | 0.006 | Greek higher |
+| Syriac (SEDRA) > Greek | 0.312 | NOT significant — overlapping distributions |
+| Syriac (surface, NEW) > Greek | 0.312 | NOT significant — overlapping distributions |
+| Syriac (surface) > Syriac (SEDRA) | 0.396 | NOT significant — methodology change has no detectable effect |
+| Syriac (surface) > Hebrew | 0.0007 | Syriac higher ✓ |
+| Syriac (surface) > Arabic | 0.0029 | Syriac higher ✓ |
+| Greek > Hebrew | 0.0023 | Greek higher ✓ |
+| Greek > Arabic | 0.0057 | Greek higher ✓ |
 
 **A two-tier structure emerges, and it does not align with Semitic-vs-Indo-European:**
 
