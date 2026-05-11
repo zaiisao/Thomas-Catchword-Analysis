@@ -1,0 +1,59 @@
+====================================================================================================
+PHONOLOGICAL-ONLY CROSS-LINGUISTIC PERMUTATION TEST
+====================================================================================================
+corpus     lang     src?     N  phon/B   sem/B  z_all    p_all  z_phon   p_phon  z_sem    p_sem
+----------------------------------------------------------------------------------------------------
+proverbs   Hebrew   SRC    595    0.37    0.18   1.76   0.0538   -0.16   0.6092   3.64   0.0003
+proverbs   Greek           590    0.65    0.94   2.97   0.0024    2.03   0.0289   2.40   0.0163
+proverbs   Syriac          585    0.53    0.19   3.27   0.0019    1.44   0.0993   4.04   0.0001
+proverbs   Aramaic         590    0.45    0.15   3.23   0.0019    1.54   0.0860   4.16   0.0002
+proverbs   Arabic          590    0.43    0.20   4.81   0.0000    3.23   0.0023   4.02   0.0004
+thomas     Syriac   SRC    115    5.37    2.87   2.53   0.0070    0.95   0.1941   3.84   0.0002
+thomas     Hebrew          115    5.46    1.93   2.28   0.0173    2.06   0.0284   1.26   0.1360
+thomas     Greek           115    7.89    4.10   2.25   0.0160    1.48   0.0805   2.35   0.0164
+thomas     Arabic          115    4.53    2.05   2.43   0.0111    1.79   0.0511   2.22   0.0268
+q          Greek    SRC     56   20.96    7.84   0.90   0.1962    0.64   0.2731   1.13   0.1633
+q          Hebrew           56   20.71    5.22   1.31   0.0960    0.99   0.1700   1.64   0.0700
+q          Syriac           56   21.47    4.93   2.35   0.0134    1.56   0.0686   4.13   0.0002
+q          Aramaic          56   16.33    2.95   1.60   0.0643    0.90   0.1930   3.10   0.0023
+q          Arabic           55   16.39    4.33   0.56   0.2964    0.24   0.4137   1.33   0.1209
+====================================================================================================
+
+Variant-sweep medians (phon-only) — across 1 (source) or 10 variants:
+--------------------------------------------------------------------------------
+  proverbs   Hebrew   SRC n_var= 1  med_z= -0.16  range=[-0.16, -0.16]  sig=0/1
+  proverbs   Greek        n_var=10  med_z=  1.88  range=[ 1.08,  3.48]  sig=6/10
+  proverbs   Syriac       n_var=10  med_z=  2.67  range=[ 1.04,  3.94]  sig=8/10
+  proverbs   Aramaic      n_var=10  med_z=  0.52  range=[-0.50,  1.83]  sig=1/10
+  proverbs   Arabic       n_var=10  med_z=  1.65  range=[ 0.38,  3.33]  sig=5/10
+  thomas     Syriac   SRC n_var= 1  med_z=  0.95  range=[ 0.95,  0.95]  sig=0/1
+  thomas     Hebrew       n_var=10  med_z=  1.12  range=[ 0.11,  2.36]  sig=2/10
+  thomas     Greek        n_var=10  med_z=  1.37  range=[ 0.92,  2.51]  sig=2/10
+  thomas     Arabic       n_var=10  med_z=  1.50  range=[ 0.75,  1.96]  sig=5/10
+  q          Greek    SRC n_var= 1  med_z=  0.64  range=[ 0.64,  0.64]  sig=0/1
+  q          Hebrew       n_var=10  med_z=  0.80  range=[ 0.07,  1.24]  sig=0/10
+  q          Syriac       n_var=10  med_z=  0.80  range=[ 0.27,  1.56]  sig=0/10
+  q          Aramaic      n_var=10  med_z=  1.03  range=[-0.06,  1.53]  sig=0/10
+  q          Arabic       n_var=10  med_z=  0.24  range=[-0.19,  0.80]  sig=0/10
+================================================================================
+
+SOURCE-LANGUAGE-LEADS TEST (one-sample: rank of source z vs target variant z's)
+--------------------------------------------------------------------------------
+  Corpus = proverbs, source = Hebrew (z_phon = -0.16):
+    vs Greek   : target med_z= 1.88, range=[ 1.08,  3.48], source < target_median, source beaten by 10/10
+    vs Syriac  : target med_z= 2.67, range=[ 1.04,  3.94], source < target_median, source beaten by 10/10
+    vs Aramaic : target med_z= 0.52, range=[-0.50,  1.83], source < target_median, source beaten by 9/10
+    vs Arabic  : target med_z= 1.65, range=[ 0.38,  3.33], source < target_median, source beaten by 10/10
+    POOLED: source rank = 40/41 target variants (empirical p = 0.976)  ✗ source does NOT lead
+  Corpus = thomas, source = Syriac (z_phon = 0.95):
+    vs Hebrew  : target med_z= 1.12, range=[ 0.11,  2.36], source < target_median, source beaten by 6/10
+    vs Greek   : target med_z= 1.37, range=[ 0.92,  2.51], source < target_median, source beaten by 9/10
+    vs Arabic  : target med_z= 1.50, range=[ 0.75,  1.96], source < target_median, source beaten by 9/10
+    POOLED: source rank = 25/31 target variants (empirical p = 0.806)  ✗ source does NOT lead
+  Corpus = q, source = Greek (z_phon = 0.64):
+    vs Hebrew  : target med_z= 0.80, range=[ 0.07,  1.24], source < target_median, source beaten by 6/10
+    vs Syriac  : target med_z= 0.80, range=[ 0.27,  1.56], source < target_median, source beaten by 8/10
+    vs Aramaic : target med_z= 1.03, range=[-0.06,  1.53], source < target_median, source beaten by 8/10
+    vs Arabic  : target med_z= 0.24, range=[-0.19,  0.80], source ≥ target_median, source beaten by 1/10
+    POOLED: source rank = 24/41 target variants (empirical p = 0.585)  ✗ source does NOT lead
+================================================================================

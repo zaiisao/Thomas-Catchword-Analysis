@@ -1,0 +1,43 @@
+{
+  "corpus": "thomas",
+  "lang": "greek",
+  "variant": 7,
+  "is_source": false,
+  "n_units_used": 115,
+  "n_blocked": 1,
+  "diagnostic": {
+    "n_boundaries": 114,
+    "phonological_total": 906,
+    "etymological_total": 0,
+    "semantic_total": 476,
+    "per_boundary_phon_plus_etym": 7.947368421052632,
+    "per_boundary_semantic": 4.175438596491228
+  },
+  "results": {
+    "all": {
+      "true_recurring_2plus": 166,
+      "null_mean": 149.767,
+      "null_std": 7.315921746437697,
+      "z_score": 2.2188591626071252,
+      "p_value": 0.013,
+      "n_perms": 1000
+    },
+    "phon": {
+      "true_recurring_2plus": 117,
+      "null_mean": 110.609,
+      "null_std": 6.16182756980427,
+      "z_score": 1.0371922822570991,
+      "p_value": 0.169,
+      "n_perms": 1000
+    },
+    "sem": {
+      "true_recurring_2plus": 49,
+      "null_mean": 39.158,
+      "null_std": 3.1960969947734688,
+      "z_score": 3.079380887405632,
+      "p_value": 0.004,
+      "n_perms": 1000
+    }
+  },
+  "elapsed_s": 767.6130492687225
+}

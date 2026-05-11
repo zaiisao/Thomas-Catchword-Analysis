@@ -1,0 +1,43 @@
+{
+  "corpus": "proverbs",
+  "lang": "syriac",
+  "variant": 4,
+  "is_source": false,
+  "n_units_used": 592,
+  "n_blocked": 0,
+  "diagnostic": {
+    "n_boundaries": 591,
+    "phonological_total": 331,
+    "etymological_total": 0,
+    "semantic_total": 120,
+    "per_boundary_phon_plus_etym": 0.560067681895093,
+    "per_boundary_semantic": 0.20304568527918782
+  },
+  "results": {
+    "all": {
+      "true_recurring_2plus": 56,
+      "null_mean": 33.375,
+      "null_std": 4.423389537447499,
+      "z_score": 5.114855883358551,
+      "p_value": 0.0,
+      "n_perms": 1000
+    },
+    "phon": {
+      "true_recurring_2plus": 34,
+      "null_mean": 22.911,
+      "null_std": 3.7755898876864267,
+      "z_score": 2.9370244994471633,
+      "p_value": 0.004,
+      "n_perms": 1000
+    },
+    "sem": {
+      "true_recurring_2plus": 22,
+      "null_mean": 10.464,
+      "null_std": 2.1365167914154104,
+      "z_score": 5.3994427033534205,
+      "p_value": 0.0,
+      "n_perms": 1000
+    }
+  },
+  "elapsed_s": 861.6503410339355
+}

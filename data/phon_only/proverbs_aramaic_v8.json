@@ -1,0 +1,43 @@
+{
+  "corpus": "proverbs",
+  "lang": "aramaic",
+  "variant": 8,
+  "is_source": false,
+  "n_units_used": 589,
+  "n_blocked": 0,
+  "diagnostic": {
+    "n_boundaries": 588,
+    "phonological_total": 249,
+    "etymological_total": 0,
+    "semantic_total": 81,
+    "per_boundary_phon_plus_etym": 0.42346938775510207,
+    "per_boundary_semantic": 0.1377551020408163
+  },
+  "results": {
+    "all": {
+      "true_recurring_2plus": 27,
+      "null_mean": 19.615,
+      "null_std": 3.4835003947179333,
+      "z_score": 2.119994018429839,
+      "p_value": 0.029,
+      "n_perms": 1000
+    },
+    "phon": {
+      "true_recurring_2plus": 16,
+      "null_mean": 14.356,
+      "null_std": 3.097945125401675,
+      "z_score": 0.5306743449133372,
+      "p_value": 0.333,
+      "n_perms": 1000
+    },
+    "sem": {
+      "true_recurring_2plus": 11,
+      "null_mean": 5.259,
+      "null_std": 1.4359383691509886,
+      "z_score": 3.9980824548858718,
+      "p_value": 0.0,
+      "n_perms": 1000
+    }
+  },
+  "elapsed_s": 840.12446808815
+}

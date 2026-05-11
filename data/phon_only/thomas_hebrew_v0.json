@@ -1,0 +1,43 @@
+{
+  "corpus": "thomas",
+  "lang": "hebrew",
+  "variant": 0,
+  "is_source": false,
+  "n_units_used": 115,
+  "n_blocked": 2,
+  "diagnostic": {
+    "n_boundaries": 114,
+    "phonological_total": 623,
+    "etymological_total": 0,
+    "semantic_total": 220,
+    "per_boundary_phon_plus_etym": 5.464912280701754,
+    "per_boundary_semantic": 1.9298245614035088
+  },
+  "results": {
+    "all": {
+      "true_recurring_2plus": 110,
+      "null_mean": 91.8472,
+      "null_std": 7.971540137263314,
+      "z_score": 2.2772011038549427,
+      "p_value": 0.0173,
+      "n_perms": 10000
+    },
+    "phon": {
+      "true_recurring_2plus": 87,
+      "null_mean": 72.4981,
+      "null_std": 7.029096413480185,
+      "z_score": 2.0631243543890943,
+      "p_value": 0.0284,
+      "n_perms": 10000
+    },
+    "sem": {
+      "true_recurring_2plus": 23,
+      "null_mean": 19.3491,
+      "null_std": 2.8879108694694855,
+      "z_score": 1.264201066105159,
+      "p_value": 0.136,
+      "n_perms": 10000
+    }
+  },
+  "elapsed_s": 347.8973650932312
+}

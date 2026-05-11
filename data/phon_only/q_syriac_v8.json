@@ -1,0 +1,43 @@
+{
+  "corpus": "q",
+  "lang": "syriac",
+  "variant": 8,
+  "is_source": false,
+  "n_units_used": 56,
+  "n_blocked": 0,
+  "diagnostic": {
+    "n_boundaries": 55,
+    "phonological_total": 1160,
+    "etymological_total": 0,
+    "semantic_total": 262,
+    "per_boundary_phon_plus_etym": 21.09090909090909,
+    "per_boundary_semantic": 4.763636363636364
+  },
+  "results": {
+    "all": {
+      "true_recurring_2plus": 223,
+      "null_mean": 201.479,
+      "null_std": 14.436812632987934,
+      "z_score": 1.4907030067582074,
+      "p_value": 0.08,
+      "n_perms": 1000
+    },
+    "phon": {
+      "true_recurring_2plus": 180,
+      "null_mean": 169.843,
+      "null_std": 13.008087907144539,
+      "z_score": 0.780821906532581,
+      "p_value": 0.207,
+      "n_perms": 1000
+    },
+    "sem": {
+      "true_recurring_2plus": 43,
+      "null_mean": 31.636,
+      "null_std": 3.222344488101792,
+      "z_score": 3.526624804380946,
+      "p_value": 0.0,
+      "n_perms": 1000
+    }
+  },
+  "elapsed_s": 541.2994420528412
+}

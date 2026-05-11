@@ -1,0 +1,43 @@
+{
+  "corpus": "proverbs",
+  "lang": "hebrew",
+  "variant": 0,
+  "is_source": true,
+  "n_units_used": 595,
+  "n_blocked": 0,
+  "diagnostic": {
+    "n_boundaries": 594,
+    "phonological_total": 219,
+    "etymological_total": 0,
+    "semantic_total": 104,
+    "per_boundary_phon_plus_etym": 0.3686868686868687,
+    "per_boundary_semantic": 0.1750841750841751
+  },
+  "results": {
+    "all": {
+      "true_recurring_2plus": 33,
+      "null_mean": 26.1218,
+      "null_std": 3.910954456395523,
+      "z_score": 1.758701124415342,
+      "p_value": 0.0538,
+      "n_perms": 10000
+    },
+    "phon": {
+      "true_recurring_2plus": 15,
+      "null_mean": 15.5491,
+      "null_std": 3.3376622342591826,
+      "z_score": -0.16451634750928468,
+      "p_value": 0.6092,
+      "n_perms": 10000
+    },
+    "sem": {
+      "true_recurring_2plus": 18,
+      "null_mean": 10.5727,
+      "null_std": 2.0400771333456977,
+      "z_score": 3.6406956769420447,
+      "p_value": 0.0003,
+      "n_perms": 10000
+    }
+  },
+  "elapsed_s": 736.2639329433441
+}

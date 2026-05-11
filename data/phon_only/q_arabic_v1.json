@@ -1,0 +1,43 @@
+{
+  "corpus": "q",
+  "lang": "arabic",
+  "variant": 1,
+  "is_source": false,
+  "n_units_used": 56,
+  "n_blocked": 0,
+  "diagnostic": {
+    "n_boundaries": 55,
+    "phonological_total": 948,
+    "etymological_total": 0,
+    "semantic_total": 254,
+    "per_boundary_phon_plus_etym": 17.236363636363638,
+    "per_boundary_semantic": 4.618181818181818
+  },
+  "results": {
+    "all": {
+      "true_recurring_2plus": 172,
+      "null_mean": 162.963,
+      "null_std": 12.340244365489689,
+      "z_score": 0.7323193716708378,
+      "p_value": 0.243,
+      "n_perms": 1000
+    },
+    "phon": {
+      "true_recurring_2plus": 138,
+      "null_mean": 132.249,
+      "null_std": 11.078041297991266,
+      "z_score": 0.519135093045989,
+      "p_value": 0.327,
+      "n_perms": 1000
+    },
+    "sem": {
+      "true_recurring_2plus": 34,
+      "null_mean": 30.714,
+      "null_std": 2.96718789428644,
+      "z_score": 1.1074458770634175,
+      "p_value": 0.177,
+      "n_perms": 1000
+    }
+  },
+  "elapsed_s": 576.915608882904
+}

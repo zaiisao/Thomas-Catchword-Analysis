@@ -1,0 +1,43 @@
+{
+  "corpus": "q",
+  "lang": "greek",
+  "variant": 0,
+  "is_source": true,
+  "n_units_used": 56,
+  "n_blocked": 1,
+  "diagnostic": {
+    "n_boundaries": 55,
+    "phonological_total": 1153,
+    "etymological_total": 0,
+    "semantic_total": 431,
+    "per_boundary_phon_plus_etym": 20.963636363636365,
+    "per_boundary_semantic": 7.836363636363636
+  },
+  "results": {
+    "all": {
+      "true_recurring_2plus": 201,
+      "null_mean": 191.1183,
+      "null_std": 10.96046098984892,
+      "z_score": 0.9015770421656512,
+      "p_value": 0.1962,
+      "n_perms": 10000
+    },
+    "phon": {
+      "true_recurring_2plus": 149,
+      "null_mean": 143.0782,
+      "null_std": 9.267183216058696,
+      "z_score": 0.6390075454360676,
+      "p_value": 0.2731,
+      "n_perms": 10000
+    },
+    "sem": {
+      "true_recurring_2plus": 52,
+      "null_mean": 48.0401,
+      "null_std": 3.516659208680875,
+      "z_score": 1.126040302746704,
+      "p_value": 0.1633,
+      "n_perms": 10000
+    }
+  },
+  "elapsed_s": 803.3127460479736
+}

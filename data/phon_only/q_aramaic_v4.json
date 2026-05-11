@@ -1,0 +1,43 @@
+{
+  "corpus": "q",
+  "lang": "aramaic",
+  "variant": 4,
+  "is_source": false,
+  "n_units_used": 56,
+  "n_blocked": 0,
+  "diagnostic": {
+    "n_boundaries": 55,
+    "phonological_total": 908,
+    "etymological_total": 0,
+    "semantic_total": 152,
+    "per_boundary_phon_plus_etym": 16.509090909090908,
+    "per_boundary_semantic": 2.7636363636363637
+  },
+  "results": {
+    "all": {
+      "true_recurring_2plus": 154,
+      "null_mean": 135.967,
+      "null_std": 12.59618636730975,
+      "z_score": 1.4316237847036088,
+      "p_value": 0.086,
+      "n_perms": 1000
+    },
+    "phon": {
+      "true_recurring_2plus": 124,
+      "null_mean": 112.963,
+      "null_std": 11.382162843677822,
+      "z_score": 0.969675109342726,
+      "p_value": 0.171,
+      "n_perms": 1000
+    },
+    "sem": {
+      "true_recurring_2plus": 30,
+      "null_mean": 23.004,
+      "null_std": 3.1959324148047936,
+      "z_score": 2.1890325238393102,
+      "p_value": 0.02,
+      "n_perms": 1000
+    }
+  },
+  "elapsed_s": 517.9682419300079
+}

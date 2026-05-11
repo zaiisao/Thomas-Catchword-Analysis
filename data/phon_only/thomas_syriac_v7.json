@@ -1,0 +1,7 @@
+{
+  "corpus": "thomas",
+  "lang": "syriac",
+  "variant": 7,
+  "skipped": true,
+  "reason": "source language has only 1 variant"
+}

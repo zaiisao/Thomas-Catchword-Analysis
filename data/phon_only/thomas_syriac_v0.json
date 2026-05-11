@@ -1,0 +1,43 @@
+{
+  "corpus": "thomas",
+  "lang": "syriac",
+  "variant": 0,
+  "is_source": true,
+  "n_units_used": 115,
+  "n_blocked": 2,
+  "diagnostic": {
+    "n_boundaries": 114,
+    "phonological_total": 612,
+    "etymological_total": 0,
+    "semantic_total": 327,
+    "per_boundary_phon_plus_etym": 5.368421052631579,
+    "per_boundary_semantic": 2.8684210526315788
+  },
+  "results": {
+    "all": {
+      "true_recurring_2plus": 137,
+      "null_mean": 119.7392,
+      "null_std": 6.815437136383843,
+      "z_score": 2.5326035079766425,
+      "p_value": 0.007,
+      "n_perms": 10000
+    },
+    "phon": {
+      "true_recurring_2plus": 94,
+      "null_mean": 88.4634,
+      "null_std": 5.8298765372861885,
+      "z_score": 0.9496942112906731,
+      "p_value": 0.1941,
+      "n_perms": 10000
+    },
+    "sem": {
+      "true_recurring_2plus": 43,
+      "null_mean": 31.2758,
+      "null_std": 3.0535773053911703,
+      "z_score": 3.8394967041773,
+      "p_value": 0.0002,
+      "n_perms": 10000
+    }
+  },
+  "elapsed_s": 265.1571640968323
+}

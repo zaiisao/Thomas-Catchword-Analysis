@@ -1,0 +1,43 @@
+{
+  "corpus": "proverbs",
+  "lang": "arabic",
+  "variant": 4,
+  "is_source": false,
+  "n_units_used": 593,
+  "n_blocked": 0,
+  "diagnostic": {
+    "n_boundaries": 592,
+    "phonological_total": 254,
+    "etymological_total": 0,
+    "semantic_total": 122,
+    "per_boundary_phon_plus_etym": 0.42905405405405406,
+    "per_boundary_semantic": 0.20608108108108109
+  },
+  "results": {
+    "all": {
+      "true_recurring_2plus": 43,
+      "null_mean": 25.597,
+      "null_std": 3.570236826878576,
+      "z_score": 4.87446655330573,
+      "p_value": 0.0,
+      "n_perms": 1000
+    },
+    "phon": {
+      "true_recurring_2plus": 27,
+      "null_mean": 17.168,
+      "null_std": 3.044959113025986,
+      "z_score": 3.228943192681909,
+      "p_value": 0.004,
+      "n_perms": 1000
+    },
+    "sem": {
+      "true_recurring_2plus": 16,
+      "null_mean": 8.429,
+      "null_std": 1.835472418752186,
+      "z_score": 4.124823627231082,
+      "p_value": 0.001,
+      "n_perms": 1000
+    }
+  },
+  "elapsed_s": 916.7551245689392
+}

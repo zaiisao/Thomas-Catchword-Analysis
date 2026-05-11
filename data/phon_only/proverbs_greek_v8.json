@@ -1,0 +1,43 @@
+{
+  "corpus": "proverbs",
+  "lang": "greek",
+  "variant": 8,
+  "is_source": false,
+  "n_units_used": 585,
+  "n_blocked": 0,
+  "diagnostic": {
+    "n_boundaries": 584,
+    "phonological_total": 373,
+    "etymological_total": 0,
+    "semantic_total": 551,
+    "per_boundary_phon_plus_etym": 0.6386986301369864,
+    "per_boundary_semantic": 0.9434931506849316
+  },
+  "results": {
+    "all": {
+      "true_recurring_2plus": 92,
+      "null_mean": 68.354,
+      "null_std": 5.132512445187055,
+      "z_score": 4.6071003728736635,
+      "p_value": 0.0,
+      "n_perms": 1000
+    },
+    "phon": {
+      "true_recurring_2plus": 60,
+      "null_mean": 46.03,
+      "null_std": 4.404213891263684,
+      "z_score": 3.1719622036775426,
+      "p_value": 0.002,
+      "n_perms": 1000
+    },
+    "sem": {
+      "true_recurring_2plus": 32,
+      "null_mean": 22.324,
+      "null_std": 2.7068476129992987,
+      "z_score": 3.574637875265757,
+      "p_value": 0.0,
+      "n_perms": 1000
+    }
+  },
+  "elapsed_s": 1256.2611548900604
+}
