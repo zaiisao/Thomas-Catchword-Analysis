@@ -1,0 +1,38 @@
+{
+  "corpus": "thomas",
+  "lang": "syriac",
+  "variant": 0,
+  "is_source": true,
+  "tokenization": "surface_forms_no_sedra_lemma",
+  "detector": "default_syriac_profile_with_SEDRA_roots",
+  "n_units_used": 115,
+  "n_blocked": 2,
+  "diagnostic": {
+    "phonological_total": 1350,
+    "etymological_total": 5,
+    "semantic_total": 167
+  },
+  "results": {
+    "all": {
+      "true_total": 1522,
+      "null_mean": 1299.0335,
+      "null_std": 60.29129271918127,
+      "z_score": 3.6981542432422367,
+      "p_value": 0.0003
+    },
+    "phon": {
+      "true_total": 1355,
+      "null_mean": 1168.2995,
+      "null_std": 55.39467122160759,
+      "z_score": 3.370369313198024,
+      "p_value": 0.0005
+    },
+    "sem": {
+      "true_total": 167,
+      "null_mean": 130.6499,
+      "null_std": 10.564257190640523,
+      "z_score": 3.4408571605209137,
+      "p_value": 0.0007
+    }
+  }
+}

@@ -1246,9 +1246,43 @@ The Thomas-Catchword-Analysis project runs in a dedicated conda environment.
 - The legacy shell scripts `scripts/run_phase2_3_finalization.sh` and `scripts/run_post_phase3.sh` reference `.venv/bin/python` which doesn't exist — update or invoke commands manually.
 - For new package installs, use `<env>/bin/python -m pip install ...`.
 
-## Outstanding work
+## Outstanding work — addressed 2026-05-12
 
-1. ~~**Phase 3 with mBERT**~~: Attempted 2026-05-11 when GPUs freed up. mBERT (178M params, top-4-layer fine-tune) gives val_acc 0.528, WORSE than the small 4.8M baseline (0.582). Pre-registered abort criterion fired correctly. Pretrained multilingual encoder gains nothing — consistent with the cross-lingual finding that the arrangement is thematic, not phonological. Phase 3 ceiling is the small-model result; no further architecture work warranted here.
-2. **Tighter Perrin pair comparison**: re-run the canonical/Perrin-specific split using all 10 Gemini variants and SEDRA root-level matching (current 22% is a lower bound).
-3. **Phon-arrangement with finer detectors**: the consonantal-skeleton + Levenshtein detector cannot see rhyme/meter/alliteration. A future experiment could train a rhyme/paronomasia detector on annotated Syriac literature (Ephrem, Narsai) and apply it to Thomas. This would address whether Syriac-specific sound-design exists at depths our current detector misses.
-4. **Variant-level re-run of the surface-Syriac cross-lingual sweep**: done at 1k perms × 10 variants. A 10k-perm sweep would tighten the confidence intervals on the Syriac-surface vs Syriac-SEDRA comparison (currently Mann-Whitney p=0.40, indistinguishable, but n=10 is low power).
+1. ~~**Phase 3 with mBERT**~~: Attempted 2026-05-11 when GPUs freed up. mBERT (178M params, top-4-layer fine-tune) gives val_acc 0.528, WORSE than the small 4.8M baseline (0.582). Pre-registered abort criterion fired correctly. Phase 3 ceiling is the small-model result; no further architecture work warranted here.
+
+2. ~~**Tighter Perrin pair comparison**~~ — **DONE 2026-05-12**: re-ran the canonical/Perrin-specific split using all 10 Gemini variants (not just variant 0) AND SEDRA root-level matching (not just consonantal-skeleton).
+
+   | Setting | Canonical / 558 | % |
+   |---|---|---|
+   | Variant 0 + skeleton (historical) | 124 | 22.2% |
+   | All 10 variants + skeleton | 131 | 23.5% |
+   | All 10 variants + SEDRA root | 140 | 25.1% |
+   | All 10 variants + either match | 140 | 25.1% |
+
+   **Williams' bias-critique purchase: 74.9% Perrin-specific (lower bound).** The tightening moves the canonical fraction from 22.2% → 25.1% — a marginal improvement. The bulk of Perrin's specific Syriac word choices remain non-canonical. Script: `scripts/perrin_pair_comparison_tight.py`. Output: `data/processed/perrin_catchwords/pair_comparison_tight.json` + `comparison_summary_tight.txt`.
+
+3. ~~**Phon-arrangement with finer detectors**~~ — **DONE 2026-05-12, in lightweight form**: re-ran Thomas Syriac (surface tokenization) with the SEDRA lemma→root table enabled in `CatchwordDetector` (catches distinct lemmas with shared triliteral root as 'etymological').
+
+   | Setting | z_all | z_phon | z_sem |
+   |---|---|---|---|
+   | Surface + lang-profile (NO roots) | 3.71 | 3.39 | 3.44 |
+   | Surface + lang-profile + SEDRA roots | 3.70 | 3.37 | 3.44 |
+
+   **Almost no change.** SEDRA-root-equivalence catches 5 additional etymological pairs at TRUE boundaries (out of ~1500 total catchwords). The consonantal-skeleton Levenshtein was already catching most root-equivalent pairs, because lemmas of the same triliteral root usually share skeleton anyway. The SEDRA root layer is a marginal refinement, not a qualitative shift. Script: `scripts/perrin_test_syriac_with_roots.py`. Output: `data/perrin_direct/thomas_syriac_v0_surface_with_roots.json`.
+
+   A FULL phonetic-feature-based detector (consonant features: place/manner/voicing/emphatic, rather than skeleton-Lev) would still be a meaningful future experiment — it would catch e.g. b↔v voicing pairs that skeleton-Lev misses. Out of scope for this round.
+
+4. ~~**Variant-level 10k-perm re-run of surface-Syriac cross-lingual**~~ — **DONE 2026-05-12**: re-ran all 10 variants at 10k perms (previously 1k).
+
+   | Setting | Median z | Range | p<0.05 count |
+   |---|---|---|---|
+   | Surface Syriac, 1k perms (2026-05-11) | 2.77 | 1.90–3.31 | 10/10 |
+   | Surface Syriac, 10k perms (2026-05-12) | 2.79 | 1.92–3.31 | 10/10 |
+
+   **Identical conclusion at higher precision.** No change to the cross-lingual interpretation. Output: `data/processed/crossling_syriac_surface/variant_{0..9}.json` (overwritten with 10k-perm results).
+
+### Newly opened: full phonetic-feature detector
+
+The single substantive outstanding item is now:
+
+5. **Full phonetic-feature phon detector** — build a consonant-feature distance (place, manner, voicing, emphatic) and re-run the Thomas Syriac permutation test. This would catch sound-pairs that share phonetic features but differ at the consonantal-skeleton level (e.g., voicing pairs like b↔v, p↔f). The SEDRA-root experiment showed that root-equivalence adds little to skeleton-Lev; phonetic-feature distance is a different axis and may add more. A future project.

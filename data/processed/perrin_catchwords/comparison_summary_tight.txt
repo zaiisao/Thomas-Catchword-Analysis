@@ -1,0 +1,14 @@
+Perrin Pair-by-Pair Comparison (TIGHT: 10 variants + SEDRA root)
+======================================================================
+Perrin entries (Syriac, non-bracket):      558
+
+Canonical match (skeleton, variant 0 only)       — historical 22.2%
+Canonical match (skeleton, ALL 10 variants):     131  (23.5%)
+Canonical match (SEDRA root, ALL 10 variants):   140  (25.1%)
+Canonical match (either, ALL 10 variants):       140  (25.1%)
+Perrin-specific (no match by either method):     418  (74.9%)
+
+The ALL-VARIANTS + SEDRA-ROOT-aware canonical fraction is the
+upper bound on what an unbiased frontier-LLM translator reproduces.
+The Perrin-specific fraction (74.9%) is the lower bound on
+Williams' bias-critique purchase across the table.

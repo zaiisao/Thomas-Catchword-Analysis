@@ -1,0 +1,7282 @@
+{
+  "per_boundary": [
+    {
+      "boundary": "Prologue-1",
+      "perrin_total": 2,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "sayings",
+          "syriac": "ܡܠܠܐ",
+          "translit": "mlle",
+          "skel": "ܡܠܠܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "sayings",
+          "syriac": "ܡܠܠܐ",
+          "translit": "mlle",
+          "skel": "ܡܠܠܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "1-2",
+      "perrin_total": 6,
+      "canonical_skel": 2,
+      "canonical_root": 2,
+      "canonical_either": 2,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "whoever",
+          "syriac": "ܟܠ ܕ",
+          "translit": "kl d",
+          "skel": "ܟܠܕ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "finds",
+          "syriac": "ܫܟܚ",
+          "translit": "shkah",
+          "skel": "ܫܟܚ",
+          "root_id": "0:1862",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "sayings",
+          "syriac": "ܡܠܠܐ",
+          "translit": "mlle",
+          "skel": "ܡܠܠܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "finds",
+          "syriac": "ܫܟܚ",
+          "translit": "shkah",
+          "skel": "ܫܟܚ",
+          "root_id": "0:1862",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "reign over",
+          "syriac": "ܡܠܟ",
+          "translit": "mlk",
+          "skel": "ܡܠܟ",
+          "root_id": "0:1064",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "all",
+          "syriac": "ܟܠ",
+          "translit": "kl",
+          "skel": "ܟܠ",
+          "root_id": "0:2030",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "2-3",
+      "perrin_total": 3,
+      "canonical_skel": 2,
+      "canonical_root": 2,
+      "canonical_either": 2,
+      "perrin_specific_strict": 1,
+      "details": [
+        {
+          "side": "a",
+          "english": "reign over",
+          "syriac": "ܡܠܟ",
+          "translit": "mlk",
+          "skel": "ܡܠܟ",
+          "root_id": "0:1064",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "kingdom",
+          "syriac": "ܡܠܟܘܬܐ",
+          "translit": "malkutha",
+          "skel": "ܡܠܟܘܬܐ",
+          "root_id": "0:1065",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "precede",
+          "syriac": "ܩܕܡ",
+          "translit": "qdm",
+          "skel": "ܩܕܡ",
+          "root_id": "0:1621",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "3-4",
+      "perrin_total": 9,
+      "canonical_skel": 3,
+      "canonical_root": 4,
+      "canonical_either": 4,
+      "perrin_specific_strict": 5,
+      "details": [
+        {
+          "side": "a",
+          "english": "kingdom",
+          "syriac": "ܡܠܟܘܬܐ",
+          "translit": "malkutha",
+          "skel": "ܡܠܟܘܬܐ",
+          "root_id": "0:1065",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "precede",
+          "syriac": "ܩܕܡ",
+          "translit": "qdm",
+          "skel": "ܩܕܡ",
+          "root_id": "0:1621",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "in the sea",
+          "syriac": "ܒܝܡܐ",
+          "translit": "b-yamma",
+          "skel": "ܒܝܡܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "sons",
+          "syriac": "ܒܢܝܐ",
+          "translit": "bnayya",
+          "skel": "ܒܢܝܐ",
+          "root_id": "0:282",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "living",
+          "syriac": "ܚܝܐ",
+          "translit": "ḥayya",
+          "skel": "ܚܝܐ",
+          "root_id": "0:621",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "in days",
+          "syriac": "ܒܝܘܡܝܢ",
+          "translit": "b-yawmin",
+          "skel": "ܒܝܘܡܝܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "child",
+          "syriac": "ܛܠܝܐ",
+          "translit": "ṭalya",
+          "skel": "ܛܠܝܐ",
+          "root_id": "0:732",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "life",
+          "syriac": "ܚܝܐ",
+          "translit": "ḥayya",
+          "skel": "ܚܝܐ",
+          "root_id": "0:621",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "first",
+          "syriac": "ܩܕܡܐ",
+          "translit": "qadma",
+          "skel": "ܩܕܡܐ",
+          "root_id": "0:1621",
+          "matched_skel": false,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "4-5",
+      "perrin_total": 3,
+      "canonical_skel": 2,
+      "canonical_root": 3,
+      "canonical_either": 3,
+      "perrin_specific_strict": 0,
+      "details": [
+        {
+          "side": "a",
+          "english": "first",
+          "syriac": "ܩܕܡܐ",
+          "translit": "qadma",
+          "skel": "ܩܕܡܐ",
+          "root_id": "0:1621",
+          "matched_skel": false,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "before",
+          "syriac": "ܩܕܡ",
+          "translit": "qdm",
+          "skel": "ܩܕܡ",
+          "root_id": "0:1621",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "revealed",
+          "syriac": "ܓܠܐ",
+          "translit": "etgli",
+          "skel": "ܓܠܐ",
+          "root_id": "0:370",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "5-6",
+      "perrin_total": 6,
+      "canonical_skel": 4,
+      "canonical_root": 4,
+      "canonical_either": 4,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "before",
+          "syriac": "ܩܕܡ",
+          "translit": "qdm",
+          "skel": "ܩܕܡ",
+          "root_id": "0:1621",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "revealed",
+          "syriac": "ܓܠܐ",
+          "translit": "etgli",
+          "skel": "ܓܠܐ",
+          "root_id": "0:370",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "revealed",
+          "syriac": "ܠܝܬ ܡܢ ܕܟܣܐ ܕܠܐ ܢܬܓܠܐ",
+          "translit": "layt men dakse dla netgle",
+          "skel": "ܠܝܬܡܢܕܟܣܐܕܠܐܢܬܓܠܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "revealed",
+          "syriac": "ܓܠܐ",
+          "translit": "etgli",
+          "skel": "ܓܠܐ",
+          "root_id": "0:370",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "before",
+          "syriac": "ܩܕܡ",
+          "translit": "qdm",
+          "skel": "ܩܕܡ",
+          "root_id": "0:1621",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "manifest",
+          "syriac": "ܠܝܬ ܡܢ ܕܟܣܐ ܕܠܐ ܢܬܓܠܐ",
+          "translit": "layt men dakse dla netgle",
+          "skel": "ܠܝܬܡܢܕܟܣܐܕܠܐܢܬܓܠܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "6-7",
+      "perrin_total": 2,
+      "canonical_skel": 1,
+      "canonical_root": 1,
+      "canonical_either": 1,
+      "perrin_specific_strict": 1,
+      "details": [
+        {
+          "side": "a",
+          "english": "diet",
+          "syriac": "ܐܟܠ",
+          "translit": "akl",
+          "skel": "ܐܟܠ",
+          "root_id": "0:89",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "eat",
+          "syriac": "ܐܟܠ",
+          "translit": "akl",
+          "skel": "ܐܟܠ",
+          "root_id": "0:89",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "7-8",
+      "perrin_total": 2,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "man",
+          "syriac": "ܓܒܪܐ",
+          "translit": "gabra",
+          "skel": "ܓܒܪܐ",
+          "root_id": "0:337",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "man",
+          "syriac": "ܓܒܪܐ",
+          "translit": "gabra",
+          "skel": "ܓܒܪܐ",
+          "root_id": "0:337",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "8-9",
+      "perrin_total": 8,
+      "canonical_skel": 3,
+      "canonical_root": 3,
+      "canonical_either": 3,
+      "perrin_specific_strict": 5,
+      "details": [
+        {
+          "side": "a",
+          "english": "threw",
+          "syriac": "ܢܦܠ",
+          "translit": "npl",
+          "skel": "ܢܦܠ",
+          "root_id": "0:1191",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "small",
+          "syriac": "ܙܥܘܪܐ",
+          "translit": "zora",
+          "skel": "ܙܥܘܪܐ",
+          "root_id": "0:575",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "good",
+          "syriac": "ܛܒܐ",
+          "translit": "ṭab",
+          "skel": "ܛܒܐ",
+          "root_id": "0:703",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "chose",
+          "syriac": "ܓܒܐ",
+          "translit": "gba",
+          "skel": "ܓܒܐ",
+          "root_id": "0:334",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "took a handful",
+          "syriac": "ܙܥܪ",
+          "translit": "za'er",
+          "skel": "ܙܥܪ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "scattered",
+          "syriac": "ܢܦܠ",
+          "translit": "npl",
+          "skel": "ܢܦܠ",
+          "root_id": "0:1191",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "fell",
+          "syriac": "ܠܩܛ",
+          "translit": "lqaṭ",
+          "skel": "ܠܩܛ",
+          "root_id": "0:1004",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "gathered",
+          "syriac": "ܛܒܐ",
+          "translit": "ṭab",
+          "skel": "ܛܒܐ",
+          "root_id": "0:703",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "9-10",
+      "perrin_total": 6,
+      "canonical_skel": 2,
+      "canonical_root": 2,
+      "canonical_either": 2,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "see",
+          "syriac": "ܗܐ",
+          "translit": "ha",
+          "skel": "ܗܐ",
+          "root_id": "0:482",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "scattered",
+          "syriac": "ܐܪܡܝ",
+          "translit": "armi",
+          "skel": "ܐܪܡܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "take root",
+          "syriac": "ܒܐܪܥܐ",
+          "translit": "b-arʿa",
+          "skel": "ܒܐܪܥܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "cast",
+          "syriac": "ܐܪܡܝ",
+          "translit": "armi",
+          "skel": "ܐܪܡܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "upon the world",
+          "syriac": "ܥܠ ܐܪܥܐ",
+          "translit": "ʿal arʿa",
+          "skel": "ܥܠܐܪܥܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "see",
+          "syriac": "ܗܐ",
+          "translit": "ha",
+          "skel": "ܗܐ",
+          "root_id": "0:482",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "10-11",
+      "perrin_total": 2,
+      "canonical_skel": 2,
+      "canonical_root": 2,
+      "canonical_either": 2,
+      "perrin_specific_strict": 0,
+      "details": [
+        {
+          "side": "a",
+          "english": "fire",
+          "syriac": "ܢܘܪܐ",
+          "translit": "nura",
+          "skel": "ܢܘܪܐ",
+          "root_id": "0:1157",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "light",
+          "syriac": "ܢܘܗܪܐ",
+          "translit": "nuhra",
+          "skel": "ܢܘܗܪܐ",
+          "root_id": "0:1144",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "11-12",
+      "perrin_total": 2,
+      "canonical_skel": 2,
+      "canonical_root": 2,
+      "canonical_either": 2,
+      "perrin_specific_strict": 0,
+      "details": [
+        {
+          "side": "a",
+          "english": "heaven",
+          "syriac": "ܫܡܝܐ",
+          "translit": "shmaya",
+          "skel": "ܫܡܝܐ",
+          "root_id": "0:1886",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "heaven",
+          "syriac": "ܫܡܝܐ",
+          "translit": "shmayya",
+          "skel": "ܫܡܝܐ",
+          "root_id": "0:1886",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "12-13",
+      "perrin_total": 6,
+      "canonical_skel": 2,
+      "canonical_root": 4,
+      "canonical_either": 4,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "who",
+          "syriac": "ܡܢ",
+          "translit": "man",
+          "skel": "ܡܢ",
+          "root_id": "0:1072",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "leader",
+          "syriac": "ܪܒ",
+          "translit": "rab",
+          "skel": "ܪܒ",
+          "root_id": "0:1722",
+          "matched_skel": false,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "righteous",
+          "syriac": "ܙܕܝܩ",
+          "translit": "zaddiq",
+          "skel": "ܙܕܝܩ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "whom",
+          "syriac": "ܡܢ",
+          "translit": "man",
+          "skel": "ܡܢ",
+          "root_id": "0:1072",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "righteous",
+          "syriac": "ܙܕܝܩ",
+          "translit": "zaddiq",
+          "skel": "ܙܕܝܩ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "teacher",
+          "syriac": "ܪܒܝ",
+          "translit": "rabbi",
+          "skel": "ܪܒܝ",
+          "root_id": "0:1722",
+          "matched_skel": false,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "13-14",
+      "perrin_total": 8,
+      "canonical_skel": 2,
+      "canonical_root": 2,
+      "canonical_either": 2,
+      "perrin_specific_strict": 6,
+      "details": [
+        {
+          "side": "a",
+          "english": "righteous",
+          "syriac": "ܙܕܝܩ",
+          "translit": "zaddiq",
+          "skel": "ܙܕܝܩ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "wise",
+          "syriac": "ܚܟܝܡܬܐ",
+          "translit": "hakimta",
+          "skel": "ܚܟܝܡܬܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "mouth",
+          "syriac": "ܦܘܡ",
+          "translit": "pum",
+          "skel": "ܦܘܡ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "came back",
+          "syriac": "ܗܦܟ",
+          "translit": "panni",
+          "skel": "ܗܦܟ",
+          "root_id": "0:512",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "alms",
+          "syriac": "ܙܕܩܬܐ",
+          "translit": "zedqta",
+          "skel": "ܙܕܩܬܐ",
+          "root_id": "0:543",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "inflict harm",
+          "syriac": "ܚܣܕ",
+          "translit": "skl",
+          "skel": "ܚܣܕ",
+          "root_id": "0:662",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "districts",
+          "syriac": "ܦܢܝܢ",
+          "translit": "penayin",
+          "skel": "ܦܢܝܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "mouth",
+          "syriac": "ܦܘܡܐ",
+          "translit": "puma",
+          "skel": "ܦܘܡܐ",
+          "root_id": "0:1459",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "14-15",
+      "perrin_total": 4,
+      "canonical_skel": 1,
+      "canonical_root": 1,
+      "canonical_either": 1,
+      "perrin_specific_strict": 3,
+      "details": [
+        {
+          "side": "a",
+          "english": "before you",
+          "syriac": "ܩܕܡ ܐܦܝ",
+          "translit": "qdam appay",
+          "skel": "ܩܕܡܐܦܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "you",
+          "syriac": "ܠܟ",
+          "translit": "lk",
+          "skel": "ܠܟ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "woman",
+          "syriac": "ܐܢܬܬܐ",
+          "translit": "neshshe",
+          "skel": "ܐܢܬܬܐ",
+          "root_id": "0:148",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "on your faces",
+          "syriac": "ܥܠ ܐܦܝܟܘܢ",
+          "translit": "'al appaykon",
+          "skel": "ܥܠܐܦܝܟܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "15-16",
+      "perrin_total": 1,
+      "canonical_skel": 1,
+      "canonical_root": 1,
+      "canonical_either": 1,
+      "perrin_specific_strict": 0,
+      "details": [
+        {
+          "side": "b",
+          "english": "father",
+          "syriac": "ܐܒܐ",
+          "translit": "abba",
+          "skel": "ܐܒܐ",
+          "root_id": "0:2",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "16-17",
+      "perrin_total": 8,
+      "canonical_skel": 2,
+      "canonical_root": 4,
+      "canonical_either": 4,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "men",
+          "syriac": "ܐܢܫܐ",
+          "translit": "nasha",
+          "skel": "ܐܢܫܐ",
+          "root_id": "0:145",
+          "matched_skel": false,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "come",
+          "syriac": "ܝܕܥ",
+          "translit": "ida'",
+          "skel": "ܝܕܥ",
+          "root_id": "0:768",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "know",
+          "syriac": "ܢܘܪܐ",
+          "translit": "nura",
+          "skel": "ܢܘܪܐ",
+          "root_id": "0:1157",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "fire",
+          "syriac": "ܥܠ",
+          "translit": "'al",
+          "skel": "ܥܠ",
+          "root_id": "0:1378",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "eye",
+          "syriac": "ܥܝܢܐ",
+          "translit": "'ayna",
+          "skel": "ܥܝܢܐ",
+          "root_id": "0:1374",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "hand",
+          "syriac": "ܐܝܕܐ",
+          "translit": "ida",
+          "skel": "ܐܝܕܐ",
+          "root_id": "0:58",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "entered",
+          "syriac": "ܥܠ",
+          "translit": "'al",
+          "skel": "ܥܠ",
+          "root_id": "0:1378",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "human",
+          "syriac": "ܐܢܫܐ",
+          "translit": "nasha",
+          "skel": "ܐܢܫܐ",
+          "root_id": "0:145",
+          "matched_skel": false,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "17-18",
+      "perrin_total": 2,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "hand",
+          "syriac": "ܐܝܕܐ",
+          "translit": "ida",
+          "skel": "ܐܝܕܐ",
+          "root_id": "0:58",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "know",
+          "syriac": "ܢܕܥ ܚܪܬܐ",
+          "translit": "neda' harta",
+          "skel": "ܢܕܥܚܪܬܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "18-19",
+      "perrin_total": 7,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 7,
+      "details": [
+        {
+          "side": "a",
+          "english": "sort",
+          "syriac": "ܛܘܒܘܗܝ",
+          "translit": "tubohi",
+          "skel": "ܛܘܒܘܗܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "blessed",
+          "syriac": "ܢܕܥ ܚܪܬܐ",
+          "translit": "neda' harta",
+          "skel": "ܢܕܥܚܪܬܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "know",
+          "syriac": "ܠܐ ܢܛܥܡ ܡܘܬܐ",
+          "translit": "la net'em mawta",
+          "skel": "ܠܐܢܛܥܡܡܘܬܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "blessed",
+          "syriac": "ܛܘܒܘܗܝ",
+          "translit": "tubohi",
+          "skel": "ܛܘܒܘܗܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "fall",
+          "syriac": "ܢܦܠ",
+          "translit": "npal",
+          "skel": "ܢܦܠ",
+          "root_id": "0:1191",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "know",
+          "syriac": "ܢܕܥ",
+          "translit": "neda'",
+          "skel": "ܢܕܥ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "death",
+          "syriac": "ܠܐ ܢܛܥܡ ܡܘܬܐ",
+          "translit": "la net'em mawta",
+          "skel": "ܠܐܢܛܥܡܡܘܬܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "19-20",
+      "perrin_total": 4,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "trees",
+          "syriac": "ܐܝܠܢܐ",
+          "translit": "ilana",
+          "skel": "ܐܝܠܢܐ",
+          "root_id": "0:69",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "fall",
+          "syriac": "ܢܦܠ",
+          "translit": "npal",
+          "skel": "ܢܦܠ",
+          "root_id": "0:1191",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "falls",
+          "syriac": "ܢܦܠ",
+          "translit": "npal",
+          "skel": "ܢܦܠ",
+          "root_id": "0:1191",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "plant",
+          "syriac": "ܣܘܟܬܐ",
+          "translit": "sukta",
+          "skel": "ܣܘܟܬܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "20-21",
+      "perrin_total": 14,
+      "canonical_skel": 6,
+      "canonical_root": 6,
+      "canonical_either": 6,
+      "perrin_specific_strict": 8,
+      "details": [
+        {
+          "side": "a",
+          "english": "kingdom",
+          "syriac": "ܡܠܟܘܬܐ",
+          "translit": "malkuta",
+          "skel": "ܡܠܟܘܬܐ",
+          "root_id": "0:1065",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "like",
+          "syriac": "ܕܡܐ",
+          "translit": "dame",
+          "skel": "ܕܡܐ",
+          "root_id": "0:455",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "seed",
+          "syriac": "ܚܒܬܐ",
+          "translit": "habta",
+          "skel": "ܚܒܬܐ",
+          "root_id": "0:583",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "ploughed",
+          "syriac": "ܕܒܪܐ",
+          "translit": "dabra",
+          "skel": "ܕܒܪܐ",
+          "root_id": "0:415",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "soil",
+          "syriac": "ܐܪܥܐ",
+          "translit": "ar'a",
+          "skel": "ܐܪܥܐ",
+          "root_id": "0:223",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "large",
+          "syriac": "ܪܒܐ",
+          "translit": "rabba",
+          "skel": "ܪܒܐ",
+          "root_id": "0:1722",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "shelter",
+          "syriac": "ܫܟܢܐ",
+          "translit": "shkana",
+          "skel": "ܫܟܢܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "like",
+          "syriac": "ܕܡܐ",
+          "translit": "dame",
+          "skel": "ܕܡܐ",
+          "root_id": "0:455",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "grant",
+          "syriac": "ܫܒܩ",
+          "translit": "shbq",
+          "skel": "ܫܒܩ",
+          "root_id": "0:1809",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "domain",
+          "syriac": "ܡܠܟܘܬܐ",
+          "translit": "malkutha",
+          "skel": "ܡܠܟܘܬܐ",
+          "root_id": "0:1065",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "carry away",
+          "syriac": "ܠܒܙ",
+          "translit": "lbz",
+          "skel": "ܠܒܙ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "world",
+          "syriac": "ܥܠܡܐ",
+          "translit": "alma",
+          "skel": "ܥܠܡܐ",
+          "root_id": "0:1383",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "great",
+          "syriac": "ܪܒܬܐ",
+          "translit": "rabbtha",
+          "skel": "ܪܒܬܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "produce",
+          "syriac": "ܦܐܪܐ",
+          "translit": "pera",
+          "skel": "ܦܐܪܐ",
+          "root_id": "0:1445",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "21-22",
+      "perrin_total": 8,
+      "canonical_skel": 4,
+      "canonical_root": 4,
+      "canonical_either": 4,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "like",
+          "syriac": "ܕܡܐ",
+          "translit": "dame",
+          "skel": "ܕܡܐ",
+          "root_id": "0:455",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "children",
+          "syriac": "ܛܠܝܐ",
+          "translit": "talya",
+          "skel": "ܛܠܝܐ",
+          "root_id": "0:732",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "domain",
+          "syriac": "ܡܠܟܘܬܐ",
+          "translit": "malkutha",
+          "skel": "ܡܠܟܘܬܐ",
+          "root_id": "0:1065",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "hand",
+          "syriac": "ܒܐܝܕܐ",
+          "translit": "b'ida",
+          "skel": "ܒܐܝܕܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "little ones",
+          "syriac": "ܙܥܘܪܐ",
+          "translit": "z'ora",
+          "skel": "ܙܥܘܪܐ",
+          "root_id": "0:575",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "like",
+          "syriac": "ܕܡܐ",
+          "translit": "dme",
+          "skel": "ܕܡܐ",
+          "root_id": "0:455",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "kingdom",
+          "syriac": "ܡܠܟܘܬܐ",
+          "translit": "malkutha",
+          "skel": "ܡܠܟܘܬܐ",
+          "root_id": "0:1065",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "hand",
+          "syriac": "ܐܝܕܐ",
+          "translit": "ida",
+          "skel": "ܐܝܕܐ",
+          "root_id": "0:58",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "22-23",
+      "perrin_total": 4,
+      "canonical_skel": 4,
+      "canonical_root": 4,
+      "canonical_either": 4,
+      "perrin_specific_strict": 0,
+      "details": [
+        {
+          "side": "a",
+          "english": "two",
+          "syriac": "ܬܪܝܢ",
+          "translit": "treyn",
+          "skel": "ܬܪܝܢ",
+          "root_id": "0:1996",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "one",
+          "syriac": "ܚܕ",
+          "translit": "had",
+          "skel": "ܚܕ",
+          "root_id": "0:595",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "one",
+          "syriac": "ܚܕ",
+          "translit": "had",
+          "skel": "ܚܕ",
+          "root_id": "0:595",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "two",
+          "syriac": "ܬܪܝܢ",
+          "translit": "treyn",
+          "skel": "ܬܪܝܢ",
+          "root_id": "0:1996",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "23-24",
+      "perrin_total": 2,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "thousand",
+          "syriac": "ܐܠܦ",
+          "translit": "alep",
+          "skel": "ܐܠܦ",
+          "root_id": "0:114",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "show us",
+          "syriac": "ܚܘܢ",
+          "translit": "hwn",
+          "skel": "ܚܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "24-25",
+      "perrin_total": 2,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "show us",
+          "syriac": "ܚܘܢ",
+          "translit": "hwn",
+          "skel": "ܚܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "love",
+          "syriac": "ܪܚܡ",
+          "translit": "rhem",
+          "skel": "ܪܚܡ",
+          "root_id": "0:1753",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "25-26",
+      "perrin_total": 6,
+      "canonical_skel": 4,
+      "canonical_root": 4,
+      "canonical_either": 4,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "brother",
+          "syriac": "ܐܚܐ",
+          "translit": "aha",
+          "skel": "ܐܚܐ",
+          "root_id": "0:55",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "guard",
+          "syriac": "ܢܛܪ",
+          "translit": "ntar",
+          "skel": "ܢܛܪ",
+          "root_id": "0:1166",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "eye",
+          "syriac": "ܥܝܢܐ",
+          "translit": "ayna",
+          "skel": "ܥܝܢܐ",
+          "root_id": "0:1374",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "brother's",
+          "syriac": "ܐܚܐ",
+          "translit": "aha",
+          "skel": "ܐܚܐ",
+          "root_id": "0:55",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "eye",
+          "syriac": "ܥܝܢܐ",
+          "translit": "ayna",
+          "skel": "ܥܝܢܐ",
+          "root_id": "0:1374",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "cast",
+          "syriac": "ܫܕܐ",
+          "translit": "shda",
+          "skel": "ܫܕܐ",
+          "root_id": "0:1818",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "26-27",
+      "perrin_total": 2,
+      "canonical_skel": 2,
+      "canonical_root": 2,
+      "canonical_either": 2,
+      "perrin_specific_strict": 0,
+      "details": [
+        {
+          "side": "a",
+          "english": "see",
+          "syriac": "ܚܙܐ",
+          "translit": "hza",
+          "skel": "ܚܙܐ",
+          "root_id": "0:613",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "see",
+          "syriac": "ܚܙܐ",
+          "translit": "hza",
+          "skel": "ܚܙܐ",
+          "root_id": "0:613",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "27-28",
+      "perrin_total": 8,
+      "canonical_skel": 4,
+      "canonical_root": 4,
+      "canonical_either": 4,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "fast",
+          "syriac": "ܥܢܘ",
+          "translit": "anaw",
+          "skel": "ܥܢܘ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "world",
+          "syriac": "ܥܠܡܐ",
+          "translit": "alma",
+          "skel": "ܥܠܡܐ",
+          "root_id": "0:1383",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "find",
+          "syriac": "ܐܫܟܚ",
+          "translit": "shkah",
+          "skel": "ܐܫܟܚ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "see",
+          "syriac": "ܚܙܐ",
+          "translit": "hza",
+          "skel": "ܚܙܐ",
+          "root_id": "0:613",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "world",
+          "syriac": "ܥܠܡܐ",
+          "translit": "alma",
+          "skel": "ܥܠܡܐ",
+          "root_id": "0:1383",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "found",
+          "syriac": "ܐܫܟܚ",
+          "translit": "shkah",
+          "skel": "ܐܫܟܚ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "distressed",
+          "syriac": "ܢܐ",
+          "translit": "na",
+          "skel": "ܢܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "see",
+          "syriac": "ܚܙܐ",
+          "translit": "hza",
+          "skel": "ܚܙܐ",
+          "root_id": "0:613",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "28-29",
+      "perrin_total": 8,
+      "canonical_skel": 4,
+      "canonical_root": 4,
+      "canonical_either": 4,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "world",
+          "syriac": "ܥܠܡܐ",
+          "translit": "alma",
+          "skel": "ܥܠܡܐ",
+          "root_id": "0:1383",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "flesh",
+          "syriac": "ܒܣܪܐ",
+          "translit": "besra",
+          "skel": "ܒܣܪܐ",
+          "root_id": "0:289",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "distressed",
+          "syriac": "ܢܐ",
+          "translit": "na",
+          "skel": "ܢܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "empty",
+          "syriac": "ܣܪܝܩܐ",
+          "translit": "sriqa",
+          "skel": "ܣܪܝܩܐ",
+          "root_id": "0:1322",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "flesh",
+          "syriac": "ܒܣܪܐ",
+          "translit": "besra",
+          "skel": "ܒܣܪܐ",
+          "root_id": "0:289",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "came into being",
+          "syriac": "ܗܘܐ",
+          "translit": "hwa",
+          "skel": "ܗܘܐ",
+          "root_id": "0:495",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "i",
+          "syriac": "ܐܢܐ",
+          "translit": "ana",
+          "skel": "ܐܢܐ",
+          "root_id": "0:131",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "poverty",
+          "syriac": "ܡܣܟܢܘܬܐ",
+          "translit": "meskenutha",
+          "skel": "ܡܣܟܢܘܬܐ",
+          "root_id": "0:1087",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "29-30",
+      "perrin_total": 6,
+      "canonical_skel": 3,
+      "canonical_root": 3,
+      "canonical_either": 3,
+      "perrin_specific_strict": 3,
+      "details": [
+        {
+          "side": "a",
+          "english": "i",
+          "syriac": "ܐܢܐ",
+          "translit": "ana",
+          "skel": "ܐܢܐ",
+          "root_id": "0:131",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "this",
+          "syriac": "ܗܕܐ",
+          "translit": "hade",
+          "skel": "ܗܕܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "wealth",
+          "syriac": "ܥܘܬܪܐ",
+          "translit": "utra",
+          "skel": "ܥܘܬܪܐ",
+          "root_id": "0:1441",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "place",
+          "syriac": "ܐܬܪ",
+          "translit": "atar",
+          "skel": "ܐܬܪ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "one",
+          "syriac": "ܚܕ",
+          "translit": "had",
+          "skel": "ܚܕ",
+          "root_id": "0:595",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "i",
+          "syriac": "ܐܢܐ",
+          "translit": "ana",
+          "skel": "ܐܢܐ",
+          "root_id": "0:131",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "30-31",
+      "perrin_total": 2,
+      "canonical_skel": 1,
+      "canonical_root": 1,
+      "canonical_either": 1,
+      "perrin_specific_strict": 1,
+      "details": [
+        {
+          "side": "a",
+          "english": "gods",
+          "syriac": "ܐܠܗܐ",
+          "translit": "alaha",
+          "skel": "ܐܠܗܐ",
+          "root_id": "0:98",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "prophet",
+          "syriac": "ܢܒܝܐ",
+          "translit": "nbiya",
+          "skel": "ܢܒܝܐ",
+          "root_id": "0:1134",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "31-32",
+      "perrin_total": 4,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "village",
+          "syriac": "ܩܪܝܬܐ",
+          "translit": "qritha",
+          "skel": "ܩܪܝܬܐ",
+          "root_id": "0:1702",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "physician",
+          "syriac": "ܐܣܝܐ",
+          "translit": "asya",
+          "skel": "ܐܣܝܐ",
+          "root_id": "0:165",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "city",
+          "syriac": "ܕܩܪܝܬܐ",
+          "translit": "d-qrita",
+          "skel": "ܕܩܪܝܬܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "strengthened",
+          "syriac": "ܐܫܬܪܪ",
+          "translit": "eshtarrar",
+          "skel": "ܐܫܬܪܪ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "32-33",
+      "perrin_total": 4,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "built on",
+          "syriac": "ܕܥܠ",
+          "translit": "d-'al",
+          "skel": "ܕܥܠ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "hidden",
+          "syriac": "ܛܠܐ",
+          "translit": "tla",
+          "skel": "ܛܠܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "hidden",
+          "syriac": "ܛܠܐ",
+          "translit": "tla",
+          "skel": "ܛܠܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "enters",
+          "syriac": "ܕܥܐܠ",
+          "translit": "d-'ael",
+          "skel": "ܕܥܐܠ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "33-34",
+      "perrin_total": 4,
+      "canonical_skel": 1,
+      "canonical_root": 1,
+      "canonical_either": 1,
+      "perrin_specific_strict": 3,
+      "details": [
+        {
+          "side": "a",
+          "english": "other",
+          "syriac": "ܒܐܕܢܝܟ",
+          "translit": "b-ednayk",
+          "skel": "ܒܐܕܢܝܟ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "sets",
+          "syriac": "ܣܐܡ",
+          "translit": "sa'em",
+          "skel": "ܣܐܡ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "blind man",
+          "syriac": "ܣܡܝܐ",
+          "translit": "samya",
+          "skel": "ܣܡܝܐ",
+          "root_id": "0:1286",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "both",
+          "syriac": "ܬܪܬܝܗܝܢ",
+          "translit": "tartayhen",
+          "skel": "ܬܪܬܝܗܝܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "34-35",
+      "perrin_total": 4,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "leads",
+          "syriac": "ܕܒܪ",
+          "translit": "dabar",
+          "skel": "ܕܒܪ",
+          "root_id": "0:415",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "fall",
+          "syriac": "ܢܦܠ",
+          "translit": "npal",
+          "skel": "ܢܦܠ",
+          "root_id": "0:1191",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "possible",
+          "syriac": "ܕܡܨܝܐ",
+          "translit": "d-msya",
+          "skel": "ܕܡܨܝܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "forcibly take",
+          "syriac": "ܡܕܒܪ",
+          "translit": "mdabar",
+          "skel": "ܡܕܒܪ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "35-36",
+      "perrin_total": 4,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "binds",
+          "syriac": "ܐܣܘܪ",
+          "translit": "esor",
+          "skel": "ܐܣܘܪ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "loot",
+          "syriac": "ܣܠܒ",
+          "translit": "salab",
+          "skel": "ܣܠܒ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "until",
+          "syriac": "ܥܕ",
+          "translit": "'ad",
+          "skel": "ܥܕ",
+          "root_id": "0:1337",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "wear",
+          "syriac": "ܬܠܒܫܘܢ",
+          "translit": "telbeshun",
+          "skel": "ܬܠܒܫܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "36-37",
+      "perrin_total": 4,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "worry",
+          "syriac": "ܬܐܨܦܘܢ",
+          "translit": "te'spun",
+          "skel": "ܬܐܨܦܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "wear",
+          "syriac": "ܬܠܒܫܘܢ",
+          "translit": "telbeshun",
+          "skel": "ܬܠܒܫܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "pick up",
+          "syriac": "ܬܣܒܘܢ",
+          "translit": "tessbun",
+          "skel": "ܬܣܒܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "garments",
+          "syriac": "ܠܒܘܫܐ",
+          "translit": "lbusha",
+          "skel": "ܠܒܘܫܐ",
+          "root_id": "0:953",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "37-38",
+      "perrin_total": 2,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "day",
+          "syriac": "ܒܐܝܢܐ ܝܘܡܐ",
+          "translit": "b-ayna yawma",
+          "skel": "ܒܐܝܢܐܝܘܡܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "days",
+          "syriac": "ܝܘܡܬܐ",
+          "translit": "yawmata",
+          "skel": "ܝܘܡܬܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "38-39",
+      "perrin_total": 4,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "desired",
+          "syriac": "ܨܒܐ",
+          "translit": "sba",
+          "skel": "ܨܒܐ",
+          "root_id": "0:1571",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "say",
+          "syriac": "ܡܡܠܠ",
+          "translit": "mmallel",
+          "skel": "ܡܡܠܠ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "wish",
+          "syriac": "ܨܒܐ",
+          "translit": "sba",
+          "skel": "ܨܒܐ",
+          "root_id": "0:1571",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "innocent",
+          "syriac": "ܬܡܝܡܬܐ",
+          "translit": "tmimata",
+          "skel": "ܬܡܝܡܬܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "39-40",
+      "perrin_total": 8,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 8,
+      "details": [
+        {
+          "side": "a",
+          "english": "pharisees",
+          "syriac": "ܦܪܝܫܐ",
+          "translit": "parise",
+          "skel": "ܦܪܝܫܐ",
+          "root_id": "0:1553",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "taken",
+          "syriac": "ܢܣܒ",
+          "translit": "nsab",
+          "skel": "ܢܣܒ",
+          "root_id": "0:1184",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "allowed",
+          "syriac": "ܥܟܪ",
+          "translit": "'akker",
+          "skel": "ܥܟܪ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "innocent",
+          "syriac": "ܬܡܝܡܬܐ",
+          "translit": "tmimata",
+          "skel": "ܬܡܝܡܬܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "grapevine",
+          "syriac": "ܟܪܡܐ",
+          "translit": "krema",
+          "skel": "ܟܪܡܐ",
+          "root_id": "0:934",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "planted",
+          "syriac": "ܐܬܢܨܒ",
+          "translit": "etnseb",
+          "skel": "ܐܬܢܨܒ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "uprooted",
+          "syriac": "ܬܬܥܩܪ",
+          "translit": "tt'aqar",
+          "skel": "ܬܬܥܩܪ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "destroyed",
+          "syriac": "ܐܬܬܡܗ",
+          "translit": "ettmah",
+          "skel": "ܐܬܬܡܗ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "40-41",
+      "perrin_total": 2,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "planted",
+          "syriac": "ܐܬܢܨܒ",
+          "translit": "etnseb",
+          "skel": "ܐܬܢܨܒ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "taken",
+          "syriac": "ܢܣܒ",
+          "translit": "nsab",
+          "skel": "ܢܣܒ",
+          "root_id": "0:1184",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "41-42",
+      "perrin_total": 0,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 0,
+      "details": []
+    },
+    {
+      "boundary": "42-43",
+      "perrin_total": 0,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 0,
+      "details": []
+    },
+    {
+      "boundary": "43-44",
+      "perrin_total": 6,
+      "canonical_skel": 1,
+      "canonical_root": 1,
+      "canonical_either": 1,
+      "perrin_specific_strict": 5,
+      "details": [
+        {
+          "side": "a",
+          "english": "say",
+          "syriac": "ܐܡܪ",
+          "translit": "amar",
+          "skel": "ܐܡܪ",
+          "root_id": "0:125",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "tree",
+          "syriac": "ܐܝܠܢܐ",
+          "translit": "ilana",
+          "skel": "ܐܝܠܢܐ",
+          "root_id": "0:69",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "fruit",
+          "syriac": "ܐܒܐ",
+          "translit": "eba",
+          "skel": "ܐܒܐ",
+          "root_id": "0:2",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "speaks against",
+          "syriac": "ܐܡܪ ܥܠ",
+          "translit": "amar 'al",
+          "skel": "ܐܡܪܥܠ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "father",
+          "syriac": "ܐܒܐ",
+          "translit": "aba",
+          "skel": "ܐܒܐ",
+          "root_id": "0:2",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "earth",
+          "syriac": "ܐܪܥܐ",
+          "translit": "ar'a",
+          "skel": "ܐܪܥܐ",
+          "root_id": "0:223",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "44-45",
+      "perrin_total": 4,
+      "canonical_skel": 1,
+      "canonical_root": 1,
+      "canonical_either": 1,
+      "perrin_specific_strict": 3,
+      "details": [
+        {
+          "side": "a",
+          "english": "father",
+          "syriac": "ܐܒܐ",
+          "translit": "aba",
+          "skel": "ܐܒܐ",
+          "root_id": "0:2",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "forgiven",
+          "syriac": "ܢܫܬܒܩ",
+          "translit": "neshtbeq",
+          "skel": "ܢܫܬܒܩ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "fruit",
+          "syriac": "ܐܒܐ",
+          "translit": "eba",
+          "skel": "ܐܒܐ",
+          "root_id": "0:2",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "evil",
+          "syriac": "ܒܝܫܐ",
+          "translit": "bisha",
+          "skel": "ܒܝܫܐ",
+          "root_id": "0:242",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "45-46",
+      "perrin_total": 8,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 8,
+      "details": [
+        {
+          "side": "a",
+          "english": "good",
+          "syriac": "ܛܒܐ",
+          "translit": "taba",
+          "skel": "ܛܒܐ",
+          "root_id": "0:703",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "man",
+          "syriac": "ܓܒܪܐ",
+          "translit": "gabra",
+          "skel": "ܓܒܪܐ",
+          "root_id": "0:337",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "brings forth",
+          "syriac": "ܡܦܩ",
+          "translit": "mappeq",
+          "skel": "ܡܦܩ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "storehouse",
+          "syriac": "ܒܝܬ ܓܙܐ",
+          "translit": "beth gaza",
+          "skel": "ܒܝܬܓܙܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "born",
+          "syriac": "ܝܠܝܕ",
+          "translit": "ylid",
+          "skel": "ܝܠܝܕ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "adam",
+          "syriac": "ܐܕܡ",
+          "translit": "adam",
+          "skel": "ܐܕܡ",
+          "root_id": "0:25",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "baptist",
+          "syriac": "ܡܥܡܕܢܐ",
+          "translit": "ma'mdana",
+          "skel": "ܡܥܡܕܢܐ",
+          "root_id": "0:1387",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "know",
+          "syriac": "ܝܕܥ",
+          "translit": "yda'",
+          "skel": "ܝܕܥ",
+          "root_id": "0:768",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "46-47",
+      "perrin_total": 6,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 6,
+      "details": [
+        {
+          "side": "a",
+          "english": "adam",
+          "syriac": "ܐܕܡ",
+          "translit": "adam",
+          "skel": "ܐܕܡ",
+          "root_id": "0:25",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "more exalted",
+          "syriac": "ܪܒ",
+          "translit": "rab",
+          "skel": "ܪܒ",
+          "root_id": "0:1722",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "child",
+          "syriac": "ܛܠܝܐ",
+          "translit": "talya",
+          "skel": "ܛܠܝܐ",
+          "root_id": "0:732",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "man",
+          "syriac": "ܐܢܫܐ",
+          "translit": "nasha",
+          "skel": "ܐܢܫܐ",
+          "root_id": "0:145",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "draw",
+          "syriac": "ܬܠܐ",
+          "translit": "tla",
+          "skel": "ܬܠܐ",
+          "root_id": "0:1971",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "honor",
+          "syriac": "ܣܢܐ",
+          "translit": "sana",
+          "skel": "ܣܢܐ",
+          "root_id": "0:1292",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "47-48",
+      "perrin_total": 6,
+      "canonical_skel": 2,
+      "canonical_root": 2,
+      "canonical_either": 2,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "two",
+          "syriac": "ܬܪܬܝܢ",
+          "translit": "tarten",
+          "skel": "ܬܪܬܝܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "honor",
+          "syriac": "ܣܢܐ",
+          "translit": "sana",
+          "skel": "ܣܢܐ",
+          "root_id": "0:1292",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "one",
+          "syriac": "ܚܕ",
+          "translit": "ḥad",
+          "skel": "ܚܕ",
+          "root_id": "0:595",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "two",
+          "syriac": "ܬܪܬܝܢ",
+          "translit": "tarten",
+          "skel": "ܬܪܬܝܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "one",
+          "syriac": "ܚܕ",
+          "translit": "ḥad",
+          "skel": "ܚܕ",
+          "root_id": "0:595",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "move away",
+          "syriac": "ܫܢܐ-",
+          "translit": "šnā",
+          "skel": "ܫܢܐ",
+          "root_id": "0:1906",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "48-49",
+      "perrin_total": 6,
+      "canonical_skel": 3,
+      "canonical_root": 3,
+      "canonical_either": 3,
+      "perrin_specific_strict": 3,
+      "details": [
+        {
+          "side": "a",
+          "english": "one",
+          "syriac": "ܚܕ",
+          "translit": "ḥad",
+          "skel": "ܚܕ",
+          "root_id": "0:595",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "house",
+          "syriac": "ܒܝܬܐ",
+          "translit": "baytā",
+          "skel": "ܒܝܬܐ",
+          "root_id": "0:271",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "mountain",
+          "syriac": "ܛܘܪܐ-",
+          "translit": "turā",
+          "skel": "ܛܘܪܐ",
+          "root_id": "0:717",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "solitaries",
+          "syriac": "ܝܚܝܕܝܐ",
+          "translit": "iḥidāyē",
+          "skel": "ܝܚܝܕܝܐ",
+          "root_id": "0:819",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "find",
+          "syriac": "ܬܫܟܚܘܢ",
+          "translit": "teškḥūn",
+          "skel": "ܬܫܟܚܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "kingdom",
+          "syriac": "ܡܠܟܘܬܐ",
+          "translit": "malkutā",
+          "skel": "ܡܠܟܘܬܐ",
+          "root_id": "0:1065",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "49-50",
+      "perrin_total": 6,
+      "canonical_skel": 2,
+      "canonical_root": 2,
+      "canonical_either": 2,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "blessed",
+          "syriac": "ܛܘܒܝܗܘܢ",
+          "translit": "ṭubayhōn",
+          "skel": "ܛܘܒܝܗܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "solitaries",
+          "syriac": "ܝܚܝܕܝܐ",
+          "translit": "iḥidāyē",
+          "skel": "ܝܚܝܕܝܐ",
+          "root_id": "0:819",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "elect",
+          "syriac": "ܓܒܝܐ",
+          "translit": "gabyā",
+          "skel": "ܓܒܝܐ",
+          "root_id": "0:334",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "by itself",
+          "syriac": "ܒܠܚܘܕ",
+          "translit": "balḥūd",
+          "skel": "ܒܠܚܘܕ",
+          "root_id": "0:983",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "became established",
+          "syriac": "ܩܡ-",
+          "translit": "qām",
+          "skel": "ܩܡ",
+          "root_id": "0:1632",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "elect",
+          "syriac": "ܓܒܝܐ-",
+          "translit": "gabyā",
+          "skel": "ܓܒܝܐ",
+          "root_id": "0:334",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "50-51",
+      "perrin_total": 6,
+      "canonical_skel": 2,
+      "canonical_root": 3,
+      "canonical_either": 3,
+      "perrin_specific_strict": 3,
+      "details": [
+        {
+          "side": "a",
+          "english": "came",
+          "syriac": "ܐܬܝܢ",
+          "translit": "atayn",
+          "skel": "ܐܬܝܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "agitation",
+          "syriac": "ܩܠܐ",
+          "translit": "qālā",
+          "skel": "ܩܠܐ",
+          "root_id": "0:1666",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "rest",
+          "syriac": "ܢܝܚܐ",
+          "translit": "nyāḥā",
+          "skel": "ܢܝܚܐ",
+          "root_id": "0:1149",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "rest",
+          "syriac": "ܢܝܚܐ",
+          "translit": "nyāḥā",
+          "skel": "ܢܝܚܐ",
+          "root_id": "0:1149",
+          "matched_skel": false,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "occur",
+          "syriac": "ܟܠ",
+          "translit": "kal",
+          "skel": "ܟܠ",
+          "root_id": "0:2030",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "come",
+          "syriac": "ܐܬܐ",
+          "translit": "atā",
+          "skel": "ܐܬܐ",
+          "root_id": "0:233",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "51-52",
+      "perrin_total": 4,
+      "canonical_skel": 2,
+      "canonical_root": 2,
+      "canonical_either": 2,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "dead",
+          "syriac": "ܡܝܬܐ-",
+          "translit": "mītē",
+          "skel": "ܡܝܬܐ",
+          "root_id": "0:1036",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "occur",
+          "syriac": "ܟܠ",
+          "translit": "kal",
+          "skel": "ܟܠ",
+          "root_id": "0:2030",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "all",
+          "syriac": "ܟܠܗܘܢ",
+          "translit": "kullhōn",
+          "skel": "ܟܠܗܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "dead",
+          "syriac": "ܡܝܬܐ-",
+          "translit": "mītē",
+          "skel": "ܡܝܬܐ",
+          "root_id": "0:1036",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "52-53",
+      "perrin_total": 6,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 6,
+      "details": [
+        {
+          "side": "a",
+          "english": "prophets",
+          "syriac": "ܢܒܝܐ-",
+          "translit": "nbiyē",
+          "skel": "ܢܒܝܐ",
+          "root_id": "0:1134",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "all",
+          "syriac": "ܟܠܗܘܢ",
+          "translit": "kullhōn",
+          "skel": "ܟܠܗܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "in your presence",
+          "syriac": "ܥܡܟܘܢ",
+          "translit": "'emmkon",
+          "skel": "ܥܡܟܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "begotten",
+          "syriac": "ܐܠܕ",
+          "translit": "ālad",
+          "skel": "ܐܠܕ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "their mother",
+          "syriac": "ܥܡܗܘܢ",
+          "translit": "'emmhōn",
+          "skel": "ܥܡܗܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "entirely",
+          "syriac": "ܟܠܗ",
+          "translit": "kulleh",
+          "skel": "ܟܠܗ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "53-54",
+      "perrin_total": 6,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 6,
+      "details": [
+        {
+          "side": "a",
+          "english": "useful",
+          "syriac": "ܚܢܐ",
+          "translit": "hnā",
+          "skel": "ܚܢܐ",
+          "root_id": "0:651",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "their mother",
+          "syriac": "ܥܡܗܘܢ",
+          "translit": "'emmhōn",
+          "skel": "ܥܡܗܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "in spirit",
+          "syriac": "ܒܪܘܚܐ",
+          "translit": "b-ruḥā",
+          "skel": "ܒܪܘܚܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "blessed",
+          "syriac": "ܛܘܒܝܗܘܢ",
+          "translit": "ṭubayhōn",
+          "skel": "ܛܘܒܝܗܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "poor",
+          "syriac": "ܡܣܟܢܐ",
+          "translit": "meskēnē",
+          "skel": "ܡܣܟܢܐ",
+          "root_id": "0:1087",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "yours",
+          "syriac": "ܕܝܠܟܘܢ-",
+          "translit": "dīlkōn",
+          "skel": "ܕܝܠܟܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "54-55",
+      "perrin_total": 2,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "heaven",
+          "syriac": "ܫܡܝܐ-",
+          "translit": "šmayā",
+          "skel": "ܫܡܝܐ",
+          "root_id": "0:1886",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "hate",
+          "syriac": "ܣܢܐ",
+          "translit": "sanyā",
+          "skel": "ܣܢܐ",
+          "root_id": "0:1292",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "55-56",
+      "perrin_total": 8,
+      "canonical_skel": 2,
+      "canonical_root": 2,
+      "canonical_either": 2,
+      "perrin_specific_strict": 6,
+      "details": [
+        {
+          "side": "a",
+          "english": "hate",
+          "syriac": "ܣܢܐ",
+          "translit": "sanyā",
+          "skel": "ܣܢܐ",
+          "root_id": "0:1292",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "cannot",
+          "syriac": "ܡܫܟܚ-",
+          "translit": "meškaḥ",
+          "skel": "ܡܫܟܚ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "way",
+          "syriac": "ܒܕܘܒܗ-",
+          "translit": "b-dūbeh",
+          "skel": "ܒܕܘܒܗ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "worthy",
+          "syriac": "ܫܘܐ",
+          "translit": "shawe",
+          "skel": "ܫܘܐ",
+          "root_id": "0:1822",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "understand",
+          "syriac": "ܕܪܟ",
+          "translit": "drak",
+          "skel": "ܕܪܟ",
+          "root_id": "0:478",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "found",
+          "syriac": "ܐܫܟܚ",
+          "translit": "eškaḥ",
+          "skel": "ܐܫܟܚ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "corpse",
+          "syriac": "ܒܣܪ",
+          "translit": "bsar",
+          "skel": "ܒܣܪ",
+          "root_id": "0:288",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "worthy",
+          "syriac": "ܫܘܐ",
+          "translit": "shawe",
+          "skel": "ܫܘܐ",
+          "root_id": "0:1822",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "56-57",
+      "perrin_total": 0,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 0,
+      "details": []
+    },
+    {
+      "boundary": "57-58",
+      "perrin_total": 6,
+      "canonical_skel": 1,
+      "canonical_root": 1,
+      "canonical_either": 1,
+      "perrin_specific_strict": 5,
+      "details": [
+        {
+          "side": "a",
+          "english": "man",
+          "syriac": "ܐܢܫܐ-",
+          "translit": "nasha",
+          "skel": "ܐܢܫܐ",
+          "root_id": "0:145",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "good",
+          "syriac": "ܛܒܐ",
+          "translit": "ṭbā",
+          "skel": "ܛܒܐ",
+          "root_id": "0:703",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "night",
+          "syriac": "ܒܠܠܝܐ-",
+          "translit": "b-lalyā",
+          "skel": "ܒܠܠܝܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "blessed",
+          "syriac": "ܛܘܒܘܗܝ",
+          "translit": "ṭubawhi",
+          "skel": "ܛܘܒܘܗܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "man",
+          "syriac": "ܐܢܫܐ",
+          "translit": "nasha",
+          "skel": "ܐܢܫܐ",
+          "root_id": "0:145",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "toiled",
+          "syriac": "ܕܠܐܝܐ-",
+          "translit": "d-lāyā",
+          "skel": "ܕܠܐܝܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "58-59",
+      "perrin_total": 4,
+      "canonical_skel": 2,
+      "canonical_root": 2,
+      "canonical_either": 2,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "found",
+          "syriac": "ܐܫܟܚ-",
+          "translit": "eškaḥ",
+          "skel": "ܐܫܟܚ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "life",
+          "syriac": "ܚܝܐ-",
+          "translit": "ḥayē",
+          "skel": "ܚܝܐ",
+          "root_id": "0:621",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "living one",
+          "syriac": "ܚܝܐ-",
+          "translit": "ḥayē",
+          "skel": "ܚܝܐ",
+          "root_id": "0:621",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "able",
+          "syriac": "ܡܨܐ",
+          "translit": "matse",
+          "skel": "ܡܨܐ",
+          "root_id": "0:1094",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "59-60",
+      "perrin_total": 7,
+      "canonical_skel": 2,
+      "canonical_root": 2,
+      "canonical_either": 2,
+      "perrin_specific_strict": 5,
+      "details": [
+        {
+          "side": "a",
+          "english": "living one",
+          "syriac": "ܚܝܐ-",
+          "translit": "ḥayē",
+          "skel": "ܚܝܐ",
+          "root_id": "0:621",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "die",
+          "syriac": "ܬܡܘܬܘܢ",
+          "translit": "tmuthun",
+          "skel": "ܬܡܘܬܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "seek",
+          "syriac": "ܒܥܝܬܘܢ",
+          "translit": "ba'ayton",
+          "skel": "ܒܥܝܬܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "see",
+          "syriac": "ܚܙܐ",
+          "translit": "hza",
+          "skel": "ܚܙܐ",
+          "root_id": "0:613",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "saw",
+          "syriac": "ܚܙܘ",
+          "translit": "hzau",
+          "skel": "ܚܙܘ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "kill",
+          "syriac": "ܢܩܛܠ",
+          "translit": "neqtul",
+          "skel": "ܢܩܛܠ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "alive",
+          "syriac": "ܚܝ",
+          "translit": "hai",
+          "skel": "ܚܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "60-61",
+      "perrin_total": 14,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 14,
+      "details": [
+        {
+          "side": "a",
+          "english": "carrying",
+          "syriac": "ܫܩܠ",
+          "translit": "shqal",
+          "skel": "ܫܩܠ",
+          "root_id": "0:1923",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "lamb",
+          "syriac": "ܐܡܪ",
+          "translit": "emar",
+          "skel": "ܐܡܪ",
+          "root_id": "0:125",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "kill",
+          "syriac": "ܢܩܛܠ",
+          "translit": "neqtul",
+          "skel": "ܢܩܛܠ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "eat",
+          "syriac": "ܢܐܟܠ",
+          "translit": "ne'kul",
+          "skel": "ܢܐܟܠ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "alive",
+          "syriac": "ܚܝ",
+          "translit": "hai",
+          "skel": "ܚܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "other",
+          "syriac": "ܚܪܢܐ",
+          "translit": "hrina",
+          "skel": "ܚܪܢܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "rest",
+          "syriac": "ܢܘܚ",
+          "translit": "nuh",
+          "skel": "ܢܘܚ",
+          "root_id": "0:1148",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "two",
+          "syriac": "ܬܪܝܢ",
+          "translit": "treyn",
+          "skel": "ܬܪܝܢ",
+          "root_id": "0:1996",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "rest",
+          "syriac": "ܢܬܬܢܝܚܘܢ",
+          "translit": "nettnihun",
+          "skel": "ܢܬܬܢܝܚܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "die",
+          "syriac": "ܢܡܘܬ",
+          "translit": "nmuth",
+          "skel": "ܢܡܘܬ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "live",
+          "syriac": "ܢܚܐ",
+          "translit": "nhe",
+          "skel": "ܢܚܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "eaten",
+          "syriac": "ܐܟܠܬ",
+          "translit": "ekalt",
+          "skel": "ܐܟܠܬ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "exists from",
+          "syriac": "ܕܩܐܡ ܡܢ",
+          "translit": "dqaem men",
+          "skel": "ܕܩܐܡܡܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "say",
+          "syriac": "ܐܡܪ",
+          "translit": "amar",
+          "skel": "ܐܡܪ",
+          "root_id": "0:125",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "61-62",
+      "perrin_total": 8,
+      "canonical_skel": 1,
+      "canonical_root": 2,
+      "canonical_either": 2,
+      "perrin_specific_strict": 6,
+      "details": [
+        {
+          "side": "a",
+          "english": "bed",
+          "syriac": "ܥܪܣܐ",
+          "translit": "'arsa",
+          "skel": "ܥܪܣܐ",
+          "root_id": "0:1431",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "salome",
+          "syriac": "ܫܠܘܡܐ",
+          "translit": "shaloma",
+          "skel": "ܫܠܘܡܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "equality",
+          "syriac": "ܫܘܝܘܬܐ",
+          "translit": "shawyutha",
+          "skel": "ܫܘܝܘܬܐ",
+          "root_id": "0:1822",
+          "matched_skel": false,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "destroyed",
+          "syriac": "ܐܒܕ",
+          "translit": "ebad",
+          "skel": "ܐܒܕ",
+          "root_id": "0:4",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "tell",
+          "syriac": "ܐܡܪ",
+          "translit": "amar",
+          "skel": "ܐܡܪ",
+          "root_id": "0:125",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "mysteries",
+          "syriac": "ܐܪܙܝ",
+          "translit": "razay",
+          "skel": "ܐܪܙܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "worthy",
+          "syriac": "ܫܘܐ",
+          "translit": "shawe",
+          "skel": "ܫܘܐ",
+          "root_id": "0:1822",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "doing",
+          "syriac": "ܥܒܕ",
+          "translit": "'abad",
+          "skel": "ܥܒܕ",
+          "root_id": "0:1328",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "62-63",
+      "perrin_total": 0,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 0,
+      "details": []
+    },
+    {
+      "boundary": "63-64",
+      "perrin_total": 16,
+      "canonical_skel": 5,
+      "canonical_root": 5,
+      "canonical_either": 5,
+      "perrin_specific_strict": 11,
+      "details": [
+        {
+          "side": "a",
+          "english": "man",
+          "syriac": "ܓܒܪܐ",
+          "translit": "gabra",
+          "skel": "ܓܒܪܐ",
+          "root_id": "0:337",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "plant",
+          "syriac": "ܙܪܥ",
+          "translit": "zra'",
+          "skel": "ܙܪܥ",
+          "root_id": "0:580",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "fill",
+          "syriac": "ܡܠܐ",
+          "translit": "mle",
+          "skel": "ܡܠܐ",
+          "root_id": "0:1058",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "storehouses",
+          "syriac": "ܒܝܬ ܚܙܢܐ",
+          "translit": "beth hzona",
+          "skel": "ܒܝܬܚܙܢܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "produce",
+          "syriac": "ܐܪܒܐ",
+          "translit": "araba",
+          "skel": "ܐܪܒܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "night",
+          "syriac": "ܠܠܝܐ",
+          "translit": "lilya",
+          "skel": "ܠܠܝܐ",
+          "root_id": "0:993",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "died",
+          "syriac": "ܡܝܬ",
+          "translit": "mith",
+          "skel": "ܡܝܬ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "ears",
+          "syriac": "ܐܕܢܐ",
+          "translit": "edne",
+          "skel": "ܐܕܢܐ",
+          "root_id": "0:26",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "man",
+          "syriac": "ܓܒܪܐ",
+          "translit": "gabra",
+          "skel": "ܓܒܪܐ",
+          "root_id": "0:337",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "invite",
+          "syriac": "ܩܪܐ",
+          "translit": "qra",
+          "skel": "ܩܪܐ",
+          "root_id": "0:1702",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "evening",
+          "syriac": "ܠܠܝܐ",
+          "translit": "lilya",
+          "skel": "ܠܠܝܐ",
+          "root_id": "0:993",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "put in my orders",
+          "syriac": "ܦܩܕ",
+          "translit": "fqad",
+          "skel": "ܦܩܕ",
+          "root_id": "0:1521",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "house",
+          "syriac": "ܒܝܬܐ",
+          "translit": "bayta",
+          "skel": "ܒܝܬܐ",
+          "root_id": "0:271",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "time",
+          "syriac": "ܐܕܢܐ",
+          "translit": "'edna",
+          "skel": "ܐܕܢܐ",
+          "root_id": "0:26",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "receive",
+          "syriac": "ܢܣܒ",
+          "translit": "nsab",
+          "skel": "ܢܣܒ",
+          "root_id": "0:1184",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "father",
+          "syriac": "ܐܒܐ",
+          "translit": "abba",
+          "skel": "ܐܒܐ",
+          "root_id": "0:2",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "64-65",
+      "perrin_total": 20,
+      "canonical_skel": 11,
+      "canonical_root": 12,
+      "canonical_either": 12,
+      "perrin_specific_strict": 8,
+      "details": [
+        {
+          "side": "a",
+          "english": "man",
+          "syriac": "ܓܒܪܐ",
+          "translit": "gabra",
+          "skel": "ܓܒܪܐ",
+          "root_id": "0:337",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "prepared",
+          "syriac": "ܛܝܒ",
+          "translit": "tayyeb",
+          "skel": "ܛܝܒ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "sent",
+          "syriac": "ܫܕܪ",
+          "translit": "shadar",
+          "skel": "ܫܕܪ",
+          "root_id": "0:1820",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "servant",
+          "syriac": "ܥܒܕܐ",
+          "translit": "'abda",
+          "skel": "ܥܒܕܐ",
+          "root_id": "0:1328",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "went",
+          "syriac": "ܐܙܠ",
+          "translit": "azal",
+          "skel": "ܐܙܠ",
+          "root_id": "0:54",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "master",
+          "syriac": "ܡܪܝ",
+          "translit": "mari",
+          "skel": "ܡܪܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "merchants",
+          "syriac": "ܬܓܪܐ",
+          "translit": "tagara",
+          "skel": "ܬܓܪܐ",
+          "root_id": "0:1949",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "another",
+          "syriac": "ܚܪܢܐ",
+          "translit": "hrina",
+          "skel": "ܚܪܢܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "time",
+          "syriac": "ܐܕܢܐ",
+          "translit": "'edna",
+          "skel": "ܐܕܢܐ",
+          "root_id": "0:26",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "receive",
+          "syriac": "ܢܣܒ",
+          "translit": "nsab",
+          "skel": "ܢܣܒ",
+          "root_id": "0:1184",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "places",
+          "syriac": "ܐܒܐ",
+          "translit": "abba",
+          "skel": "ܐܒܐ",
+          "root_id": "0:2",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "good",
+          "syriac": "ܛܒ",
+          "translit": "tab",
+          "skel": "ܛܒ",
+          "root_id": "0:703",
+          "matched_skel": false,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "man",
+          "syriac": "ܓܒܪܐ",
+          "translit": "gabra",
+          "skel": "ܓܒܪܐ",
+          "root_id": "0:337",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "vineyard",
+          "syriac": "ܫܕܪ",
+          "translit": "shdar",
+          "skel": "ܫܕܪ",
+          "root_id": "0:1820",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "sent",
+          "syriac": "ܥܒܕܗ",
+          "translit": "abdeh",
+          "skel": "ܥܒܕܗ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "servant",
+          "syriac": "ܡܚܐܘܗܝ",
+          "translit": "mḥā'uhi",
+          "skel": "ܡܚܐܘܗܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "vineyard",
+          "syriac": "ܐܙܠ",
+          "translit": "ezal",
+          "skel": "ܐܙܠ",
+          "root_id": "0:54",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "beat",
+          "syriac": "ܡܪܗ",
+          "translit": "mareh",
+          "skel": "ܡܪܗ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "went",
+          "syriac": "ܐܚܪܢܐ",
+          "translit": "aḥrānā",
+          "skel": "ܐܚܪܢܐ",
+          "root_id": "0:691",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "master",
+          "syriac": "ܐܕܢܐ",
+          "translit": "ednē",
+          "skel": "ܐܕܢܐ",
+          "root_id": "0:26",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "65-66",
+      "perrin_total": 4,
+      "canonical_skel": 1,
+      "canonical_root": 1,
+      "canonical_either": 1,
+      "perrin_specific_strict": 3,
+      "details": [
+        {
+          "side": "a",
+          "english": "recognize",
+          "syriac": "ܝܕܥ",
+          "translit": "yda'",
+          "skel": "ܝܕܥ",
+          "root_id": "0:768",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "show respect",
+          "syriac": "ܒܗܬܘܢ",
+          "translit": "bahtūn",
+          "skel": "ܒܗܬܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "show",
+          "syriac": "ܚܘܘܢ",
+          "translit": "ḥawwūn",
+          "skel": "ܚܘܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "stone",
+          "syriac": "ܟܐܦܐ",
+          "translit": "kepā",
+          "skel": "ܟܐܦܐ",
+          "root_id": "0:862",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "66-67",
+      "perrin_total": 2,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "show",
+          "syriac": "ܚܘܘܢ",
+          "translit": "ḥawwūn",
+          "skel": "ܚܘܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "knows",
+          "syriac": "ܝܕܥ",
+          "translit": "yda'",
+          "skel": "ܝܕܥ",
+          "root_id": "0:768",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "67-68",
+      "perrin_total": 4,
+      "canonical_skel": 2,
+      "canonical_root": 2,
+      "canonical_either": 2,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "destitution",
+          "syriac": "ܣܢܘ",
+          "translit": "snāw",
+          "skel": "ܣܢܘ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "place",
+          "syriac": "ܐܬܪܐ",
+          "translit": "atrā",
+          "skel": "ܐܬܪܐ",
+          "root_id": "0:239",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "hate",
+          "syriac": "ܣܢܝܢ",
+          "translit": "sānēn",
+          "skel": "ܣܢܝܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "place",
+          "syriac": "ܐܬܪܐ",
+          "translit": "atrā",
+          "skel": "ܐܬܪܐ",
+          "root_id": "0:239",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "68-69",
+      "perrin_total": 4,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "blessed",
+          "syriac": "ܛܘܒܝܗܘܢ",
+          "translit": "ṭubayhūn",
+          "skel": "ܛܘܒܝܗܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "persecute",
+          "syriac": "ܪܕܦܝܢ",
+          "translit": "rādpīn",
+          "skel": "ܪܕܦܝܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "blessed",
+          "syriac": "ܛܘܒܝܗܘܢ",
+          "translit": "ṭubayhūn",
+          "skel": "ܛܘܒܝܗܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "persecuted",
+          "syriac": "ܪܕܝܦܝܢ",
+          "translit": "rdīpīn",
+          "skel": "ܪܕܝܦܝܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "69-70",
+      "perrin_total": 4,
+      "canonical_skel": 1,
+      "canonical_root": 1,
+      "canonical_either": 1,
+      "perrin_specific_strict": 3,
+      "details": [
+        {
+          "side": "a",
+          "english": "father",
+          "syriac": "ܐܒܐ",
+          "translit": "abā",
+          "skel": "ܐܒܐ",
+          "root_id": "0:2",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "stomach",
+          "syriac": "ܓܘܐ",
+          "translit": "gawwā",
+          "skel": "ܓܘܐ",
+          "root_id": "0:352",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "within you",
+          "syriac": "ܓܘܝܟܘܢ",
+          "translit": "gawwikōn",
+          "skel": "ܓܘܝܟܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "give birth",
+          "syriac": "ܬܠܕܘܢ",
+          "translit": "tēldūn",
+          "skel": "ܬܠܕܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "70-71",
+      "perrin_total": 2,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "kill",
+          "syriac": "ܢܡܝܬܟܘܢ",
+          "translit": "nmītkōn",
+          "skel": "ܢܡܝܬܟܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "destroy",
+          "syriac": "ܫܪܐ",
+          "translit": "shrā",
+          "skel": "ܫܪܐ",
+          "root_id": "0:1925",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "71-72",
+      "perrin_total": 2,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "house",
+          "syriac": "ܒܝܬܐ",
+          "translit": "baytā",
+          "skel": "ܒܝܬܐ",
+          "root_id": "0:271",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "belongings",
+          "syriac": "ܒܝܬܐ",
+          "translit": "baytā",
+          "skel": "ܒܝܬܐ",
+          "root_id": "0:271",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "72-73",
+      "perrin_total": 2,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "divide",
+          "syriac": "ܦܠܓ",
+          "translit": "plag",
+          "skel": "ܦܠܓ",
+          "root_id": "0:1496",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "send out",
+          "syriac": "ܢܦܩ",
+          "translit": "appeq",
+          "skel": "ܢܦܩ",
+          "root_id": "0:1194",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "73-74",
+      "perrin_total": 6,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 6,
+      "details": [
+        {
+          "side": "a",
+          "english": "great",
+          "syriac": "ܣܓܝ",
+          "translit": "saggi",
+          "skel": "ܣܓܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "ask",
+          "syriac": "ܒܥܘ",
+          "translit": "ba'u",
+          "skel": "ܒܥܘ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "lord",
+          "syriac": "ܡܪܐ",
+          "translit": "mārā",
+          "skel": "ܡܪܐ",
+          "root_id": "0:1101",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "lord",
+          "syriac": "ܡܪܐ",
+          "translit": "mārā",
+          "skel": "ܡܪܐ",
+          "root_id": "0:1101",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "many",
+          "syriac": "ܣܓܝ",
+          "translit": "saggi",
+          "skel": "ܣܓܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "around",
+          "syriac": "ܚܕܪ",
+          "translit": "ḥdar",
+          "skel": "ܚܕܪ",
+          "root_id": "0:598",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "74-75",
+      "perrin_total": 4,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "many",
+          "syriac": "ܣܓܝ",
+          "translit": "saggi",
+          "skel": "ܣܓܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "cistern",
+          "syriac": "ܓܘܒܐ",
+          "translit": "gubā",
+          "skel": "ܓܘܒܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "many",
+          "syriac": "ܣܓܝ",
+          "translit": "saggi",
+          "skel": "ܣܓܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "bridal chamber",
+          "syriac": "ܓܢܘܢܐ",
+          "translit": "gnōnā",
+          "skel": "ܓܢܘܢܐ",
+          "root_id": "0:391",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "75-76",
+      "perrin_total": 8,
+      "canonical_skel": 3,
+      "canonical_root": 3,
+      "canonical_either": 3,
+      "perrin_specific_strict": 5,
+      "details": [
+        {
+          "side": "a",
+          "english": "standing",
+          "syriac": "ܩܝܡܝܢ",
+          "translit": "qāymīn",
+          "skel": "ܩܝܡܝܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "door",
+          "syriac": "ܬܪܥܐ",
+          "translit": "tar'ā",
+          "skel": "ܬܪܥܐ",
+          "root_id": "0:2000",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "solitaries",
+          "syriac": "ܝܚܝܕܝܐ",
+          "translit": "iḥidāyē",
+          "skel": "ܝܚܝܕܝܐ",
+          "root_id": "0:819",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "bridal chamber",
+          "syriac": "ܓܢܘܢܐ",
+          "translit": "gnōnā",
+          "skel": "ܓܢܘܢܐ",
+          "root_id": "0:391",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "alone",
+          "syriac": "ܒܠܚܘܕܘܗܝ",
+          "translit": "balḥōdaw",
+          "skel": "ܒܠܚܘܕܘܗܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "unfailing",
+          "syriac": "ܕܠܥܠܡ",
+          "translit": "d-l-'olam",
+          "skel": "ܕܠܥܠܡ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "moth",
+          "syriac": "ܣܣܐ",
+          "translit": "sāsā",
+          "skel": "ܣܣܐ",
+          "root_id": "0:1296",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "worm",
+          "syriac": "ܬܘܠܥܐ",
+          "translit": "tul'ā",
+          "skel": "ܬܘܠܥܐ",
+          "root_id": "0:1960",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "76-77",
+      "perrin_total": 10,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 10,
+      "details": [
+        {
+          "side": "a",
+          "english": "discovered",
+          "syriac": "ܐܫܟܚ",
+          "translit": "eshkaḥ",
+          "skel": "ܐܫܟܚ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "pearl",
+          "syriac": "ܡܪܓܢܝܬܐ",
+          "translit": "marganitā",
+          "skel": "ܡܪܓܢܝܬܐ",
+          "root_id": "0:1102",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "unfailing",
+          "syriac": "ܕܠܥܠܡ",
+          "translit": "d-l-'olam",
+          "skel": "ܕܠܥܠܡ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "worm",
+          "syriac": "ܬܘܠܥܐ",
+          "translit": "tul'ā",
+          "skel": "ܬܘܠܥܐ",
+          "root_id": "0:1960",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "destroys",
+          "syriac": "ܚܒܠ",
+          "translit": "ḥabbel",
+          "skel": "ܚܒܠ",
+          "root_id": "0:586",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "which is above all of them",
+          "syriac": "ܕܠܥܠ ܡܢܗܘܢ",
+          "translit": "d-l-'el menhōn",
+          "skel": "ܕܠܥܠܡܢܗܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "came forth",
+          "syriac": "ܢܦܩ",
+          "translit": "npaq",
+          "skel": "ܢܦܩ",
+          "root_id": "0:1194",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "split",
+          "syriac": "ܨܠܚ",
+          "translit": "ṣlaḥ",
+          "skel": "ܨܠܚ",
+          "root_id": "0:1595",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "stone",
+          "syriac": "ܟܐܦܐ",
+          "translit": "kepā",
+          "skel": "ܟܐܦܐ",
+          "root_id": "0:862",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "find",
+          "syriac": "ܬܫܟܚܘܢ",
+          "translit": "tashkḥūn",
+          "skel": "ܬܫܟܚܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "77-78",
+      "perrin_total": 6,
+      "canonical_skel": 1,
+      "canonical_root": 1,
+      "canonical_either": 1,
+      "perrin_specific_strict": 5,
+      "details": [
+        {
+          "side": "a",
+          "english": "came forth",
+          "syriac": "ܢܦܩ",
+          "translit": "npaq",
+          "skel": "ܢܦܩ",
+          "root_id": "0:1194",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "wood",
+          "syriac": "ܩܝܣܐ",
+          "translit": "qaysā",
+          "skel": "ܩܝܣܐ",
+          "root_id": "0:1661",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "lift",
+          "syriac": "ܫܩܘܠ",
+          "translit": "shqul",
+          "skel": "ܫܩܘܠ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "come out",
+          "syriac": "ܢܦܩܬܘܢ",
+          "translit": "npaqtūn",
+          "skel": "ܢܦܩܬܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "reed",
+          "syriac": "ܩܢܝܐ",
+          "translit": "qanya",
+          "skel": "ܩܢܝܐ",
+          "root_id": "0:1684",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "clothed",
+          "syriac": "ܕܠܒܝܫ",
+          "translit": "d-lbish",
+          "skel": "ܕܠܒܝܫ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "78-79",
+      "perrin_total": 6,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 6,
+      "details": [
+        {
+          "side": "a",
+          "english": "come out",
+          "syriac": "ܢܦܩܬܘܢ",
+          "translit": "npaqtūn",
+          "skel": "ܢܦܩܬܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "reed",
+          "syriac": "ܩܢܝܐ",
+          "translit": "qanya",
+          "skel": "ܩܢܝܐ",
+          "root_id": "0:1684",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "truth",
+          "syriac": "ܫܪܪܐ",
+          "translit": "shrara",
+          "skel": "ܫܪܪܐ",
+          "root_id": "0:1924",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "bore",
+          "syriac": "ܛܥܢܟ",
+          "translit": "t'enak",
+          "skel": "ܛܥܢܟ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "breasts",
+          "syriac": "ܬܕܝܐ",
+          "translit": "tdaye",
+          "skel": "ܬܕܝܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "in truth",
+          "syriac": "ܒܫܪܪܐ",
+          "translit": "b-shrara",
+          "skel": "ܒܫܪܪܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "79-80",
+      "perrin_total": 2,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "days",
+          "syriac": "ܝܘܡܬܐ",
+          "translit": "yawmata",
+          "skel": "ܝܘܡܬܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "world",
+          "syriac": "ܥܠܡܐ",
+          "translit": "alma",
+          "skel": "ܥܠܡܐ",
+          "root_id": "0:1383",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "80-81",
+      "perrin_total": 4,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "found",
+          "syriac": "ܐܫܟܚ",
+          "translit": "eshkah",
+          "skel": "ܐܫܟܚ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "body",
+          "syriac": "ܒܣܪ",
+          "translit": "bsar",
+          "skel": "ܒܣܪ",
+          "root_id": "0:288",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "power",
+          "syriac": "ܚܝܠܐ",
+          "translit": "hayla",
+          "skel": "ܚܝܠܐ",
+          "root_id": "0:622",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "repudiate",
+          "syriac": "ܢܘܕܡ",
+          "translit": "nudam",
+          "skel": "ܢܘܕܡ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "81-82",
+      "perrin_total": 6,
+      "canonical_skel": 1,
+      "canonical_root": 1,
+      "canonical_either": 1,
+      "perrin_specific_strict": 5,
+      "details": [
+        {
+          "side": "a",
+          "english": "increased in wealth",
+          "syriac": "ܝܬܪ",
+          "translit": "yatar",
+          "skel": "ܝܬܪ",
+          "root_id": "0:858",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "king",
+          "syriac": "ܡܠܟܐ",
+          "translit": "malka",
+          "skel": "ܡܠܟܐ",
+          "root_id": "0:1065",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "repudiate",
+          "syriac": "ܢܘܕܡ",
+          "translit": "nudam",
+          "skel": "ܢܘܕܡ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "fire",
+          "syriac": "ܢܘܪܐ",
+          "translit": "nura",
+          "skel": "ܢܘܪܐ",
+          "root_id": "0:1157",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "far",
+          "syriac": "ܪܚܝܩ",
+          "translit": "rahiq",
+          "skel": "ܪܚܝܩ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "kingdom",
+          "syriac": "ܡܠܟܘܬܐ",
+          "translit": "malkuta",
+          "skel": "ܡܠܟܘܬܐ",
+          "root_id": "0:1065",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "82-83",
+      "perrin_total": 2,
+      "canonical_skel": 2,
+      "canonical_root": 2,
+      "canonical_either": 2,
+      "perrin_specific_strict": 0,
+      "details": [
+        {
+          "side": "a",
+          "english": "fire",
+          "syriac": "ܢܘܪܐ",
+          "translit": "nura",
+          "skel": "ܢܘܪܐ",
+          "root_id": "0:1157",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "light",
+          "syriac": "ܢܘܗܪܐ",
+          "translit": "nuhra",
+          "skel": "ܢܘܗܪܐ",
+          "root_id": "0:1144",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "83-84",
+      "perrin_total": 4,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "images",
+          "syriac": "ܨܠܡܐ",
+          "translit": "salma",
+          "skel": "ܨܠܡܐ",
+          "root_id": "0:1596",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "revealed",
+          "syriac": "ܡܬܓܠܝܢ",
+          "translit": "metgalyan",
+          "skel": "ܡܬܓܠܝܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "images",
+          "syriac": "ܨܠܡܝܟܘܢ",
+          "translit": "salmaykon",
+          "skel": "ܨܠܡܝܟܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "revealed",
+          "syriac": "ܡܬܓܠܝܢ",
+          "translit": "metgalyan",
+          "skel": "ܡܬܓܠܝܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "84-85",
+      "perrin_total": 4,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "came into being",
+          "syriac": "ܐܬܒܪܝ",
+          "translit": "etbri",
+          "skel": "ܐܬܒܪܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "die",
+          "syriac": "ܡܝܬܝܢ",
+          "translit": "maytin",
+          "skel": "ܡܝܬܝܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "came into being",
+          "syriac": "ܐܬܒܪܝ",
+          "translit": "etbri",
+          "skel": "ܐܬܒܪܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "death",
+          "syriac": "ܡܘܬܐ",
+          "translit": "mawta",
+          "skel": "ܡܘܬܐ",
+          "root_id": "0:1036",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "85-86",
+      "perrin_total": 6,
+      "canonical_skel": 1,
+      "canonical_root": 1,
+      "canonical_either": 1,
+      "perrin_specific_strict": 5,
+      "details": [
+        {
+          "side": "a",
+          "english": "Adam",
+          "syriac": "ܐܕܡ",
+          "translit": "Adam",
+          "skel": "ܐܕܡ",
+          "root_id": "0:25",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "great",
+          "syriac": "ܪܒܬܐ",
+          "translit": "rabta",
+          "skel": "ܪܒܬܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "wealth",
+          "syriac": "ܥܘܬܪܐ",
+          "translit": "utra",
+          "skel": "ܥܘܬܪܐ",
+          "root_id": "0:1441",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "son of man",
+          "syriac": "ܒܪܗ ܕܐܢܫܐ",
+          "translit": "breh d-nasha",
+          "skel": "ܒܪܗܕܐܢܫܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "place",
+          "syriac": "ܐܬܪ",
+          "translit": "atar",
+          "skel": "ܐܬܪ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "lay",
+          "syriac": "ܢܣܡܘܟ",
+          "translit": "nesmok",
+          "skel": "ܢܣܡܘܟ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "86-87",
+      "perrin_total": 4,
+      "canonical_skel": 1,
+      "canonical_root": 1,
+      "canonical_either": 1,
+      "perrin_specific_strict": 3,
+      "details": [
+        {
+          "side": "a",
+          "english": "Foxes",
+          "syriac": "ܬܥܠܐ",
+          "translit": "ta'le",
+          "skel": "ܬܥܠܐ",
+          "root_id": "0:1987",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "lay",
+          "syriac": "ܢܣܡܘܟ",
+          "translit": "nesmok",
+          "skel": "ܢܣܡܘܟ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "wretched",
+          "syriac": "ܕܘܝ",
+          "translit": "dwai",
+          "skel": "ܕܘܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "dependent",
+          "syriac": "ܬܠܐ",
+          "translit": "tla",
+          "skel": "ܬܠܐ",
+          "root_id": "0:1971",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "87-88",
+      "perrin_total": 2,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "soul",
+          "syriac": "ܢܦܫ",
+          "translit": "naphsh",
+          "skel": "ܢܦܫ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "yourselves",
+          "syriac": "ܠܢܦܫܟܘܢ",
+          "translit": "l-naphshkon",
+          "skel": "ܠܢܦܫܟܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "88-89",
+      "perrin_total": 0,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 0,
+      "details": []
+    },
+    {
+      "boundary": "89-90",
+      "perrin_total": 2,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "understand",
+          "syriac": "ܐܣܬܟܠ",
+          "translit": "estakal",
+          "skel": "ܐܣܬܟܠ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "find",
+          "syriac": "ܫܟܚ",
+          "translit": "shkah",
+          "skel": "ܫܟܚ",
+          "root_id": "0:1862",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "90-91",
+      "perrin_total": 2,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "find",
+          "syriac": "ܫܟܚ",
+          "translit": "shkah",
+          "skel": "ܫܟܚ",
+          "root_id": "0:1862",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "recognized",
+          "syriac": "ܝܕܥܬܘܢ",
+          "translit": "yda'tun",
+          "skel": "ܝܕܥܬܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "91-92",
+      "perrin_total": 8,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 8,
+      "details": [
+        {
+          "side": "a",
+          "english": "tell",
+          "syriac": "ܐܡܪ",
+          "translit": "emar",
+          "skel": "ܐܡܪ",
+          "root_id": "0:125",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "so that",
+          "syriac": "ܝܕܥܬܘܢ",
+          "translit": "yda'tun",
+          "skel": "ܝܕܥܬܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "recognized",
+          "syriac": "ܡܢ ܩܕܡ",
+          "translit": "men qdam",
+          "skel": "ܡܢܩܕܡ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "before",
+          "syriac": "ܙܒܢܐ",
+          "translit": "zabna",
+          "skel": "ܙܒܢܐ",
+          "root_id": "0:538",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "Seek",
+          "syriac": "ܡܫܟܚܝܢ",
+          "translit": "mshkhin",
+          "skel": "ܡܫܟܚܝܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "find",
+          "syriac": "ܩܕܡܝܐ",
+          "translit": "qadmaya",
+          "skel": "ܩܕܡܝܐ",
+          "root_id": "0:1621",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "former",
+          "syriac": "ܝܘܡܬܐ",
+          "translit": "yawmata",
+          "skel": "ܝܘܡܬܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "days",
+          "syriac": "ܐܡܪ",
+          "translit": "emar",
+          "skel": "ܐܡܪ",
+          "root_id": "0:125",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "92-93",
+      "perrin_total": 4,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "Seek",
+          "syriac": "ܩܕܡܝܐ",
+          "translit": "qadmaya",
+          "skel": "ܩܕܡܝܐ",
+          "root_id": "0:1621",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "former",
+          "syriac": "ܨܒܐ",
+          "translit": "sba",
+          "skel": "ܨܒܐ",
+          "root_id": "0:1571",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "give",
+          "syriac": "ܬܬܠܘܢ",
+          "translit": "tetlun",
+          "skel": "ܬܬܠܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "to",
+          "syriac": "ܩܕܡ",
+          "translit": "qdam",
+          "skel": "ܩܕܡ",
+          "root_id": "0:1621",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "93-94",
+      "perrin_total": 0,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 0,
+      "details": []
+    },
+    {
+      "boundary": "94-95",
+      "perrin_total": 1,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 1,
+      "details": [
+        {
+          "side": "b",
+          "english": "not with interest",
+          "syriac": "ܕܠܐ ܩܨܨܐ",
+          "translit": "d-la qa'esa",
+          "skel": "ܕܠܐܩܨܨܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "95-96",
+      "perrin_total": 4,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "not with interest",
+          "syriac": "ܕܠܐ ܩܨܨܐ",
+          "translit": "d-la qa'esa",
+          "skel": "ܕܠܐܩܨܨܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "get",
+          "syriac": "ܡܬܠܒܘܢ",
+          "translit": "metleboon",
+          "skel": "ܡܬܠܒܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "took",
+          "syriac": "ܢܣܒܬ",
+          "translit": "nesbat",
+          "skel": "ܢܣܒܬ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "large",
+          "syriac": "ܪܒܐ",
+          "translit": "rba",
+          "skel": "ܪܒܐ",
+          "root_id": "0:1722",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "96-97",
+      "perrin_total": 8,
+      "canonical_skel": 5,
+      "canonical_root": 5,
+      "canonical_either": 5,
+      "perrin_specific_strict": 3,
+      "details": [
+        {
+          "side": "a",
+          "english": "of the father",
+          "syriac": "ܕܐܒܐ",
+          "translit": "d-aba",
+          "skel": "ܕܐܒܐ",
+          "root_id": "0:410",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "woman",
+          "syriac": "ܐܢܬܬܐ",
+          "translit": "antta",
+          "skel": "ܐܢܬܬܐ",
+          "root_id": "0:148",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "dough",
+          "syriac": "ܚܡܝܪܐ",
+          "translit": "hmira",
+          "skel": "ܚܡܝܪܐ",
+          "root_id": "0:647",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "ears",
+          "syriac": "ܐܕܢܐ",
+          "translit": "edna",
+          "skel": "ܐܕܢܐ",
+          "root_id": "0:26",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "of the [father]",
+          "syriac": "ܕܐܒܐ",
+          "translit": "d-aba",
+          "skel": "ܕܐܒܐ",
+          "root_id": "0:410",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "woman",
+          "syriac": "ܐܢܬܬܐ",
+          "translit": "antta",
+          "skel": "ܐܢܬܬܐ",
+          "root_id": "0:148",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "meal",
+          "syriac": "ܩܡܚܐ",
+          "translit": "qamha",
+          "skel": "ܩܡܚܐ",
+          "root_id": "0:1675",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "handle",
+          "syriac": "ܐܕܢܐ",
+          "translit": "edna",
+          "skel": "ܐܕܢܐ",
+          "root_id": "0:26",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "97-98",
+      "perrin_total": 8,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 8,
+      "details": [
+        {
+          "side": "a",
+          "english": "of the [father]",
+          "syriac": "ܕܐܒܐ",
+          "translit": "d-aba",
+          "skel": "ܕܐܒܐ",
+          "root_id": "0:410",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "carrying",
+          "syriac": "ܫܩܠ",
+          "translit": "shqal",
+          "skel": "ܫܩܠ",
+          "root_id": "0:1923",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "observed",
+          "syriac": "ܚܙܬ",
+          "translit": "hzat",
+          "skel": "ܚܙܬ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "house",
+          "syriac": "ܒܝܬܗ",
+          "translit": "bayteh",
+          "skel": "ܒܝܬܗ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "of the father",
+          "syriac": "ܕܐܒܐ",
+          "translit": "d-aba",
+          "skel": "ܕܐܒܐ",
+          "root_id": "0:410",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "house",
+          "syriac": "ܒܝܬܗ",
+          "translit": "bayteh",
+          "skel": "ܒܝܬܗ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "drew",
+          "syriac": "ܫܩܠ",
+          "translit": "shqal",
+          "skel": "ܫܩܠ",
+          "root_id": "0:1923",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "find out",
+          "syriac": "ܚܘܐ",
+          "translit": "hwa",
+          "skel": "ܚܘܐ",
+          "root_id": "0:600",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "98-99",
+      "perrin_total": 10,
+      "canonical_skel": 2,
+      "canonical_root": 2,
+      "canonical_either": 2,
+      "perrin_specific_strict": 8,
+      "details": [
+        {
+          "side": "a",
+          "english": "of the father",
+          "syriac": "ܕܐܒܐ",
+          "translit": "d-aba",
+          "skel": "ܕܐܒܐ",
+          "root_id": "0:410",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "wanted",
+          "syriac": "ܨܒܐ",
+          "translit": "tsba",
+          "skel": "ܨܒܐ",
+          "root_id": "0:1571",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "put it through",
+          "syriac": "ܛܠܩ",
+          "translit": "tlaq",
+          "skel": "ܛܠܩ",
+          "root_id": "0:735",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "arm",
+          "syriac": "ܐܡܐ",
+          "translit": "ama",
+          "skel": "ܐܡܐ",
+          "root_id": "0:118",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "prevail",
+          "syriac": "ܛܥܢ",
+          "translit": "t'an",
+          "skel": "ܛܥܢ",
+          "root_id": "0:744",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "standing",
+          "syriac": "ܩܝܡܝܢ",
+          "translit": "qaymin",
+          "skel": "ܩܝܡܝܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "will",
+          "syriac": "ܨܒܝܢܐ",
+          "translit": "tsebyana",
+          "skel": "ܨܒܝܢܐ",
+          "root_id": "0:1571",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "my mother",
+          "syriac": "ܐܡܝ",
+          "translit": "emmi",
+          "skel": "ܐܡܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "enter",
+          "syriac": "ܥܠܘ",
+          "translit": "'ellu",
+          "skel": "ܥܠܘ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "of my father",
+          "syriac": "ܕܐܒܝ",
+          "translit": "d-abi",
+          "skel": "ܕܐܒܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "99-100",
+      "perrin_total": 2,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "my mother",
+          "syriac": "ܐܡܝ",
+          "translit": "emmi",
+          "skel": "ܐܡܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "mine",
+          "syriac": "ܕܝܠܝ",
+          "translit": "d-ili",
+          "skel": "ܕܝܠܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "100-101",
+      "perrin_total": 5,
+      "canonical_skel": 1,
+      "canonical_root": 1,
+      "canonical_either": 1,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "require",
+          "syriac": "ܬܒܥܝܢ",
+          "translit": "tab'in",
+          "skel": "ܬܒܥܝܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "give",
+          "syriac": "ܗܒܘ",
+          "translit": "habu",
+          "skel": "ܗܒܘ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "mine",
+          "syriac": "ܕܝܠܝ",
+          "translit": "d-ili",
+          "skel": "ܕܝܠܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "hate",
+          "syriac": "ܣܢܐ",
+          "translit": "sna",
+          "skel": "ܣܢܐ",
+          "root_id": "0:1292",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "my mother",
+          "syriac": "ܐܡܝ",
+          "translit": "emmi",
+          "skel": "ܐܡܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "101-102",
+      "perrin_total": 4,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "hate",
+          "syriac": "ܣܢܐ",
+          "translit": "sna",
+          "skel": "ܣܢܐ",
+          "root_id": "0:1292",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "in my way",
+          "syriac": "ܒܐܘܪܚܝ",
+          "translit": "b-urhi",
+          "skel": "ܒܐܘܪܚܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "in the manger",
+          "syriac": "ܒܐܘܪܝܐ",
+          "translit": "b-urya",
+          "skel": "ܒܐܘܪܝܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "let",
+          "syriac": "ܫܒܩ",
+          "translit": "shbaq",
+          "skel": "ܫܒܩ",
+          "root_id": "0:1809",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "102-103",
+      "perrin_total": 6,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 6,
+      "details": [
+        {
+          "side": "a",
+          "english": "asleep",
+          "syriac": "ܕܡܟ",
+          "translit": "dmek",
+          "skel": "ܕܡܟ",
+          "root_id": "0:458",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "oxen",
+          "syriac": "ܬܘܪܐ",
+          "translit": "tawra",
+          "skel": "ܬܘܪܐ",
+          "root_id": "0:1963",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "he does not eat",
+          "syriac": "ܠܐ ܐܟܠ",
+          "translit": "la akel",
+          "skel": "ܠܐܐܟܠ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "Blessed",
+          "syriac": "ܛܘܒܘܗܝ",
+          "translit": "tubaw",
+          "skel": "ܛܘܒܘܗܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "loins",
+          "syriac": "ܚܨܐ",
+          "translit": "hatsa",
+          "skel": "ܚܨܐ",
+          "root_id": "0:672",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "break-in",
+          "syriac": "ܬܘܪܥܬܐ",
+          "translit": "tawr'a",
+          "skel": "ܬܘܪܥܬܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "103-104",
+      "perrin_total": 4,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "man",
+          "syriac": "ܓܒܪܐ",
+          "translit": "gabra",
+          "skel": "ܓܒܪܐ",
+          "root_id": "0:337",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "come in",
+          "syriac": "ܚܨܐ",
+          "translit": "hatsa",
+          "skel": "ܚܨܐ",
+          "root_id": "0:672",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "Come",
+          "syriac": "ܨܘܡ",
+          "translit": "tsum",
+          "skel": "ܨܘܡ",
+          "root_id": "0:1582",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "fast",
+          "syriac": "ܐܬܚܫܒܬ",
+          "translit": "ethashbet",
+          "skel": "ܐܬܚܫܒܬ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "104-105",
+      "perrin_total": 0,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 0,
+      "details": []
+    },
+    {
+      "boundary": "105-106",
+      "perrin_total": 4,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "son",
+          "syriac": "ܒܪ",
+          "translit": "bar",
+          "skel": "ܒܪ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "prostitute",
+          "syriac": "ܬܡܬܐ",
+          "translit": "tamata",
+          "skel": "ܬܡܬܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "two",
+          "syriac": "ܬܪܝܢ",
+          "translit": "treyn",
+          "skel": "ܬܪܝܢ",
+          "root_id": "0:1996",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "sons",
+          "syriac": "ܒܢܝ",
+          "translit": "bnay",
+          "skel": "ܒܢܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "106-107",
+      "perrin_total": 10,
+      "canonical_skel": 2,
+      "canonical_root": 2,
+      "canonical_either": 2,
+      "perrin_specific_strict": 8,
+      "details": [
+        {
+          "side": "a",
+          "english": "When",
+          "syriac": "ܡܐ",
+          "translit": "ma",
+          "skel": "ܡܐ",
+          "root_id": "0:1007",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "one",
+          "syriac": "ܚܕ",
+          "translit": "had",
+          "skel": "ܚܕ",
+          "root_id": "0:595",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "man",
+          "syriac": "ܬܐܡܪܘܢ",
+          "translit": "temrun",
+          "skel": "ܬܐܡܪܘܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "say",
+          "syriac": "ܛܘܪܐ",
+          "translit": "tura",
+          "skel": "ܛܘܪܐ",
+          "root_id": "0:717",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "Mountain",
+          "syriac": "ܫܢܝ",
+          "translit": "shni",
+          "skel": "ܫܢܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "man",
+          "syriac": "ܡܐܐ",
+          "translit": "m'a",
+          "skel": "ܡܐܐ",
+          "root_id": "0:1008",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "hundred",
+          "syriac": "ܚܕ",
+          "translit": "ḥad",
+          "skel": "ܚܕ",
+          "root_id": "0:595",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "one",
+          "syriac": "ܛܥܐ",
+          "translit": "ṭ'a",
+          "skel": "ܛܥܐ",
+          "root_id": "0:742",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "went astray",
+          "syriac": "ܫܒܩ",
+          "translit": "shbaq",
+          "skel": "ܫܒܩ",
+          "root_id": "0:1809",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "he left",
+          "syriac": "ܐܡܪ",
+          "translit": "emar",
+          "skel": "ܐܡܪ",
+          "root_id": "0:125",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "107-108",
+      "perrin_total": 10,
+      "canonical_skel": 1,
+      "canonical_root": 1,
+      "canonical_either": 1,
+      "perrin_specific_strict": 9,
+      "details": [
+        {
+          "side": "a",
+          "english": "like",
+          "syriac": "ܕܡܐ",
+          "translit": "dma",
+          "skel": "ܕܡܐ",
+          "root_id": "0:455",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "sheep",
+          "syriac": "ܥܢܐ",
+          "translit": "'ana",
+          "skel": "ܥܢܐ",
+          "root_id": "0:1400",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "went astray",
+          "syriac": "ܛܥܐ",
+          "translit": "ṭ'a",
+          "skel": "ܛܥܐ",
+          "root_id": "0:742",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "ninety-nine",
+          "syriac": "ܬܫܥܐ ܘܬܫܥܝܢ",
+          "translit": "tesh'in tsha",
+          "skel": "ܬܫܥܐܘܬܫܥܝܢ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "love you",
+          "syriac": "ܫܒܐ",
+          "translit": "shba",
+          "skel": "ܫܒܐ",
+          "root_id": "0:1803",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "drinks",
+          "syriac": "ܫܬܐ",
+          "translit": "shta",
+          "skel": "ܫܬܐ",
+          "root_id": "0:1934",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "like me",
+          "syriac": "ܕܡܐ ܠܝ",
+          "translit": "dme li",
+          "skel": "ܕܡܐܠܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "i myself",
+          "syriac": "ܐܢܐ",
+          "translit": "ena",
+          "skel": "ܐܢܐ",
+          "root_id": "0:131",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "things",
+          "syriac": "ܫܒܘ",
+          "translit": "shbu",
+          "skel": "ܫܒܘ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "hidden",
+          "syriac": "ܟܣܐ",
+          "translit": "kse",
+          "skel": "ܟܣܐ",
+          "root_id": "0:916",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "108-109",
+      "perrin_total": 4,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "things",
+          "syriac": "ܫܒܘ",
+          "translit": "shbu",
+          "skel": "ܫܒܘ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "hidden",
+          "syriac": "ܟܣܐ",
+          "translit": "kse",
+          "skel": "ܟܣܐ",
+          "root_id": "0:916",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "hidden",
+          "syriac": "ܟܣܝܐ",
+          "translit": "ksya",
+          "skel": "ܟܣܝܐ",
+          "root_id": "0:917",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "wished",
+          "syriac": "ܫܒܐ",
+          "translit": "shba",
+          "skel": "ܫܒܐ",
+          "root_id": "0:1803",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "109-110",
+      "perrin_total": 6,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 6,
+      "details": [
+        {
+          "side": "a",
+          "english": "left",
+          "syriac": "ܫܒܩ",
+          "translit": "shbaq",
+          "skel": "ܫܒܩ",
+          "root_id": "0:1809",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "found",
+          "syriac": "ܐܫܟܚ",
+          "translit": "eshkaḥ",
+          "skel": "ܐܫܟܚ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "lending money at interest",
+          "syriac": "ܝܬܪ",
+          "translit": "yater",
+          "skel": "ܝܬܪ",
+          "root_id": "0:858",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "finds",
+          "syriac": "ܐܫܟܚ",
+          "translit": "eshkaḥ",
+          "skel": "ܐܫܟܚ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "becomes rich",
+          "syriac": "ܝܬܪ",
+          "translit": "yater",
+          "skel": "ܝܬܪ",
+          "root_id": "0:858",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "repudiate",
+          "syriac": "ܪܚܩ",
+          "translit": "rḥaq",
+          "skel": "ܪܚܩ",
+          "root_id": "0:1755",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "110-111",
+      "perrin_total": 4,
+      "canonical_skel": 1,
+      "canonical_root": 1,
+      "canonical_either": 1,
+      "perrin_specific_strict": 3,
+      "details": [
+        {
+          "side": "a",
+          "english": "finds",
+          "syriac": "ܐܫܟܚ",
+          "translit": "eshkaḥ",
+          "skel": "ܐܫܟܚ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "world",
+          "syriac": "ܥܠܡܐ",
+          "translit": "'alma",
+          "skel": "ܥܠܡܐ",
+          "root_id": "0:1383",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "earth",
+          "syriac": "ܐܪܥܐ",
+          "translit": "ar'a",
+          "skel": "ܐܪܥܐ",
+          "root_id": "0:223",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "finds",
+          "syriac": "ܐܫܟܚ",
+          "translit": "eshkaḥ",
+          "skel": "ܐܫܟܚ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "111-112",
+      "perrin_total": 4,
+      "canonical_skel": 0,
+      "canonical_root": 0,
+      "canonical_either": 0,
+      "perrin_specific_strict": 4,
+      "details": [
+        {
+          "side": "a",
+          "english": "finds",
+          "syriac": "ܐܫܟܚ",
+          "translit": "eshkaḥ",
+          "skel": "ܐܫܟܚ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "a",
+          "english": "himself",
+          "syriac": "ܢܦܫܗ",
+          "translit": "npshe",
+          "skel": "ܢܦܫܗ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "flesh",
+          "syriac": "ܒܣܪ",
+          "translit": "besra",
+          "skel": "ܒܣܪ",
+          "root_id": "0:288",
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "soul",
+          "syriac": "ܢܦܫ",
+          "translit": "npesh",
+          "skel": "ܢܦܫ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        }
+      ]
+    },
+    {
+      "boundary": "112-113",
+      "perrin_total": 2,
+      "canonical_skel": 1,
+      "canonical_root": 1,
+      "canonical_either": 1,
+      "perrin_specific_strict": 1,
+      "details": [
+        {
+          "side": "a",
+          "english": "woe",
+          "syriac": "ܕܘܝ",
+          "translit": "dawe",
+          "skel": "ܕܘܝ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "here",
+          "syriac": "ܗܐ",
+          "translit": "ha",
+          "skel": "ܗܐ",
+          "root_id": "0:482",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    },
+    {
+      "boundary": "113-114",
+      "perrin_total": 6,
+      "canonical_skel": 4,
+      "canonical_root": 4,
+      "canonical_either": 4,
+      "perrin_specific_strict": 2,
+      "details": [
+        {
+          "side": "a",
+          "english": "kingdom",
+          "syriac": "ܡܠܟܘܬܐ",
+          "translit": "malkuta",
+          "skel": "ܡܠܟܘܬܐ",
+          "root_id": "0:1065",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "here",
+          "syriac": "ܗܐ",
+          "translit": "ha",
+          "skel": "ܗܐ",
+          "root_id": "0:482",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "a",
+          "english": "spread out",
+          "syriac": "ܦܪܝܣܐ",
+          "translit": "parisa",
+          "skel": "ܦܪܝܣܐ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "leave",
+          "syriac": "ܬܫܒܘܩ",
+          "translit": "tashbuq",
+          "skel": "ܬܫܒܘܩ",
+          "root_id": null,
+          "matched_skel": false,
+          "matched_root": false,
+          "matched_either": false
+        },
+        {
+          "side": "b",
+          "english": "see",
+          "syriac": "ܗܐ",
+          "translit": "ha",
+          "skel": "ܗܐ",
+          "root_id": "0:482",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        },
+        {
+          "side": "b",
+          "english": "kingdom",
+          "syriac": "ܡܠܟܘܬܐ",
+          "translit": "malkuta",
+          "skel": "ܡܠܟܘܬܐ",
+          "root_id": "0:1065",
+          "matched_skel": true,
+          "matched_root": true,
+          "matched_either": true
+        }
+      ]
+    }
+  ],
+  "overall": {
+    "perrin_total": 558,
+    "canonical_skel": 131,
+    "canonical_root": 140,
+    "canonical_either": 140,
+    "perrin_specific_strict": 418
+  }
+}
