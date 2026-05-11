@@ -1,5 +1,7 @@
 # Direct verification of Perrin's Syriac-paronomasia claim
 
+> **Note (2026-05-12):** This document has been merged into the unified `FINDINGS.md`, which is now the authoritative single-source record. This file is retained for traceability but should not be cited as the primary source.
+
 **Major correction (2026-05-11, late):** the earlier "Syriac dead last" finding
 was a methodological artifact. Syriac was the only language being
 SEDRA-lemmatized while Hebrew/Greek/Arabic ran on surface forms. SEDRA

@@ -1,5 +1,7 @@
 # Proverbs 10–29 — Positive-control validation of the catchword pipeline
 
+> **Note (2026-05-12):** This document has been merged into the unified `FINDINGS.md`, which is now the authoritative single-source record. This file is retained for traceability but should not be cited as the primary source.
+
 **Question.** Does the Thomas catchword-arrangement pipeline (Phase 4 cross-lingual permutation
 test) work on a text that is *documented in the secondary literature* to be catchword-arranged?
 If yes, the method has a positive control. If no, the Thomas signal is uninterpretable.

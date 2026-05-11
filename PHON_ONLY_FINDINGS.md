@@ -1,5 +1,7 @@
 # Phonological-only cross-linguistic permutation test — pipeline limitation confirmed
 
+> **Note (2026-05-12):** This document has been merged into the unified `FINDINGS.md`, which is now the authoritative single-source record. This file is retained for traceability but should not be cited as the primary source.
+
 **Question.** The original cross-linguistic permutation test mixed three catchword types
 (semantic, phonological, etymological). The Proverbs positive control revealed that **Hebrew
 does not lead on Proverbs** (median variant-sweep z = 1.76 in Hebrew vs 4.38 in Syriac), even

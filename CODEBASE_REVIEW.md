@@ -1,5 +1,7 @@
 # Codebase review — comprehensive audit + test suite
 
+> **Note (2026-05-12):** This document has been merged into the unified `FINDINGS.md`, which is now the authoritative single-source record. This file is retained for traceability but should not be cited as the primary source.
+
 After the SEDRA-tokenization bug class was caught the hard way during the
 Perrin verification work, the user requested a comprehensive review of every
 moving part in the pipeline to verify it gives actual, defensible results.

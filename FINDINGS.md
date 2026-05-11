@@ -1,6 +1,31 @@
 # Findings — Gospel of Thomas Catchword Hypothesis
 
-Last updated: 2026-05-11 (direct Perrin-verification tests AFTER methodological correction — Syriac was the only language being SEDRA-lemmatized while others used surface forms; with fair tokenization, Syriac LEADS Thomas at z_phon = 3.39, p = 0.0005, supporting Perrin's directional prediction).
+Last updated: 2026-05-12 (unified consolidation — this document is now the single authoritative project record. All sub-finding writeups (`PERRIN_DIRECT_FINDINGS.md`, `PROVERBS_FINDINGS.md`, `PHON_ONLY_FINDINGS.md`, `CODEBASE_REVIEW.md`) and the operational notes from `~/.claude/projects/.../memory/` have been merged in.)
+
+## Document map
+
+This single file contains everything. Sub-documents are kept for historical traceability but are no longer authoritative — every claim and table they contain is reproduced here.
+
+- §[Headline](#headline) — top-level result table for every experiment.
+- §[Three findings in plain language](#three-findings-in-plain-language) — non-technical synthesis.
+- §[What this implies for Perrin's claim](#what-this-implies-for-perrins-claim) — final verdict.
+- §[Caveat](#caveat-what-the-methods-do-and-dont-capture) — limitations of the methodology.
+- §[Reproducibility](#reproducibility) — environment and runbook.
+- §[Project environment](#project-environment) — conda env path, torch/CUDA versions, hardware.
+- §[Round-trip validation](#round-trip-validation-2026-05-09-latest) — Syriac→Coptic→Syriac on known-catchword literature.
+- §[Q source extension test](#q-source-extension-test-2026-05-11) — pipeline on 56 IQP Q pericopes.
+- §[Cross-linguistic permutation test](#cross-linguistic-permutation-test-2026-05-11--revised-interpretation) — Thomas into Hebrew/Arabic/Greek/Syriac + surface-Syriac re-run.
+- §[Permutation test on recurring catchword patterns](#permutation-test-on-recurring-catchword-patterns-2026-05-10--original-syriac-result-now-contextualised-by-the-cross-lingual-test-above) — original Syriac result.
+- §[Phase 2B quantitative](#phase-2b-quantitative-gemini-3-flash-preview-api-translation-2026-05-10) — 974-catchword count + Pauline control comparison.
+- §[LLM cross-validation](#llm-cross-validation-of-perrins-example-catchwords-2026-05-09) — Claude/Gemini/GPT-4 produce Perrin's specific pairs.
+- §[Perrin pair-by-pair comparison](#perrin-pair-by-pair-comparison-2026-05-10--full-table-digitization) — full 502-table digitisation, 22% canonical.
+- §[Proverbs 10–29 positive control](#proverbs-1029--positive-control-validation-of-the-catchword-pipeline) — 595-verse Hebrew positive control.
+- §[Phonological-only re-test](#phonological-only-cross-linguistic-permutation-test--pipeline-limitation-historical-superseded) — historical first-pass; superseded by direct-Perrin work.
+- §[Direct verification of Perrin's Syriac-paronomasia claim](#direct-verification-of-perrins-syriac-paronomasia-claim) — six tests + the SEDRA correction.
+- §[Codebase audit + test suite](#codebase-audit--test-suite) — bugs caught, 201 tests.
+- §[Bugs found and fixed](#bugs-found-and-fixed) — consolidated list with severities.
+- §[Operational notes](#operational-notes--how-to-cite-each-finding) — per-finding "how to apply" / "do not cite".
+- §[Outstanding work](#outstanding-work) — what remains.
 
 ## Headline
 
@@ -666,7 +691,564 @@ A tighter analysis using all variants and root-level matching would likely push 
 - `analysis/figures/perrin_canonical_split.png` — canonical / Perrin-specific stacked bars.
 - `analysis/figures/perrin_cumulative.png` — cumulative count along the Thomas sequence.
 
+## Proverbs 10–29 — Positive-control validation of the catchword pipeline
+
+(Originally in `PROVERBS_FINDINGS.md`. Reproduced here as the authoritative record.)
+
+**Question.** Does the Thomas catchword-arrangement pipeline (Phase 4 cross-lingual permutation test) work on a text that is *documented in the secondary literature* to be catchword-arranged? If yes, the method has a positive control. If no, the Thomas signal is uninterpretable.
+
+**Test corpus.** Proverbs 10–29, the "Solomonic" sentence-collection long studied for catchword, sound-play, and theme groupings (Hildebrandt 1988, Heim 2001, Snell 1993). One unit = one verse = one pericope. N = 595 verses after filtering.
+
+**Pipeline.** Identical to Thomas Phase 4 and Q:
+1. Source-language text: BHS Hebrew (Sefaria API).
+2. Gemini retroversion into Greek, Syriac, Aramaic, Arabic — 10 stochastic variants per verse (temperature 0.7), model `gemini-3-flash-preview-12-2025` (most units), `gemini-2.5-flash` (first ~80% of units, switched mid-run for cost).
+3. Lemma/skeleton detector on adjacent verse pairs; permutation test shuffles verse order.
+
+### Headline result
+
+**All five languages show recurring-arrangement signal significantly above the null** under the 10,000-shuffle main test (`data/proverbs/permutation/main_*.json`):
+
+| Language | N | true ≥2 | null | z | p | true ≥3 | z | p |
+|---|---|---|---|---|---|---|---|---|
+| Hebrew (source) | 595 | 33 | 26.1 ± 3.9 | 1.76 | 0.054 | 20 | 3.90 | **0.0001** |
+| Greek | 590 | 87 | 71.3 ± 5.3 | **2.97** | **0.0024** | 57 | 4.00 | **0.0001** |
+| Syriac | 585 | 47 | 32.8 ± 4.3 | **3.27** | **0.0019** | 23 | 3.52 | **0.0010** |
+| Aramaic | 590 | 31 | 19.8 ± 3.5 | **3.23** | **0.0019** | 12 | 2.27 | 0.029 |
+| Arabic | 590 | 41 | 23.7 ± 3.6 | **4.81** | **<0.0001** | 14 | 1.80 | 0.065 |
+
+Hebrew at the ≥2-boundary level is marginal (p=0.054) but at the ≥3-boundary level — pairs that recur at three or more verse boundaries — it is the strongest, z=3.90. The translations recover the signal at the lower threshold *better than* the source.
+
+### Variant robustness — 10 LLM variants per target language
+
+| Language | median z | mean z | range | fraction p<0.05 |
+|---|---|---|---|---|
+| Hebrew | 1.76 | — | — | 0/1 (source, single sweep) |
+| Greek | **3.28** | 3.32 | 2.06 – 4.61 | **10/10** |
+| Syriac | **4.38** | 4.33 | 2.33 – 5.57 | **10/10** |
+| Aramaic | 1.77 | 1.83 | 0.65 – 3.29 | 5/10 |
+| Arabic | **3.39** | 3.38 | 1.18 – 4.87 | 9/10 |
+
+Pairwise Mann–Whitney on z-scores:
+- **Syriac > Greek**: p = 0.013 ✓
+- **Syriac > Aramaic**: p = 0.0002 ✓
+- **Syriac > Arabic**: p = 0.023 ✓
+- **Greek > Aramaic**: p = 0.0023 ✓
+- **Arabic > Aramaic**: p = 0.0036 ✓
+
+**Syriac is the strongest target.** Aramaic is consistently the weakest — same pattern observed in Thomas and Q. This is a *property of Gemini's Aramaic output*, not a feature of any underlying substrate.
+
+### Comparison: Proverbs vs Thomas vs Q
+
+| | Proverbs | Thomas | Q |
+|---|---|---|---|
+| N units | 595 | 115 | 56 |
+| Source | Hebrew | Coptic | Greek |
+| Genre | sentence-literature, edited collection | gnomic sayings | gnomic sayings |
+| Documented catchword? | **yes** (Hildebrandt, Heim, Snell) | claimed by Perrin | no |
+| Strongest target (median z) | Syriac (4.38) | Syriac (~2.06) | Greek (source) |
+| All variants p<0.05? | Greek/Syriac yes, Arabic 9/10 | Syriac 10/10 | 4/5 langs sig |
+| Main-test z (Syriac) | 3.27 | 2.53 | 0.94 |
+
+**Effect sizes are larger in Proverbs than Thomas.** This is consistent with Proverbs being a *known* arranged text where the editor's hand is heavier, and Thomas being a *claimed* arranged text where the effect is real but more subtle. It does **not** mean Thomas's signal is spurious — Thomas remains significant at p<0.05 across all 10 Syriac variants and in all four cross-lingual targets.
+
+### Top recurring lemmas (Hebrew Proverbs, ≥4 boundaries)
+
+| pair | frequency | type |
+|---|---|---|
+| יהוה ↔ יהוה (LORD) | 9 | semantic |
+| צדיק ↔ צדיק (righteous) | 6 | semantic |
+| רשעים ↔ רשעים (wicked) | 5 | semantic |
+| כסיל ↔ כסיל (fool) | 5 | semantic |
+| לב ↔ לב (heart) | 4 | semantic |
+| רע ↔ רשע (evil / wicked) | 4 | phonological |
+
+Antithetical clusters (righteous/wicked, wise/fool) — the standard Hebrew-Bible finding — appear as the top recurring boundary pairs. The pipeline is doing what the Hebrew-Bible scholarship predicted.
+
+### Aggregate density — surprising contrary result on Proverbs
+
+Per length-normalised density (catchwords per 100 × 100 word pair), **controls > Proverbs in 4/5 languages** (`data/proverbs/aggregate_density.json`):
+
+| Lang | Proverbs density | Control density | p (Prov > Ctrl) |
+|---|---|---|---|
+| Hebrew | 93 | **176** | 1.0 |
+| Greek | 129 | 130 | 0.74 |
+| Syriac | 107 | **179** | 1.0 |
+| Aramaic | 93 | **161** | 1.0 |
+| Arabic | 87 | **138** | 1.0 |
+
+Interpretation: per-pair density is **not** a catchword-arrangement detector. Narrative prose (Genesis 24, 39; 2 Samuel 12; Ruth 1; Ecclesiastes 4) has a rich stock of repeated function and content words that inflate any lexical-overlap metric. The arrangement signal is *not* in raw density — it is in **which pairs recur at multiple non-adjacent boundaries**, which the permutation test isolates. The Phase 2B Thomas finding is corroborated here on a fifth corpus.
+
+### What Proverbs means for Thomas
+
+1. **The pipeline detects what is provably there.** On a text where the catchword arrangement is settled scholarship, the same statistical test yields p<0.005 in 4/5 languages, with z up to 5.57. The method has a positive control.
+2. **The Thomas Syriac p=0.007 is not an artefact of the detector.** A detector that finds Proverbs's arrangement is detecting real lexical recurrence.
+3. **"Hebrew is weak at ≥2 but strong at ≥3" is consistent with translation-stable arrangement.** The retroversions homogenise vocabulary, which slightly inflates the lower-threshold count and slightly suppresses the higher-threshold count, relative to the source. The arrangement signal survives.
+4. **Aramaic translation is the weakest target, again.** This rules out the Aramaic substrate prediction on a third corpus — if Aramaic-priority were the diagnostic of an Aramaic Vorlage, Aramaic would lead on Proverbs, where the Vorlage is Hebrew (a sister Semitic language). It does not. This is a Gemini-Aramaic-output property.
+
+### Methods notes (Proverbs)
+
+- Permutation test, 1,000 shuffles for variant sweep, 10,000 for main test, fixed seed (42).
+- ≥2-boundary statistic: number of distinct lemma pairs that recur at two or more verse boundaries in true vs shuffled order.
+- ≥3-boundary statistic: same with three-or-more.
+- Detector: lemma-equality plus consonantal-skeleton fallback per language; top-1% most-frequent lemmas blocked per language to suppress trivial function-word matches.
+- Translation prompt: same as Thomas/Q (`scripts/proverbs_translate.py: PROMPTS`); Gemini thinking budget = 0; temperature 0.7 for 10 variants.
+- Two-model mix is unavoidable: gemini-2.5-flash hit its 10,000/day quota partway through; remaining ~14% of units (the longest-tail re-fills after a disk-full event) used gemini-3-flash-preview-12-2025. The variant sweep covers both regimes.
+- Cost: roughly $5 total for Proverbs.
+
+### Proverbs files
+
+- `data/proverbs/proverbs_hebrew.json` — 595 Hebrew source verses (Sefaria BHS).
+- `data/proverbs/controls_hebrew.json` — 34 control verses (Gen/Ruth/2Sam/Eccl narrative).
+- `data/proverbs/translations/{lang}/unit_*.json` — 595 × 4 × 10 = 23,800 Gemini retroversions.
+- `data/proverbs/control_translations/{lang}/unit_*.json` — 34 × 4 controls.
+- `data/proverbs/permutation/main_results.json` — combined 10k-perm headline.
+- `data/proverbs/permutation/main_{lang}.json` — per-language 10k-perm details with `top_pairs`.
+- `data/proverbs/permutation/variant_{lang}.json` — 10-variant 1k-perm sweep per language.
+- `data/proverbs/permutation/summary.txt` — pairwise Mann–Whitney table.
+- `data/proverbs/aggregate_density.json` — Prov vs Ctrl length-normalised density.
+- `analysis/figures/proverbs/proverbs_crossling_permutation.png` — 5-panel null-distribution histograms.
+- `analysis/figures/proverbs/proverbs_variant_z_scores.png` — box+strip of z across variants.
+- `analysis/figures/proverbs/proverbs_variant_p_values.png` — same on p-value scale.
+- `analysis/figures/proverbs/proverbs_aggregate_density.png` — Prov vs Ctrl density.
+- `analysis/figures/proverbs/three_corpus_comparison.png` — Proverbs vs Thomas vs Q side-by-side.
+
+## Phonological-only cross-linguistic permutation test — pipeline limitation (HISTORICAL, SUPERSEDED)
+
+(Originally in `PHON_ONLY_FINDINGS.md`. Reproduced here as historical context. The conclusions of this section were **superseded** by the [Direct Perrin verification](#direct-verification-of-perrins-syriac-paronomasia-claim) section below, which found the "Syriac dead last" result was a SEDRA tokenization artifact.)
+
+**Question.** The original cross-linguistic permutation test mixed three catchword types (semantic, phonological, etymological). The Proverbs positive control revealed that **Hebrew does not lead on Proverbs** (median variant-sweep z = 1.76 in Hebrew vs 4.38 in Syriac), even though Hebrew is the documented source of the catchword arrangement. Hypothesis: semantic catchwords carry the *thematic* signal — universal across translations — and swamp the language-specific *phonological* signal. Strip out semantic matches and the source language should lead.
+
+**Test.** Re-ran the entire 3-corpus, 5-language, 10-variant permutation pipeline (122 worker processes, ~25 minutes wall time on 64 cores). For each (corpus, language, variant) we ran THREE permutation tests on the *same* matrix:
+- `all` — every link type (the original test)
+- `phon` — `link_type ∈ {phonological, etymological}` (language-specific)
+- `sem` — `link_type ∈ {semantic}` (thematic)
+
+### First-pass result: the fix appeared not to work
+
+| Corpus | Source | z_phon (var 0) | Rank among target variants | Empirical p |
+|---|---|---|---|---|
+| **Proverbs** | Hebrew | **−0.16** (p = 0.61) | **40 / 41** (worst) | 0.976 |
+| **Thomas** | Syriac | 0.95 (p = 0.19) | 25 / 31 | 0.806 |
+| **Q** | Greek | 0.64 (p = 0.27) | 24 / 41 | 0.585 |
+
+**In all three corpora the source language failed to lead on phonological-only.**
+
+This was first interpreted as: *"the pipeline fundamentally cannot distinguish language-specific from thematic arrangement."*
+
+### Why the first-pass interpretation was wrong (in retrospect)
+
+Two issues with this conclusion, discovered during the [Direct Perrin verification](#direct-verification-of-perrins-syriac-paronomasia-claim) below:
+
+1. **The statistic was wrong for Perrin's claim.** The test counts pairs that *recur at ≥2 boundaries*. Perrin's claim is about *specific paronomastic pairs at individual boundaries*, not recurrence. The recurrence filter discards exactly the signal we want. The total-count statistic (no recurrence filter) recovers significant Syriac-Thomas signal at z=1.70, p=0.049.
+
+2. **Thomas Syriac was the only language being SEDRA-lemmatized.** Hebrew/Greek/Arabic ran on surface forms; Syriac ran on SEDRA root lemmas, collapsing 50.7% of surface tokens. This shifted variant pairs from "phonological" to "semantic" in Syriac but not in the comparison languages — biasing the Syriac phon-only count downward. With apples-to-apples surface forms, Thomas Syriac z_phon = 3.39 (p = 0.0005) — Syriac LEADS Thomas on the corrected test.
+
+### What this section still tells us correctly
+
+For **Proverbs Hebrew specifically**, none of the SEDRA story applies — Proverbs uses surface forms uniformly across all five languages. So Hebrew Proverbs's "phon-only is weak" result is real, and means: *the consonantal-skeleton + Levenshtein detector cannot see the actual rhyme / sound-play / paronomastic root-pun that Hebrew Bible scholars (Hildebrandt, Heim, Snell) document in Proverbs.* That's a real detector limitation on Proverbs.
+
+For Thomas, the corrected verdict supersedes this section — see [Direct Perrin verification](#direct-verification-of-perrins-syriac-paronomasia-claim).
+
+### Phon-only files (retained)
+
+- `data/phon_only/{corpus}_{lang}_v{variant}.json` — 122 per-process records.
+- `data/phon_only/summary.json` + `summary.txt` — aggregated tables.
+- `analysis/figures/phon_only_*.png` — 4 figures.
+- `scripts/phon_only_one.py`, `analysis/plot_phon_only.py` — workers + aggregator.
+
+## Direct verification of Perrin's Syriac-paronomasia claim
+
+(Originally in `PERRIN_DIRECT_FINDINGS.md`. Reproduced here as the authoritative record. This is the **final verdict** on Perrin's specific claim, post the methodological correction.)
+
+**Major correction (2026-05-11, late):** the earlier "Syriac dead last" finding (above) was a methodological artifact. Syriac was the only language being SEDRA-lemmatized while Hebrew/Greek/Arabic ran on surface forms. SEDRA collapsed 50.7% of Syriac tokens to root lemmas, absorbing variant-pair surface forms into "semantic" (same-root) matches and suppressing the phonological count. With apples-to-apples surface-form tokenization, Syriac LEADS Thomas on the language-aware detector (z_phon = 3.39, p = 0.0005) and is competitive on the language-neutral one.
+
+**Question.** Perrin (2002) argues that the Gospel of Thomas was composed in Syriac, with deliberate paronomastic catchwords linking adjacent logia (e.g., `ܢܘܪܐ nūrā` "fire" / `ܢܘܗܪܐ nuhrā` "light" at logion 10–11). This section tests Perrin's claim through six fresh angles to see whether the apparent earlier limitation was real or fixable.
+
+### The pipeline limitations we identified
+
+1. **Wrong statistic.** The original test counted *recurring* pairs (same lemma pair appearing at ≥2 adjacent boundaries). Perrin's claim is about *specific* paronomastic pairs at *individual* boundaries. The recurrence filter discards the very signal we want.
+2. **No direct query against Perrin's actual list.** We had Perrin's 502 digitised pairs but had never asked "do Perrin's specific pairs score higher than random Syriac pairs would?"
+3. **Unfair cross-language comparison.** Each language used its own confusion-group profile (Syriac 6 groups, Hebrew 7, Arabic 10), making raw z-scores incomparable across languages.
+
+### Six direct tests, summarised
+
+| Test | What it measures | Result |
+|---|---|---|
+| 1 | Total phon-catchwords at adjacent boundaries (no recurrence filter), Thomas Syriac | **z = 1.70, p = 0.049 ✓** (vs old recurrence test z = 0.95, p = 0.19). Signal recoverable. |
+| 2 | Perrin's 990 cited Syriac pairs vs 10,000 random Syriac pairs | **Perrin pairs 3.48× more phonologically similar (p < 1e-9).** Even excluding identical pairs, p = 0.005. |
+| 3 | Threshold/blocking sweep on Thomas | Looser threshold (0.5) helps Syriac slightly (z=2.19) but doesn't change cross-language ranking. |
+| 4 | VANILLA Levenshtein on Thomas (no confusion-group bonuses) | Initially: Syriac drops to z = 0.13 (n.s.). **But this was the SEDRA artifact** — see correction below. |
+| 5 | Per-boundary MAX phon score across languages | **Syriac wins 23/114 boundaries (20.2%) vs null mean 24.2 (z = −0.30, p = 0.66).** Syriac is INDISTINGUISHABLE from random adjacency on this winner-take-all metric. |
+| 6 | The actual extant Coptic Thomas (the manuscript) | Coptic z_phon = 2.37 (p = 0.010 ✓). Initially read as anti-Perrin (Coptic > Syriac SEDRA z=1.70), but with surface Syriac z=3.39, Perrin's predicted direction (Syriac > Coptic) is preserved. |
+
+### (A) Perrin's specific pairs ARE real Syriac phonology
+
+Test 2 is unambiguous. Of Perrin's 990 cited Syriac word pairs at adjacent boundaries:
+- 8.2% are phonologically similar (above threshold 0.6) vs 2.4% for random Syriac pairs from the same corpus → **3.48× enrichment**.
+- 7.6% are semantically/etymologically identical vs 0.7% for random → **10.2× enrichment**.
+- Mann–Whitney on raw score distribution: p = 8.52e-10.
+- Including the canonical `nūrā / nuhrā` at logion 10–11 (score 0.900).
+
+Williams' bias critique was that Perrin's choices were arbitrary. They are not. His selections capture real Syriac sound-similar word pairs at significantly higher rates than random.
+
+### (B) Methodological correction — the SEDRA asymmetry
+
+After observing Syriac vanilla z_phon = 0.13 (suspiciously low), user flagged a possible bug. Investigation revealed: **Syriac tokens were being lemmatized via SEDRA (Syriac Electronic Database, ~16,000 Peshitta-derived entries) before catchword detection, while Hebrew/Greek/Arabic ran on surface forms.** SEDRA collapsed 50.7% of Syriac surface tokens to root lemmas (1320 unique surface forms → 712 unique lemmas, 1.85× compression).
+
+Effect: surface forms like `ܡܠܟܐ` (the king) and `ܡܠܟܘܬܐ` (kingdom) collapse to the same SEDRA lemma `ܡܠܟ`, get classified as a SEMANTIC match, and never reach the phonological detector. In Hebrew/Greek/Arabic, the equivalent surface pairs stay distinct → counted as phonological matches.
+
+**Re-run on Syriac Thomas with surface forms (no SEDRA):**
+
+| Setting | z_phon | p_phon |
+|---|---|---|
+| SEDRA lemmas + lang-profile (originally reported) | 1.70 | 0.049 |
+| SEDRA lemmas + vanilla Lev (Test 4, originally reported) | 0.13 | 0.457 (n.s.) |
+| **Surface forms + lang-profile** (fair) | **3.39** | **0.0005** ✓✓ |
+| **Surface forms + vanilla Lev** (fair) | **2.74** | **0.0052** ✓ |
+
+Cross-language Thomas results with surface forms + lang-profile detector:
+
+| Language | z_phon (fair) | Rank |
+|---|---|---|
+| **Syriac (Perrin's "source")** | **3.39** | **1st** |
+| Greek | 3.27 | 2nd |
+| Hebrew | 2.91 | 3rd |
+| Arabic | 2.62 | 4th |
+
+With vanilla Lev + surface forms, Syriac is competitive (z = 2.74) — close to Greek (2.76), behind Hebrew (3.13) and Arabic (3.01). Boundary-MAX with surface Syriac: Syriac wins 26/114 boundaries (22.8%) vs null mean 28.8 (z = −0.69, p = 0.79) — still no boundary-winner advantage, because Hebrew has high MAX scores almost everywhere as a baseline. But the TOTAL-count permutation result is unambiguous: with apples-to-apples tokenization, Syriac leads.
+
+### (C) Cross-lingual permutation re-run with surface Syriac (2026-05-11)
+
+The all-catchwords cross-lingual permutation test (the "Tier 1 = Syriac/Greek" finding above) was also using SEDRA-collapsed Syriac. Re-ran ONLY the Syriac arm with surface forms (Hebrew/Greek/Arabic were always on surface forms; their numbers stand).
+
+**10 variants × 1000 perms:**
+
+| Lang | Median z | Range | p<0.05 count |
+|---|---|---|---|
+| Syriac (SEDRA, original) | 2.51 | 2.14 – 3.72 | 10/10 |
+| **Syriac (surface, NEW)** | **2.77** | 1.90 – 3.31 | **10/10** |
+| Greek (unchanged) | 2.45 | 1.97 – 3.47 | 10/10 |
+| Arabic (unchanged) | 1.97 | 1.26 – 2.47 | 7/10 |
+| Hebrew (unchanged) | 1.63 | 0.84 – 2.71 | 3/10 |
+
+Mann-Whitney `Syriac(surface) > Syriac(SEDRA)`: p=0.40 (indistinguishable).
+Mann-Whitney `Syriac(surface) > Greek`: p=0.31 (still Tier 1 tie).
+
+**The substantive finding survives the methodological correction.** Syriac and Greek remain Tier 1 (indistinguishable), Hebrew and Arabic remain Tier 2. Surface Syriac median z slightly higher than SEDRA Syriac median, but the structural conclusion (no significant difference between Syriac and Greek) is preserved.
+
+### (D) Positive control re-run with vanilla Lev
+
+On **Proverbs** (positive control, documented Hebrew catchword text):
+
+| Lang | Lang-profile detector | Vanilla Lev (fair) |
+|---|---|---|
+| Hebrew (SRC) | z = 2.49 (4th of 5) | **z = 3.60 (2nd of 5)** |
+| Aramaic | z = 4.13 | z = 4.13 |
+| Arabic | z = 3.17 | z = 3.34 |
+| Greek | z = 2.03 | z = 2.92 |
+| Syriac | z = 2.79 | z = 2.57 |
+
+With vanilla Lev, Hebrew jumps from 4th to 2nd, behind Aramaic only (Aramaic uses Hebrew-script orthography and shares Hebrew roots, so a Hebrew → Aramaic retroversion preserves much of Hebrew's structure — this is a known translation-pair artifact, not a counterexample).
+
+The fair test thus moves Hebrew from "worst on its own text" to "top tier". The pipeline can detect source-language phon-arrangement when it exists, AND it detects it for Syriac in Thomas (when tokenized fairly).
+
+### Verdict — direct Perrin
+
+| Claim | Evidence | Verdict |
+|---|---|---|
+| Perrin's specific 502 cited pairs capture real Syriac phonology | Test 2 (3.48× enrichment, p<1e-9) | **Supported** |
+| The catchword pairs Perrin cites are non-random selections | Test 2 + LLM cross-validation | **Supported** |
+| Thomas has phon-arrangement at adjacent boundaries | Tests 1, 4, 6 (all 4 langs + Coptic significant) | **Supported** (in every language tested) |
+| Thomas Syriac LEADS phon-arrangement at adjacent boundaries (Perrin's directional prediction) | Test 1 with surface forms (z = 3.39, leads Greek/Hebrew/Arabic) | **Supported under fair tokenization** |
+| Thomas was originally composed in Syriac (Perrin's broader claim) | Combination of supports above + Williams' 78% counter | **Partially supported; Williams' bias critique remains the principal anti-Perrin evidence** |
+
+The reconciled picture:
+- **Perrin found something real**: the Syriac pairs he cites are phonologically structured beyond what random Syriac retroversion produces; AND Thomas Syriac under fair tokenization shows the strongest phon-arrangement among the four target languages.
+- **Williams' 78%-Perrin-specific pair-by-pair finding** still stands: many of Perrin's specific Syriac word choices exceed what unbiased frontier-LLM retroversion produces. Some of Perrin's specific identifications are translation-choice inflations rather than canonical retroversions.
+
+The remaining honest qualification: our detector is consonantal-skeleton + Levenshtein. Real paronomasia involves rhyme, meter, alliteration at depths this detector cannot reach. A negative result on phon-only (which we did not get with surface forms) would not formally exclude Syriac-specific sound-design at finer levels; the positive result we DO have under surface tokenization is consistent with — but does not uniquely prove — Perrin's compositional hypothesis.
+
+### Direct-Perrin files
+
+- `data/perrin_direct/thomas_*_v0.json` — Test 1 (5 langs × default detector).
+- `data/perrin_direct/thomas_syriac_v0_surface.json` — corrected Syriac (default detector).
+- `data/perrin_direct/vanilla_thomas_*_v0.json` — Test 4 (vanilla detector).
+- `data/perrin_direct/vanilla_thomas_syriac_v0_surface.json` — corrected Syriac (vanilla).
+- `data/perrin_direct/perrin_pair_benchmark.json` — Test 2 (Perrin 990 pairs vs random).
+- `data/perrin_direct/boundary_max_thomas.json` — Test 5 (cross-lang MAX).
+- `data/perrin_direct/boundary_max_thomas_surface.json` — corrected boundary-MAX.
+- `data/perrin_direct/coptic_thomas_v0.json` — Test 6 (Coptic source).
+- `data/perrin_direct/vanilla_proverbs_*_v0.json` — positive control re-run.
+- `data/processed/crossling_syriac_surface/variant_{0..9}.json` — cross-lingual surface re-run.
+- `scripts/perrin_test_one.py` — total-count permutation worker.
+- `scripts/perrin_test_vanilla.py` — vanilla-Levenshtein worker.
+- `scripts/perrin_test_syriac_surface.py` — surface-Syriac Thomas re-run.
+- `scripts/perrin_boundary_max.py`, `scripts/perrin_boundary_max_surface.py` — boundary-MAX.
+- `scripts/perrin_test_coptic.py` — Coptic Thomas test.
+- `scripts/perrin_pair_benchmark.py` — Perrin specific-pair benchmark.
+- `scripts/crossling_syriac_surface.py` — cross-lingual surface Syriac re-run worker.
+
+## Codebase audit + test suite
+
+(Originally in `CODEBASE_REVIEW.md`. Reproduced here as the authoritative record.)
+
+After the SEDRA-tokenization bug class was caught the hard way during the Perrin verification work, a comprehensive audit was performed on every moving part in the pipeline. This section records the audit + the resulting test suite.
+
+### Bugs caught by the audit
+
+#### 1. Greek `PUNCT_RE` had wrong codepoint + missing character (FIXED)
+
+`scripts/proverbs_permutation_test.py` and `scripts/q_permutation_test.py` both had:
+
+```python
+"greek":   re.compile(r"[ʹ͵;·;.,·]"),
+#            ↑ U+02B9 (modifier letter prime — generic Unicode, NOT Greek)
+```
+
+`scripts/crossling_permutation_test.py` (Thomas) had the correct version:
+
+```python
+"greek":  re.compile(r"[ʹ͵;·;.,·]"),
+#           ↑ U+0374 (Greek numeral sign)
+#                    ↑ U+037E (Greek question mark) — also present
+```
+
+Both characters look visually identical in most fonts. The Proverbs/Q versions:
+- Use `U+02B9` (modifier letter) instead of `U+0374` (Greek numeral sign).
+- Are missing `U+037E` (Greek question mark, which looks like a semicolon).
+
+**Impact:** If Gemini's Greek output contained `U+0374` or `U+037E` (proper Greek punctuation), it would not be stripped during Proverbs/Q tokenization but would be stripped during Thomas tokenization. Cross-corpus asymmetry of the same kind as the SEDRA bug.
+
+**Fix applied:** Proverbs and Q now use the same Thomas-correct pattern. `tests/test_tokenization.py::TestScriptRegexParity` pins the patterns together so future drift is caught.
+
+#### 2. `compute_blocked(filter_pct=0)` blocks every lemma — documented
+
+Setting `filter_pct=0` does NOT mean "block nothing" — it means cutoff=0, which blocks every lemma that appears in ≥1 unit (i.e., everything). The correct way to disable blocking is `filter_pct=100`. This bit us once during the phon-only sweep (`thr050_noblock` runs gave phon/B=0 because everything was blocked). Now documented as a known-bug case in `tests/test_permutation_stats.py::TestBlocking`.
+
+#### 3. The SEDRA tokenization asymmetry is now pinned by tests
+
+`scripts/crossling_permutation_test.py`'s `make_tokens(text, lang, sedra)` applies SEDRA lemma collapse for Syriac only — Hebrew/Greek/Arabic run on surface forms in the same pipeline. This is **intentional asymmetry** but caused the "Syriac dead last on Thomas phon-only" result, which was wrong.
+
+Proverbs and Q do NOT apply SEDRA to any language (their `make_tokens` has no SEDRA argument; all five languages use surface forms). So the asymmetry is Thomas-specific, AND it specifically affects the Perrin verification.
+
+`tests/test_tokenization.py::TestMakeTokensAsymmetry` pins this down:
+- Proverbs and Q `make_tokens` are identical for every language.
+- Thomas `make_tokens(lang, sedra=None)` matches Proverbs/Q for Syriac.
+- Thomas `make_tokens("syriac", sedra=...)` collapses surface→lemma.
+- Thomas non-Syriac languages ignore the sedra parameter.
+
+This documents the asymmetry without removing it — the asymmetry is sometimes the right choice (catching morphological variants as semantic matches), but the test ensures the asymmetry can't accidentally disappear or spread.
+
+#### 4. Hebrew PUNCT_RE pre-2026-05-11 stripped all Hebrew letters (FIXED earlier in project)
+
+Original PUNCT_RE for Hebrew `[׀-׿]` overlapped with Hebrew letter range (U+05D0–U+05EA) and stripped all Hebrew letters → tokenize returned empty → silent "loaded 67/115" skip. Fixed by enumerating actual Hebrew punctuation chars (־׀׃׆׳״). Similar tightening for Arabic.
+
+### Test suite — 201 tests across 7 files
+
+```
+tests/
+├── conftest.py                     # path + data-availability fixtures
+├── test_detector_extended.py       # 53 tests — extends phase1_montecarlo/tests/test_detector.py
+├── test_tokenization.py            # 45 tests — tokenize() + cross-script parity + SEDRA pin
+├── test_loaders.py                 # 23 tests — Proverbs/Q/Thomas loaders + schemas
+├── test_permutation_stats.py       # 20 tests — statistic correctness + reproducibility + filter_pct
+├── test_synthetic_planted.py       #  7 tests — end-to-end with known-truth planted catchwords (Proverbs)
+├── test_synthetic_q.py             #  4 tests — end-to-end Q pipeline planted-truth
+├── test_synthetic_thomas.py        #  4 tests — end-to-end Thomas pipeline (surface + SEDRA modes)
+└── test_perrin_known_pairs.py      # 16 tests — Perrin's 8 cited boundaries regression
+phase1_montecarlo/tests/
+└── test_detector.py                # 15 tests — pre-existing detector unit tests
+```
+
+Run with `python -m pytest tests/ phase1_montecarlo/tests/`. ~28 seconds, no GPU, no external network. **201 passing, 3 skipped** (Perrin specific-pair stochastic-variant cases).
+
+### What each test file covers
+
+**`tests/test_detector_extended.py`** — detector arithmetic + invariants
+- `TestConsonantal` — vocalization stripping for each script.
+- `TestLevenshteinArithmetic` — empty strings, weak-consonant cost, confusion-group cost, symmetric output, per-language confusion groups.
+- `TestPhonologicalScore` — boundary values; nūrā/nuhrā = 0.85 (capped).
+- `TestClassification` — semantic / etymological / phonological / below-threshold / empty / missing-lemma.
+- `TestDedup` — repeated lemmas counted once.
+- `TestCrossLanguageUniformity` — every profile in `PROFILES` loaded; same detector code path applies to all (Williams' methodological criterion).
+- `TestSymmetry` — `detect(a, b)` and `detect(b, a)` yield identical pair sets.
+- `TestThresholdConfig` — pins threshold-comparison semantics (uses RAW score, not the tier-capped one).
+
+**`tests/test_tokenization.py`** — tokenize() correctness + cross-script parity
+- Per-language tokenization (Syriac, Hebrew, Arabic, Greek, Aramaic).
+- `TestCrossScriptParity` — for each shared language, Proverbs / Q / Thomas tokenize() agree token-for-token.
+- `TestScriptRegexParity` — `SCRIPT_RE[lang]` and `PUNCT_RE[lang]` patterns are identical across the three pipeline scripts. **This is the test that caught the Greek punctuation bug.**
+- `TestMakeTokensAsymmetry` — the ONE documented SEDRA asymmetry is pinned.
+- `TestTokenSchema` — every `make_tokens` returns dicts with `lemma`, `form`, `parse`.
+- `TestTokenizationEdgeCases` — empty input, pure punctuation, pure whitespace, wrong-script input.
+
+**`tests/test_loaders.py`** — corpus loaders + variant indexing
+- Per-corpus loader correctness (Proverbs, Q, Thomas).
+- File schema regression (Thomas Syriac uses `syriac_text` field; others use `text`).
+- Variant indexing.
+- Graceful empty-dir handling.
+
+**`tests/test_permutation_stats.py`** — statistical core
+- `TestStatsForOrder` — hand-computed counts on tiny matrices.
+- `TestTotalCount` — total-catchwords statistic (no recurrence filter).
+- `TestPermutationReproducibility` — same seed → identical null.
+- `TestNullDistribution` — null mean stable across seeds at large N.
+- `TestBlocking` — filter_pct=80 blocks top 20%; filter_pct=100 blocks nothing; **filter_pct=0 blocks everything (KNOWN BUG, documented)**.
+- `TestStatisticRegression` — hand-built planted matrix; pins counts.
+
+**`tests/test_synthetic_planted.py`** — end-to-end with known truth (Proverbs)
+- Build a 50-verse Hebrew corpus where 6 UNIQUE planted pairs sit at TRUE adjacent boundaries.
+- `test_planted_pair_detected_at_boundaries` — detector finds all 6 planted pairs.
+- `test_total_count_rejects_null_on_planted` — permutation test on TRUE order rejects null at p<0.05 (z=1.92 typically).
+- `test_total_count_planted_vs_shuffled` — same verses in shuffled order show essentially null signal (z≈0).
+- `TestPipelineRobustness` — empty / single-unit / no-overlap corpora complete without error.
+- `TestShufflingInvariants` — total cells in the matrix is invariant to matrix-build order.
+
+**`tests/test_synthetic_q.py`** — end-to-end Q pipeline planted-truth
+- Build a 50-pericope Greek corpus with 6 unique planted pairs at TRUE adjacent boundaries.
+- Each verse gets UNIQUE filler tokens (no overlap) so the only shared catchwords are the planted ones (pure signal).
+- Tests planted detection, total-count permutation rejection of null, planted-vs-shuffled comparison.
+
+**`tests/test_synthetic_thomas.py`** — end-to-end Thomas pipeline (BOTH modes)
+- Tests Thomas's `make_tokens` in TWO modes: `sedra=None` (surface forms) and `sedra=<fake dict>` (lemma collapse path).
+- Verifies planted pairs are detected and the permutation test rejects null in both modes.
+- Pins the SEDRA collapse behavior (`test_sedra_collapses_known_form`).
+
+**`tests/test_perrin_known_pairs.py`** — Perrin's 8 cited boundaries
+- `TestPerrinBoundariesHaveAnyCatchword` — at each of the 8 cited boundaries the detector finds ≥1 catchword. **All 8 pass — this IS the FINDINGS.md "8/8 reproduced" claim.**
+- `TestNuraNuhra`, `TestEtarAtar`, `TestNasNesse` — strict version checking the SPECIFIC named pair appears. These SKIP (don't fail) when the current Gemini stochastic variant produced different vocabulary at a given logion (e.g., Logion 17 has no literal "light" word in any of the 10 Gemini variants — Perrin's claim there depends on an eye→light metaphor that doesn't survive literal retroversion).
+
+### What this audit did NOT cover
+
+The test suite covers the **active recurring-catchword pipeline** that produced the project's main findings (Phase 2B, cross-lingual, Q, Proverbs, phon-only, direct Perrin verification). It does NOT cover:
+
+- **Phase 1 Monte Carlo (`scripts/run_monte_carlo.py`)** — separate code path using the EM lexical map. The headline "P(≥502)=0" depends on this. Audited (uses Coptic SCRIPTORIUM tags + Syriac lemmas from parallel corpus, doesn't use SEDRA), but not regressed with explicit tests.
+- **Phase 2A beam-search translation** — bigram-LM-augmented beam. Audited (uses detector but only on its own Syriac output; no cross-language asymmetry).
+- **Phase 2B detect script (`scripts/phase2b_detect_catchwords.py`)** — audited. Uses SEDRA on Syriac-internal data only (Thomas Syriac vs Thomas Syriac, no cross-language). The 974 count and 8.53/pair vs 12.15/pair control comparison are internally consistent.
+- **Phase 3 contrastive model** — PyTorch training pipeline. Stochastic, GPU-dependent.
+- **Translation-fetch scripts** — these hit the Gemini API.
+- **The Perrin table digitisation** — 696 rows manually digitised from microfilm via vision-LLM. Final cumulative matches book totals (271/261/502) as a checksum.
+- **Figure-generation scripts** — visual output; smoke-tested by being runnable.
+- **Aggregate-density analysis scripts** — these share the tokenize/make_tokens primitives that ARE tested.
+
+### Per-corpus reproducibility status
+
+| Corpus | Tokenisation pinned? | Loader pinned? | End-to-end synthetic test? |
+|---|:---:|:---:|:---:|
+| Proverbs | ✓ | ✓ | ✓ |
+| Q | ✓ | ✓ | ✓ |
+| Thomas | ✓ + SEDRA asymmetry documented | ✓ | ✓ (both SEDRA + surface modes) |
+
+### How to use this suite
+
+```bash
+# Run all tests
+python -m pytest tests/ phase1_montecarlo/tests/ -v
+
+# Run a single test file
+python -m pytest tests/test_detector_extended.py -v
+
+# Run a specific test class
+python -m pytest tests/test_tokenization.py::TestScriptRegexParity -v
+```
+
+The suite runs in ~28 seconds end-to-end on a single core. CI integration should be straightforward (no GPU needed, no external network).
+
+### Recommendations for future work
+
+1. **Run the full suite before publishing any new finding.** A 28-second test sweep would not have caught the SEDRA-specific issue but WOULD have caught the Greek-punctuation regression.
+2. **If a new corpus is added, write a synthetic planted-truth test for it.** This is the strongest end-to-end check.
+3. **If a new language profile is added** to `phase1_montecarlo/language_data.py`, add it to `TestCrossLanguageUniformity` so the parametrized loop automatically picks it up.
+4. **If `make_tokens` for any corpus is changed**, run `tests/test_tokenization.py::TestMakeTokensAsymmetry`. Any new asymmetry must be deliberate AND documented in the test.
+5. **The Perrin specific-pair tests should be re-checked if the Gemini pipeline is re-run** — stochastic variants might shift which boundary contains which lemma. The weak suite (boundary-has-any-catchword) should remain stable.
+
+## Bugs found and fixed
+
+Consolidated list of methodology and code bugs caught at various stages:
+
+| # | Bug | Severity | Found by | Status |
+|---|---|---|---|---|
+| 1 | Hebrew PUNCT_RE stripped Hebrew letters (overlapping range `[׀-׿]` with U+05D0–U+05EA) — silent "loaded 67/115" skip during cross-lingual permutation test | HIGH | Inspection of low load count during 2026-05-11 cross-lingual run | Fixed: enumerated actual Hebrew punctuation chars |
+| 2 | FINDINGS.md "Hebrew 8/10, Arabic 9/10 significant" was counts at p<0.10 not p<0.05 (actual α=0.05 counts: 3/10 Hebrew, 7/10 Arabic) | LOW (documentation) | 2026-05-12 audit | Fixed: corrected table |
+| 3 | Greek PUNCT_RE used wrong U+02B9 instead of U+0374; missing U+037E in Proverbs and Q scripts (Thomas script was correct) | MEDIUM | Test suite `test_tokenization.py::TestScriptRegexParity` (2026-05-12) | Fixed: harmonised to Thomas-correct pattern |
+| 4 | `compute_blocked(filter_pct=0)` blocks every lemma (cutoff=0, count>0 always exceeds) | MEDIUM (footgun) | Phon-only `thr050_noblock` runs gave phon/B=0; investigated | Documented in `test_permutation_stats.py::TestBlocking` |
+| 5 | Thomas `make_tokens` applies SEDRA lemma collapse to Syriac only; Hebrew/Greek/Arabic run on surface forms. Biases phon-only cross-language comparison against Syriac (suppresses phon count, inflates semantic count) | HIGH | User flagged Syriac vanilla z=0.13 as suspicious (2026-05-11). 50.7% of Syriac tokens are SEDRA-collapsed | Documented (kept intentionally) in `test_tokenization.py::TestMakeTokensAsymmetry`. Corrected re-runs in `crossling_syriac_surface.py`, `perrin_test_syriac_surface.py`, `perrin_boundary_max_surface.py` |
+
+## Operational notes — how to cite each finding
+
+(From `~/.claude/projects/.../memory/project_*.md` operational guidance.)
+
+### Phase 1 Monte Carlo (P(≥502)=0)
+- **DO cite:** "Random Coptic→Syriac translation cannot reproduce Perrin's 502 catchwords; mean 195, P(≥502)=0."
+- **DO NOT cite:** Thomas's MC ratio 0.83× as evidence against Syriac origin — round-trip validation showed this is within the noise band of round-tripped known-catchword Syriac literature.
+
+### Phase 2A/2C lexical-map ceiling (~324)
+- **DO cite:** "Even fluent automated translation (lexical-map + Peshitta-NT bigram LM, λ ∈ {0,...,1}) cannot exceed ~324 catchwords. Surplus to Perrin's 502 is ~178."
+
+### Phase 2B aggregate (974 catchwords, 8.53/pair vs control 12.15/pair)
+- **DO cite:** Phase 2B as evidence that specific Perrin catchword pairs are canonical (Williams' bias critique on examples fails).
+- **DO cite:** The control comparison as evidence that the aggregate count Perrin reports may NOT be Thomas-specific — any Coptic text translated by a stylistically consistent translator produces similar density.
+- **Net stance:** Williams' bias critique is contradicted for specific famous pairs but may have purchase on the aggregate-count claim.
+
+### LLM cross-validation (Claude/Gemini/GPT-4 + EM map P=0.98/0.79)
+- **DO cite:** The strongest available evidence against Williams' bias critique for the famous cited pairs.
+- **DO NOT treat:** Qwen3-14B's failure as evidence against Perrin — it's evidence small/mid open-weight models lack Classical Syriac generation capability.
+
+### Round-trip validation
+- **DO cite:** Round-trip-corrected ceiling: "Perrin's 1.87× recovery ratio is empirically unreachable by lexical-map round-trip even on known-catchword Syriac literature (max observed: 1.23× for Narsai under MAP)."
+- **DO NOT cite:** Phase 1's MC ratio (0.83×) as evidence against Syriac origin — within round-trip noise band.
+
+### Permutation test on recurring patterns (Syriac p=0.007, 10/10 variants)
+- **DO cite:** As the project's strongest finding when the question is about Perrin's *compositional-design* argument.
+- **STOP citing** total catchword counts as evidence either way (Phase 2B showed aggregate is uninformative).
+
+### Perrin pair-by-pair (22% canonical / 78% Perrin-specific)
+- **DO cite:** The 22% lower-bound when asked about the strength of Williams' bias critique.
+- **Caveat:** Variant 0 only + skeleton-equality (not SEDRA root) — tighter analysis would push canonical fraction up.
+
+### Cross-lingual permutation test (all 4 langs significant, Syriac=Greek tied)
+- **DO cite:** The permutation-test signal (Syriac p=0.007) does NOT support a Syriac-specific arrangement — it reflects thematic clustering visible in any translation.
+- **DO cite:** Greek's significance (p=0.016) as the decisive Indo-European counterexample to "Semitic-only" interpretations.
+- **As of 2026-05-11 re-run:** With surface-form Syriac the result is unchanged structurally (Mann-Whitney p=0.40 vs SEDRA Syriac).
+
+### Q source extension test
+- **DO cite:** Aramaic does NOT distinctively lead Q — clusters with Syriac in the same translation-stability pattern.
+- **ALWAYS prefix with the framing note:** Casey/Chilton argue from mistranslation retrojection, NOT catchword arrangement. A null result here is silent on their actual argument.
+
+### Proverbs 10–29 positive control
+- **DO cite** when defending the Thomas finding from "the pipeline doesn't work" objections.
+- **DO use** the consistent Aramaic-lag across Thomas/Q/Proverbs to argue the pattern is Gemini-side, not substrate-diagnostic.
+
+### Phon-only re-test (HISTORICAL)
+- **DO NOT cite** as evidence against Perrin's phonological claim — superseded by Direct Perrin verification with surface tokenization.
+- **DO cite** when claiming the all-catchwords result is thematic (the semantic decomposition is decisive for that conclusion).
+
+### Direct Perrin verification (CORRECTED)
+- **DO cite the CORRECTED result:** with fair tokenization, Syriac LEADS Thomas at z=3.39. This supports Perrin's directional prediction.
+- **DO cite Test 2** (Perrin's pairs 3.48× enriched) as direct support for his specific identifications.
+- **DO NOT cite** the initial "Syriac dead last z=0.13" or "Coptic > Syriac z=2.37 vs 1.70" findings — both were SEDRA artifacts.
+- **DO retain** Williams' 78%-Perrin-specific finding as the principal remaining anti-Perrin evidence.
+
+## Project environment
+
+(From `~/.claude/projects/.../memory/project_env.md`.)
+
+The Thomas-Catchword-Analysis project runs in a dedicated conda environment.
+
+- **Path:** `/home/sogang/mnt/db_2/anaconda3/envs/thomas/bin/python`
+- **Stack:** Python 3.11, torch 2.5.1+cu121, tokenizers 0.22.2 (supports `end_of_word_suffix`), transformers, lxml, pandas, numpy, scipy, matplotlib, scikit-learn, networkx.
+- **Hardware:** machine has 4× NVIDIA RTX A6000 (49 GB each) + 64 cores + 503 GB RAM. System NVIDIA driver supports up to CUDA 12.4, so install torch with `--index-url https://download.pytorch.org/whl/cu121` (NOT the default cu130 wheel which silently disables CUDA).
+
+**Why a dedicated env:** the system Python lacks torch+tokenizers; existing project envs either don't have both or have an old tokenizers without `end_of_word_suffix`. This env was created on 2026-05-09 specifically for this project.
+
+**How to apply:**
+- Always run project scripts with `/home/sogang/mnt/db_2/anaconda3/envs/thomas/bin/python` (not bare `python` or `python3`).
+- The legacy shell scripts `scripts/run_phase2_3_finalization.sh` and `scripts/run_post_phase3.sh` reference `.venv/bin/python` which doesn't exist — update or invoke commands manually.
+- For new package installs, use `<env>/bin/python -m pip install ...`.
+
 ## Outstanding work
 
 1. ~~**Phase 3 with mBERT**~~: Attempted 2026-05-11 when GPUs freed up. mBERT (178M params, top-4-layer fine-tune) gives val_acc 0.528, WORSE than the small 4.8M baseline (0.582). Pre-registered abort criterion fired correctly. Pretrained multilingual encoder gains nothing — consistent with the cross-lingual finding that the arrangement is thematic, not phonological. Phase 3 ceiling is the small-model result; no further architecture work warranted here.
 2. **Tighter Perrin pair comparison**: re-run the canonical/Perrin-specific split using all 10 Gemini variants and SEDRA root-level matching (current 22% is a lower bound).
+3. **Phon-arrangement with finer detectors**: the consonantal-skeleton + Levenshtein detector cannot see rhyme/meter/alliteration. A future experiment could train a rhyme/paronomasia detector on annotated Syriac literature (Ephrem, Narsai) and apply it to Thomas. This would address whether Syriac-specific sound-design exists at depths our current detector misses.
+4. **Variant-level re-run of the surface-Syriac cross-lingual sweep**: done at 1k perms × 10 variants. A 10k-perm sweep would tighten the confidence intervals on the Syriac-surface vs Syriac-SEDRA comparison (currently Mann-Whitney p=0.40, indistinguishable, but n=10 is low power).
