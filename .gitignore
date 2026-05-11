@@ -78,3 +78,13 @@ DIGITIZE_PERRIN_TABLE_TASK.md
 data/q_source/translations/
 data/q_source/control_translations/
 data/q_source/permutation/main_results.json
+
+# Proverbs 10-29 positive-control retroversion outputs (regeneratable via
+# scripts/proverbs_translate.py; full null distributions and per-variant
+# intermediates regeneratable). Track Hebrew source + aggregate density +
+# consolidated variant summaries + summary.txt only.
+data/proverbs/translations/
+data/proverbs/control_translations/
+data/proverbs/permutation/main_results.json
+data/proverbs/permutation/main_*.json
+data/proverbs/permutation/variant_*_[0-9].json

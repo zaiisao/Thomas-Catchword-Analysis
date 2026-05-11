@@ -1,0 +1,20 @@
+{
+  "language": "hebrew",
+  "results": [
+    {
+      "language": "hebrew",
+      "variant": 0,
+      "skipped": false,
+      "n_loaded": 595,
+      "n_units_used": 595,
+      "n_blocked": 0,
+      "true_recurring_2plus": 33,
+      "null_mean": 26.1218,
+      "null_std": 3.910954456395523,
+      "z_score": 1.758701124415342,
+      "p_value": 0.0538,
+      "elapsed_s": 271.0509452819824,
+      "_note": "synthesized from main_hebrew.json (10k perms instead of 1k)"
+    }
+  ]
+}

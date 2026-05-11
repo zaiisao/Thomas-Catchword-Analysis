@@ -1,0 +1,32 @@
+Proverbs 10–29 — variant robustness summary
+===========================================================================
+Lang                  Med z   Mean z    Min z    Max z      Med p  all p<.05?
+---------------------------------------------------------------------------
+Hebrew (source)        1.76     1.76     1.76     1.76     0.0538          NO
+Greek                  3.28     3.32     2.06     4.61     0.0005         YES
+Syriac                 4.38     4.33     2.33     5.57     0.0000         YES
+Aramaic                1.77     1.83     0.65     3.29     0.0545          NO
+Arabic                 3.39     3.38     1.18     4.87     0.0000          NO
+===========================================================================
+
+Pairwise Mann-Whitney (one-sided, A > B z):
+  Hebrew (source)    > Greek             :  p = 1.0000
+  Hebrew (source)    > Syriac            :  p = 1.0000
+  Hebrew (source)    > Aramaic           :  p = 0.5455
+  Hebrew (source)    > Arabic            :  p = 0.9091
+  Greek              > Hebrew (source)   :  p = 0.0909
+  Greek              > Syriac            :  p = 0.9894
+  Greek              > Aramaic           :  p = 0.0023  ✓
+  Greek              > Arabic            :  p = 0.6612
+  Syriac             > Hebrew (source)   :  p = 0.0909
+  Syriac             > Greek             :  p = 0.0129  ✓
+  Syriac             > Aramaic           :  p = 0.0002  ✓
+  Syriac             > Arabic            :  p = 0.0226  ✓
+  Aramaic            > Hebrew (source)   :  p = 0.5455
+  Aramaic            > Greek             :  p = 0.9982
+  Aramaic            > Syriac            :  p = 0.9998
+  Aramaic            > Arabic            :  p = 0.9971
+  Arabic             > Hebrew (source)   :  p = 0.1818
+  Arabic             > Greek             :  p = 0.3669
+  Arabic             > Syriac            :  p = 0.9812
+  Arabic             > Aramaic           :  p = 0.0036  ✓
