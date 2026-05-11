@@ -1,0 +1,32 @@
+Q source — variant robustness summary
+===========================================================================
+Lang                  Med z   Mean z    Min z    Max z      Med p  all p<.05?
+---------------------------------------------------------------------------
+Greek (source)         0.94     0.94     0.94     0.94     0.1870          NO
+Aramaic                1.71     1.61     0.13     2.31     0.0500          NO
+Syriac                 1.60     1.60     1.10     2.31     0.0595          NO
+Hebrew                 1.08     1.05     0.27     1.56     0.1510          NO
+Arabic                 0.53     0.51     0.08     1.00     0.3120          NO
+===========================================================================
+
+Pairwise Mann-Whitney (one-sided, A > B z, n=10 each):
+  Greek (source) > Aramaic:  p = 0.9091
+  Greek (source) > Syriac:  p = 1.0000
+  Greek (source) > Hebrew:  p = 0.8182
+  Greek (source) > Arabic:  p = 0.1818
+  Aramaic > Greek (source):  p = 0.1818
+  Aramaic > Syriac:  p = 0.2603
+  Aramaic > Hebrew:  p = 0.0057
+  Aramaic > Arabic:  p = 0.0009
+  Syriac > Greek (source):  p = 0.0909
+  Syriac > Aramaic:  p = 0.7637
+  Syriac > Hebrew:  p = 0.0009
+  Syriac > Arabic:  p = 0.0001
+  Hebrew > Greek (source):  p = 0.2727
+  Hebrew > Aramaic:  p = 0.9954
+  Hebrew > Syriac:  p = 0.9993
+  Hebrew > Arabic:  p = 0.0023
+  Arabic > Greek (source):  p = 0.9091
+  Arabic > Aramaic:  p = 0.9993
+  Arabic > Syriac:  p = 0.9999
+  Arabic > Hebrew:  p = 0.9982

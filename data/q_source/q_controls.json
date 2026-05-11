@@ -1,0 +1,12 @@
+[
+  {"pericope": 1001, "label": "Romans 8:1-8 (Spirit vs Flesh)",       "luke_ref": "Romans 8:1-8",        "q_ref": "control", "is_control": true},
+  {"pericope": 1002, "label": "Romans 8:31-39 (More than Conquerors)", "luke_ref": "Romans 8:31-39",      "q_ref": "control", "is_control": true},
+  {"pericope": 1003, "label": "Romans 12:1-8 (Body Members)",          "luke_ref": "Romans 12:1-8",       "q_ref": "control", "is_control": true},
+  {"pericope": 1004, "label": "1 Cor 1:18-25 (Wisdom of God)",         "luke_ref": "1 Corinthians 1:18-25", "q_ref": "control", "is_control": true},
+  {"pericope": 1005, "label": "1 Cor 13:1-13 (Love)",                  "luke_ref": "1 Corinthians 13:1-13", "q_ref": "control", "is_control": true},
+  {"pericope": 1006, "label": "Hebrews 1:1-4 (Son)",                   "luke_ref": "Hebrews 1:1-4",       "q_ref": "control", "is_control": true},
+  {"pericope": 1007, "label": "Hebrews 11:1-7 (Faith)",                "luke_ref": "Hebrews 11:1-7",      "q_ref": "control", "is_control": true},
+  {"pericope": 1008, "label": "Hebrews 12:1-6 (Race)",                 "luke_ref": "Hebrews 12:1-6",      "q_ref": "control", "is_control": true},
+  {"pericope": 1009, "label": "Revelation 21:1-7 (New Heaven)",        "luke_ref": "Revelation 21:1-7",   "q_ref": "control", "is_control": true},
+  {"pericope": 1010, "label": "Revelation 22:1-7 (River of Life)",     "luke_ref": "Revelation 22:1-7",   "q_ref": "control", "is_control": true}
+]

@@ -1,0 +1,22 @@
+{
+  "language": "greek",
+  "n_permutations_per_variant": 1000,
+  "phon_threshold": 0.65,
+  "filter_pct": 80.0,
+  "n_pericopes": 56,
+  "results": [
+    {
+      "variant": 0,
+      "skipped": false,
+      "n_loaded": 56,
+      "n_pericopes_used": 56,
+      "n_blocked": 1,
+      "true_recurring_2plus": 201,
+      "null_mean": 191.08,
+      "null_std": 10.57589712506698,
+      "z_score": 0.9379818924758273,
+      "p_value": 0.187,
+      "elapsed_s": 287.0109667778015
+    }
+  ]
+}

@@ -71,3 +71,10 @@ data/raw/perrin_table_images/
 data/raw/perrin_2002_table_pages/
 perrin_*_ocr.txt
 DIGITIZE_PERRIN_TABLE_TASK.md
+
+# Q-source Gemini retroversion outputs (regeneratable via scripts/q_translate.py
+# at API cost; full null distributions regeneratable from variant translations).
+# Track inputs and summary artifacts only.
+data/q_source/translations/
+data/q_source/control_translations/
+data/q_source/permutation/main_results.json

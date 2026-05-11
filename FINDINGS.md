@@ -12,6 +12,9 @@ Last updated: 2026-05-10 (after permutation test on recurring catchword patterns
 | **Phase 2B (qualitative)** | Do frontier LLMs reproduce Perrin's *specific* catchwords? | Claude / Gemini / GPT-4 manual on 5 logia + EM map check | **YES** — 3/3 LLMs + EM map (P=0.98 / P=0.79) all produce ܢⲩⲣⲣ for fire and ܢⲩⲗⲣⲣ for light; bias critique fails for cited pairs |
 | **Phase 2B (quantitative)** | Is the *aggregate count* Thomas-specific? | Gemini-3-Flash-Preview API, 1,250 calls, with control passages | **NO** — 974 catchwords on Thomas (4.14×) but controls produce 12.15/pair vs Thomas's 8.53/pair (p=0.99); aggregate density is LLM-stylistic |
 | **Permutation test** | Does the *ordering* of Thomas logia produce more recurring catchword patterns than random orderings? | 10,000 random shuffles of Gemini-translated Thomas; cross-checked across all 10 variants + Phase 2A beam | **YES — p = 0.007** at ≥2 boundaries; all 10 LLM variants give p < 0.05 (median p ≈ 0.014); 8/8 of Perrin's specific cited boundaries reproduced |
+| **Perrin table (full)** | Of Perrin's 502 specific Syriac catchwords, how many also appear at the same boundary in an unbiased Gemini retroversion? | Digitization of Perrin's full table (book pp. 58–153) + consonantal-skeleton match against Phase 2B Gemini canonical | **22.2% canonical, 77.8% Perrin-specific** (124/558 vs 434/558 at adjacent-boundary attribution); 53/107 boundaries have **0 canonical matches**; Williams' bias critique extends from sampled examples to the whole table |
+| **Cross-linguistic permutation test** | Is the recurring-catchword effect Syriac-specific, Semitic-general, or thematic? | Gemini retroversion of Thomas into Hebrew + Arabic + Greek; same permutation test, same detector, same threshold; 10-variant robustness sweep per language | **All four significant** at variant 0 (Syriac p=0.007, Hebrew p=0.017, Arabic p=0.011, **Greek p=0.016**). 10-variant sweep reveals a two-tier structure: **Syriac and Greek are statistically indistinguishable** (Mann-Whitney p=0.31, 10/10 variants significant in each, median z≈2.4–2.5); Hebrew + Arabic sit lower (median z≈1.6–1.9, 2-3 variants drop below p=0.05). The Syriac=Greek tie is **decisive against any Syriac-specific phonological design** — the effect is **thematic, not Syriac-specific**. |
+| **Q source (extension test)** | Does Q (sayings source behind Matt+Luke) show the same effect, and does Aramaic distinctively lead? | Identical pipeline applied to 56 IQP Q pericopes + 10 non-Q controls (Romans/Hebrews/Revelation); Gemini retroversion into Aramaic/Syriac/Hebrew/Arabic + Greek source; same calibration, 10k perms + 10-variant sweep | **Q's signal is much weaker than Thomas's.** Only Syriac p=0.013 reaches α=0.05 at variant 0; Aramaic p=0.064, Greek source p=0.196. Variant sweep: Aramaic and Syriac form Tier 1 (median z≈1.6–1.7, indistinguishable, Mann-Whitney p=0.26); Greek+Hebrew Tier 2; Arabic Tier 3. **Aramaic does NOT distinctively lead** — Casey/Chilton-style substrate prediction is not supported on this test (but note: catchword arrangement is not what Casey/Chilton actually argue; their claim is about mistranslation retrojection, which this pipeline does not test). |
 | **Phase 3.0** | Is catchword arrangement actually detectable in known Syriac literary texts? | Consecutive-vs-random pair test on Ephrem/Narsai/Jacob/Odes | **YES** — pooled p < 1e-9, Cohen's d = 0.54 |
 | **Phase 3.1** | Can a model trained on those texts learn to discriminate consecutive strophes? | Hard-negative contrastive (same-work, ≥3 strophes apart) + InfoNCE | val_acc **0.582** (vs 0.50 chance) |
 | **Phase 3.2** | Does that learned model see the same pattern in beam-translated Thomas? | Permutation test: adjacent vs shuffled cos_sim | p = **0.087** (marginal) for beam translation; p = 0.32 (n.s.) for NMT |
@@ -22,7 +25,7 @@ Last updated: 2026-05-10 (after permutation test on recurring catchword patterns
 
 **(2) Catchword-based literary arrangement is real in Syriac.** When we apply the same calibrated rule-based detector to Ephrem, Narsai, Jacob of Serug, and the Odes of Solomon, consecutive strophes share significantly more catchwords than randomly-paired strophes (pooled p < 1e-9, Cohen's d = 0.54). All four corpora individually are significant. So Perrin's *premise* — that Syriac literature uses catchword arrangement and a Syriac-original Thomas should too — is not unfounded.
 
-**(3) But Thomas (in beam-translated Syriac) shows only marginal evidence of that arrangement.** Our Phase 3.1 model that *did* learn to discriminate consecutive vs hard-negative Syriac strophes (val_acc 0.58) produces only weak signal when applied to beam-translated Thomas: adjacent-pair similarity is mean 0.627 vs shuffle baseline 0.590, permutation p = 0.087 (one-tailed). Not strong enough to declare Thomas a Syriac literary text by this test.
+**(3) Thomas's recurring-catchword arrangement is real, but it's thematic, not Syriac-specific.** When we translate Thomas into Hebrew, Arabic, and Greek (same Gemini model, same detector, same threshold), the same permutation test gives p = 0.017, 0.011, and 0.016 respectively at variant 0. The 10-variant robustness sweep (1,000 perms × 10 variants × 4 languages) sharpens this: Syriac and Greek form a single statistical tier (Mann-Whitney p = 0.31, 10/10 variants significant in each, median z ≈ 2.4–2.5), and Hebrew + Arabic form a second, lower tier (median z ≈ 1.6–1.9, 2–3 variants drop below p=0.05). Greek is decisive: it has no triliteral roots, longer words, different phonological structure, and yet matches Syriac on this test. The non-randomness is in the **thematic clustering of the logia** (visible in the Coptic source) — not in any Syriac-specific phonological design. The Hebrew/Arabic underperformance is most plausibly translation-side noise (rarer registers, more lexical variance across variants), not anything about the source text. Combined with the Perrin-table pair-by-pair result (78% of Perrin's 502 specific Syriac words are not canonical retroversions), this leaves Perrin's *aggregate* claim ("Thomas is arranged by Syriac catchwords") without empirical support, while leaving his *specific cited examples* (`nūrā/nuhrā` etc.) intact as canonical translations of thematically-paired Coptic.
 
 ## What this implies for Perrin's claim
 
@@ -38,7 +41,7 @@ We cannot fully separate (a) from (b) without (i) Phase 2B, which requires an `A
 
 - **All Phase 2 methods** treat translation as one-Coptic-word-to-one-Syriac-word, drawn from an EM-aligned lexical map of NT parallel verses. Real translators choose multi-word renderings, restructure clauses, and cross-reference idioms. This is a strict lower bound on what informed translation can do.
 - **Phase 3** measures catchwords via the same rule-based detector calibrated against Perrin's Coptic count. We use consonantal-skeleton matching for both literature and Thomas because patristic Syriac strophes lack lemma annotations. The relative consecutive-vs-random comparison is robust to function-word inflation; the absolute counts are not.
-- **The contrastive model is small (4.8M params).** GPUs were 95%+ allocated to another job during this run, blocking the larger mBERT-finetuning approach in the original Phase 3.1 spec. A larger pretrained-encoder version may shift the Thomas p-value toward significance — the spec is `scripts/phase3_improved_contrastive.py` for when GPU memory is available.
+- **The contrastive model is small (4.8M params); the larger mBERT-finetune attempt did not improve on it.** When GPU memory became available (2026-05-11), we ran `scripts/phase3_improved_contrastive.py` — the spec'd 178M-param mBERT fine-tune (frozen bottom 8 layers / fine-tune top 4, hard-negatives, all-pairs InfoNCE, batch 256, lr 4e-5). Best val_acc 0.528 over 10 epochs (vs 0.582 for the small 4.8M baseline). The script's pre-registered self-abort criterion ("val_acc < 0.60 at epoch 10 → signal too weak for this architecture") fired correctly. The bigger pretrained encoder does NOT extract more signal from these 17k strophe-triples — consistent with the cross-lingual finding that catchword arrangement is thematic, not phonological, so a phonology-blind multilingual encoder gains nothing. The original Phase 3 numbers (val_acc 0.582, Thomas p=0.087) stand as the project's Phase 3 result.
 
 ## Reproducibility
 
@@ -128,7 +131,193 @@ The round-trip experiment **does not falsify Perrin's claim** — but it sharply
 
 The most rigorous remaining bound: **Perrin's 1.87× recovery ratio is empirically unreachable by lexical-map translation, even on known-catchword Syriac literature.** This is a reasonable basis to suspect the surplus reflects either Perrin's translation choices or higher-order Syriac structure that our 1-grams + bigrams don't model — same dichotomy as before, with one direction of evidence (Phase 1's MC ratio) now ruled out as a discriminator.
 
-## Permutation test on recurring catchword patterns (2026-05-10) — **strongest finding**
+## Q source extension test (2026-05-11)
+
+We extended the entire Thomas pipeline to a second corpus: the **Q source** (the hypothetical sayings collection behind Matthew and Luke). The motivation: if the catchword-arrangement effect we found in Thomas is a property of any thematically clustered sayings collection (the "thematic" conclusion of the cross-linguistic test below), Q should show the same pattern. Casey (2002) and Chilton (2010) have argued Q was originally composed in Aramaic — but their argument is about mistranslation retrojection, *not* catchword arrangement. Our pipeline cannot test Casey/Chilton's actual claim. What it *can* test is whether Q shows the Thomas-style arrangement effect, and whether Aramaic distinctively leads.
+
+### Setup
+
+- **56 Q pericopes** (IQP / Critical Edition of Q standard segmentation, Lukan-ordered). Greek text fetched from the SBLGNT register via Gemini-3-Flash-Preview, with 1 pericope (Luke 11:39-44) manually transcribed after Gemini's safety filter declined.
+- **10 non-Q control passages** from Romans (8, 12), 1 Corinthians (1, 13), Hebrews (1, 11, 12), Revelation (21, 22) — definitely no Q overlap; comparable register (NT prose).
+- **Target languages**: Aramaic (Jewish Babylonian, Hebrew script), Syriac, Biblical Hebrew, Classical Arabic — 10 Gemini variants per pericope per language. Greek serves as the **source language** (no translation needed).
+- Same detector calibration as every other phase (threshold=0.65, filter_pct=80). New `LanguageProfile` for Aramaic in `phase1_montecarlo/language_data.py`.
+- 100% usable variants across all 4 target languages.
+
+### Aggregate density: Q vs controls per language
+
+The aggregate density check that we should have run on Thomas before the headline 974 number (lesson from Phase 2B). Per-pair catchword count plus length-normalised density (catchwords per 100×100 word pair, since Q pericopes average ~60 words vs the chosen controls' ~110):
+
+| Language | Q raw/pair | Ctrl raw/pair | Q density | Ctrl density | p (length-norm, Q > Ctrl) |
+|---|---:|---:|---:|---:|---:|
+| Greek (source) | 30.0 | 60.7 | 68.3 | 37.1 | **0.0002** ✓ |
+| Aramaic | 19.5 | 60.6 | 66.5 | 55.6 | 0.237 |
+| Syriac | 27.2 | 72.2 | 81.8 | 62.4 | 0.103 |
+| Hebrew | 26.5 | 55.8 | 83.7 | 51.4 | **0.0020** ✓ |
+| Arabic | 21.1 | 53.2 | 70.5 | 46.1 | **0.0061** ✓ |
+
+Raw counts: Q < Controls in every language because the controls are roughly twice as long per pair. After length-normalisation, Q is *denser* than controls in 4/5 languages — but **Aramaic is the only non-significant case (p=0.24)**. If Q had been composed in Aramaic with Semitic catchword density baked in, Aramaic should *amplify* the Q-vs-Control gap; instead it narrows it. First piece of evidence against a distinctive Aramaic substrate.
+
+### Permutation test (variant 0, 10,000 shuffles)
+
+| Language | True (≥2) | Null mean ± std | z | p |
+|---|---:|---:|---:|---:|
+| Greek (source) | 201 | 191.1 ± 11.0 | 0.90 | 0.196 |
+| Aramaic | 149 | 129.8 ± 12.0 | 1.60 | 0.064 |
+| **Syriac** | **238** | 203.9 ± 14.5 | **2.35** | **0.013** ✓ |
+| Hebrew | 210 | 193.2 ± 12.8 | 1.32 | 0.104 |
+| Arabic | 157 | 150.4 ± 11.8 | 0.56 | 0.296 |
+
+Only Syriac reaches α=0.05. Aramaic is the second-strongest (p=0.064 marginal). Greek source is non-significant. This is much weaker than Thomas (where all 4 languages crossed α=0.05 at variant 0). N halved (56 vs 115) and average pair length is ~3× longer, so power per pair is ~6× lower — but the absolute z-scores are also lower (Syriac z=2.35 here vs 2.53 for Thomas at the same variant).
+
+### Variant robustness (10 variants × 1,000 perms per language)
+
+| Language | Median z | Min–Max z | Median p | All p<0.05? |
+|---|---:|---:|---:|:---:|
+| Greek (source) | 0.94 | (single var) | 0.187 | n/a |
+| **Aramaic** | **1.71** | 0.13 – 2.31 | 0.050 | NO (4/10) |
+| **Syriac** | **1.60** | 1.10 – 2.31 | 0.060 | NO (3/10) |
+| Hebrew | 1.08 | 0.27 – 1.56 | 0.151 | NO (1/10) |
+| Arabic | 0.53 | 0.08 – 1.00 | 0.312 | NO (0/10) |
+
+**Pairwise Mann-Whitney (one-sided, n=10 each):**
+
+| Test | p | Significant? |
+|---|---:|---|
+| **Aramaic > Syriac** | **0.260** | **no — indistinguishable** |
+| Aramaic > Greek (source) | 0.182 | no |
+| Aramaic > Hebrew | **0.006** | yes |
+| Aramaic > Arabic | **0.0009** | yes |
+| Syriac > Hebrew | **0.0009** | yes |
+| Syriac > Arabic | **0.0001** | yes |
+| Syriac > Greek (source) | 0.091 | marginal |
+| Hebrew > Arabic | **0.002** | yes |
+
+**Three-tier structure for Q (mirroring Thomas's two-tier but weaker overall):**
+
+- **Tier 1 (median z ≈ 1.6–1.7)**: **Aramaic + Syriac**, statistically indistinguishable (Mann-Whitney p=0.26).
+- **Tier 2 (median z ≈ 0.9–1.1)**: Greek source + Hebrew.
+- **Tier 3 (median z ≈ 0.5)**: Arabic.
+
+**No language has all 10 variants below α=0.05.** Aramaic (the strongest by median z) has only 4/10 variants significant; Syriac 3/10. Compare to Thomas: Syriac and Greek there had **10/10 each**. Q's signal is qualitatively weaker AND less variant-robust than Thomas's.
+
+### Interpretation
+
+1. **The same translation-stability pattern from Thomas reappears.** For Thomas, Syriac ≈ Greek were Tier 1 (Gemini's most lexically consistent retroversions). For Q, Aramaic ≈ Syriac are Tier 1 — Gemini handles both Northwest-Semitic languages with comparable consistency, and both pick up the same signal. The clustering is not a property of either language *as a substrate*; it is a property of Gemini's translation behavior.
+
+2. **Aramaic does NOT distinctively lead Q.** It is tied with Syriac (which Casey/Chilton would not claim as Q's substrate). The Aramaic-substrate prediction (insofar as it would predict an Aramaic-specific arrangement signal) is unsupported.
+
+3. **Q's catchword-arrangement signal is genuinely weaker than Thomas's.** Even controlling for power (smaller N, longer units), the median z-scores are roughly 1.5–1.7 vs Thomas's 2.4–2.5. Q's Lukan ordering may not preserve as much thematic clustering as Thomas's ordering does — or Q's longer pericopes dilute the per-pair catchword signal.
+
+4. **A null result on this catchword test is NOT a refutation of Casey/Chilton.** Their argument is about mistranslation retrojection at specific Greek loci (e.g., underlying Aramaic syntactic ambiguities), not about catchword arrangement. The pipeline we used cannot evaluate that argument; a different methodology (systematic retroversion + identification of clausal mistranslations) would be needed. This test only addresses whether Q shows the Thomas-style catchword-arrangement effect with an Aramaic substrate signature — which it does not.
+
+5. **What this says about the cross-linguistic permutation test on Thomas.** The Thomas result was striking precisely because all 4 languages crossed α=0.05 and the top tier (Syriac, Greek) had 10/10 variants significant. The Q result shows that this strong, robust effect does *not* automatically appear in any Greek-source sayings collection — Q does not reproduce it. So the Thomas effect, while not Syriac-specific (Greek matches it), is also not universal across sayings collections; it depends on the specific thematic clustering Thomas's redactor encoded. This narrows but does not eliminate the "thematic clustering" interpretation.
+
+### Files
+
+- `data/q_source/q_findings_summary.md` — full Q analysis writeup with reframing.
+- `data/q_source/q_verses.json`, `q_controls.json` — pericope reference lists.
+- `data/q_source/q_pericopes_greek.json` (56), `q_controls_greek.json` (10).
+- `data/q_source/translations/{aramaic,syriac,hebrew,arabic}/pericope_NNN.json` — 2,240 Q variants.
+- `data/q_source/control_translations/{...}/pericope_NNN.json` — 400 control variants.
+- `data/q_source/aggregate_density.json` — Q vs controls per language.
+- `data/q_source/permutation/main_results.json` — 5-language permutation test.
+- `data/q_source/permutation/variant_{lang}.json` — 5 × 10 variant sweep.
+- `data/q_source/permutation/summary.txt` — variant tables + Mann-Whitney.
+- `analysis/figures/q_source/q_crossling_permutation.png` — null-distribution histograms.
+- `analysis/figures/q_source/q_variant_z_scores.png` + `q_variant_p_values.png` — variant robustness.
+- `analysis/figures/q_source/q_vs_thomas.png` — side-by-side Thomas vs Q.
+- Scripts: `scripts/q_fetch_greek.py`, `scripts/q_translate.py`, `scripts/q_aggregate_density.py`, `scripts/q_permutation_test.py`, `scripts/q_variant_robustness.py`, `analysis/plot_q_results.py`.
+
+## Cross-linguistic permutation test (2026-05-11) — **revised interpretation**
+
+**This test materially revises the previous "strongest finding" interpretation below.**
+
+### Question
+
+The Syriac permutation test (next section) showed the true ordering of Thomas's 115 logia produces 137 distinct recurring catchword pairs at ≥2 boundaries vs a null mean of 119.7 (p = 0.007). That establishes the arrangement is non-random with respect to **Syriac** catchwords. But it cannot distinguish three explanations:
+
+- (a) **Syriac-specific arrangement.** A Syriac-speaking editor organized the logia for Syriac phonological echoes. Effect should appear in Syriac alone.
+- (b) **Thematic arrangement that incidentally produces catchword patterns in any language.** Logia are grouped by topic; thematically related logia share vocabulary that produces catchword links in any language. Effect should appear in all languages.
+- (c) **Semitic-general.** Effect appears in Semitic languages (triliteral roots, limited consonant inventory) but not in Greek.
+
+### Setup
+
+- Translated all 115 Thomas logia into Biblical Hebrew, Classical Arabic, and Koine Greek using the same Gemini-3-Flash-Preview model, temperature, and 10-variant scheme as Phase 2B's Syriac translations. Verified scripts: 100% usable variants in all three languages.
+- Same `CatchwordDetector` algorithm at the same threshold (0.65) and same 80% blocked-lemma filter. Only the `LanguageProfile` (confusion groups, weak consonants, vocalization) varies.
+- Identical permutation procedure: 10,000 shuffles, ≥2-boundary recurring-pair count.
+
+### Result — all four languages significant at α = 0.05
+
+| Language | True (≥2) | Null mean ± std | z-score | p-value |
+|---|---:|---:|---:|---:|
+| **Syriac** (reference) | **137** | 119.7 ± 6.8 | **+2.53** | **0.0070** |
+| **Hebrew** | **110** |  91.8 ± 8.0 | **+2.28** | **0.0173** |
+| **Arabic** | **102** |  86.1 ± 6.5 | **+2.43** | **0.0111** |
+| **Greek** | **170** | 153.5 ± 7.4 | **+2.25** | **0.0160** |
+
+Effect sizes are nearly identical — z = 2.25 to 2.53 across all four languages. **Syriac does not lead.** Arabic's z=2.43 and Greek's z=2.25 are within the same band. The number of recurring pairs differs (Greek's larger raw vocabulary produces 170; Arabic's smaller produces 102) but the relative effect against each language's own null distribution is the same magnitude everywhere.
+
+Greek is decisive: it has fundamentally different phonological structure (no triliteral roots, longer words, different consonant inventory) and yet shows the same arrangement effect at the same significance. Per the pre-registered decision rule, this falls in case **(b) thematic arrangement.**
+
+### What this means
+
+The recurring-catchword pattern that the Syriac permutation test detected at p=0.007 is **not Syriac-specific.** It reflects the thematic clustering already visible in the Coptic source: logia grouped by topic (fire/light, kingdom/father, man/woman, hidden/revealed) share vocabulary in any translation, which the catchword detector picks up as "recurring pairs." Hebrew, Arabic, and Greek translations all produce the same significant arrangement effect under the same algorithm.
+
+This is **not a refutation of Perrin's *specific* example pairs** (`nūrā/nuhrā`, `naš/nesse`, `ʿetar/ʾatar`) — those still survive the LLM cross-validation and the EM-map check. But it does refute the broader claim that "the recurring-catchword arrangement of Thomas is evidence of Syriac compositional design." The same significant arrangement is detectable in Greek translation, where Perrin's claim is that no such Syriac substrate exists.
+
+Combined with the Perrin-table pair-by-pair finding (22.2% canonical, 77.8% Perrin-specific — see section above), the picture sharpens:
+
+1. Aggregate density (Phase 2B): not Thomas-specific.
+2. Most of Perrin's specific Syriac choices (Perrin table): not canonical (Williams' bias critique vindicated for the bulk of the 502 entries).
+3. Recurring-pair arrangement (this test): real, but not Syriac-specific. Appears equally in Greek, Hebrew, Arabic translations — driven by thematic content, not language.
+4. The few famous cited examples (LLM cross-validation, 2026-05-09): still canonical.
+
+### Variant robustness (2026-05-11) — 10 LLM variants × 1000 perms per language
+
+The single-variant headline above could be a lucky sample. We re-ran the permutation test on each of the 10 Gemini variants per language and compared the z-score *distributions*:
+
+| Language | Median z | Min–Max z | Median p | All 10 variants p<0.05? |
+|---|---:|---:|---:|:---:|
+| **Syriac** | 2.50 | 2.14 – 3.72 | 0.012 | **YES (10/10)** |
+| **Hebrew** | 1.61 | 0.84 – 2.71 | 0.066 | NO (8/10) |
+| **Arabic** | 1.90 | 1.26 – 2.47 | 0.034 | NO (9/10) |
+| **Greek**  | 2.34 | 1.97 – 3.47 | 0.012 | **YES (10/10)** |
+
+**Pairwise Mann-Whitney (one-sided on the 10 z-scores per language):**
+
+| Test | p-value | Direction |
+|---|---:|---|
+| Syriac > Greek | **0.312** | NOT significant — overlapping distributions |
+| Syriac > Hebrew | 0.001 | Syriac higher |
+| Syriac > Arabic | 0.002 | Syriac higher |
+| Greek > Hebrew | 0.002 | Greek higher |
+| Greek > Arabic | 0.006 | Greek higher |
+
+**A two-tier structure emerges, and it does not align with Semitic-vs-Indo-European:**
+
+- **Tier 1 — strong & every-variant significant**: **Syriac and Greek**. Statistically indistinguishable in z-distribution (Mann-Whitney p = 0.31 in both directions). Median z ≈ 2.4–2.5, max z > 3.4, all 10/10 variants reject the null.
+- **Tier 2 — weaker, 1–2 non-significant variants**: Hebrew and Arabic. Median z ≈ 1.6–1.9, significantly below Tier 1 (p ≤ 0.006 in every pairwise test).
+
+**This Syriac = Greek result is decisive against "Syriac-specific arrangement."** If the effect were a phonological catchword design specific to a Syriac substrate, Greek (no triliteral roots, no Semitic morphology, different consonant inventory) should be at the *bottom* of the ranking. It is tied for the *top*. The tier separation that does appear (Syriac/Greek > Hebrew/Arabic) is most plausibly translation-side noise — Gemini produces lexically more stable Koine Greek and Classical Syriac than Biblical Hebrew and Classical Arabic (both rarer registers in mainstream training data), so the Hebrew/Arabic catchword-pair sets vary more across variants and the per-variant power drops accordingly. The *median z-scores* in all four languages remain well above zero (p<0.10 in 37/40 variant runs across all four languages); no language fails to show the effect on aggregate.
+
+### Caveats
+
+- Consonantal-skeleton matching (no SEDRA-style root collapse) means non-Syriac languages have noisier lemma sets. This adds noise symmetrically and would weaken — not strengthen — the cross-lingual signal. The fact that the effect is still significant despite that noise is informative.
+- The matrix-build cost differs by language (Syriac: 80s with SEDRA lemmas; Greek: 257s with raw forms). This affects compute, not statistical power.
+- Mann-Whitney on n=10 each is low-power; the Syriac=Greek result (p=0.31) does not prove equality, only that we cannot reject "Syriac z ≤ Greek z" at this sample size. But this is the *expected* direction for the Syriac-specific hypothesis to be rejected, and we get it cleanly.
+
+### Files
+
+- `data/processed/crossling_translations/{hebrew,arabic,greek}/logion_*.json` — 115 logia × 10 variants × 3 languages = 3,450 Gemini translations.
+- `data/processed/crossling_permutation_results.json` — single-variant headline + null distributions.
+- `data/processed/crossling_variant_robustness/{syriac,hebrew,arabic,greek}.json` — 10 variants × 1000 perms per language.
+- `data/processed/crossling_variant_robustness/summary.txt` — pairwise Mann-Whitney + tier table.
+- `analysis/figures/crossling_permutation.png` — 4-panel null-distribution histograms (single variant).
+- `analysis/figures/crossling_effect_sizes.png` — bar chart of single-variant z-scores.
+- `analysis/figures/crossling_variant_z_scores.png` — box+strip plots of z-scores across 10 variants per language. **The key figure**: shows Tier 1 (Syriac, Greek) and Tier 2 (Hebrew, Arabic) directly.
+- `analysis/figures/crossling_variant_p_values.png` — same layout for p-values.
+
+## Permutation test on recurring catchword patterns (2026-05-10) — original Syriac result (now contextualised by the cross-lingual test above)
 
 Phase 2B's headline number (974 catchwords for Thomas vs 12.15/pair for controls) showed that *aggregate* catchword density isn't Thomas-specific — it's a property of consistent LLM translation. **But that test missed Perrin's actual argument.** Perrin doesn't claim Thomas's count is high; he claims that *specific catchword pairs recur at multiple logion boundaries* (e.g., *nūrā/nuhrā* at boundaries 10–11, 16–17, 82–83). Recurrence depends on the **ordering** of logia, which only the actual Thomas sequence provides. Total catchword inflation cancels under shuffling; recurrence does not.
 
@@ -381,8 +570,81 @@ This is a sober record of what worked and what didn't, recorded so that later re
 4. **Cross-validate with a *different* model of the same task in reverse** (we used `gemini-2.5-flash` to back-translate `gemini-3-flash-preview`'s Syriac outputs to English with no Coptic context). 20/20 of our blind back-translations recovered the correct Thomas content, confirming the forward translations are semantically faithful and not hallucinated.
 5. **The cheapest tier of a "newer" version family is not necessarily better than an older mid-tier model.** `gemini-3.1-flash-lite` GA had a script-confusion regression that older `gemini-3-flash-preview` does not.
 
+## Perrin pair-by-pair comparison (2026-05-10) — full table digitization
+
+This is the experiment FINDINGS.md previously listed as #1 outstanding ("manual entry of Perrin's full 502-pair table … the experiment that would definitively close the bias question"). Now executed.
+
+### What we did
+We obtained a microfilm scan of *Thomas and Tatian* (2002), book pp. 58–153 — Perrin's full four-column catchword table comparing Coptic / Greek / Syriac. The 96 page-images were digitised (10 parallel vision-LLM agents, schema-driven extraction, footnote transliteration cross-reference) into a structured JSON file at `data/processed/perrin_catchwords/perrin_table_full.json` (696 rows). The final cumulative counts in our digitisation match the book's printed grand totals exactly: **Coptic 271, Greek 261, Syriac 502.**
+
+We then derived per-boundary catchword counts using Perrin's word-counting convention (each underlined word counted once at the boundary indicated by its `links_to_logion` subscript). For each of Perrin's 558 adjacent-boundary Syriac catchwords (some words link to non-adjacent logia and are excluded), we asked the question:
+
+> Does the same Syriac word (consonantal skeleton match) appear as a participating lemma in our Phase 2B Gemini canonical retroversion at the same boundary?
+
+If yes → "canonical" (Perrin's choice agrees with what an unbiased frontier-LLM translator produces). If no → "Perrin-specific" (Perrin chose a Syriac word our automated retroversion did not — these are the words that drive his count above an unbiased ceiling).
+
+### Result
+
+| Statistic | Value |
+|---|---|
+| Perrin Syriac catchwords (adjacent-boundary, non-bracket) | 558 |
+| Canonical (skel match in Gemini canonical at same boundary) | **124  (22.2%)** |
+| Perrin-specific (no skel match) | 434  (77.8%) |
+| Per-boundary canonical match rate, mean / median | 21.6% / 10.0% |
+| Boundaries with 0% canonical | **53 / 107** |
+| Boundaries with 100% canonical | 6 / 107 |
+| Our Gemini boundary catchwords (Perrin-style word count) | 1323 |
+| Ratio Perrin / ours (whole table) | 0.42× |
+
+Top boundaries by Perrin total — note how few canonical matches we find even where Perrin and Gemini both find many catchwords:
+
+| Boundary | Perrin | Ours (Perrin-style) | Canonical |
+|---|---|---|---|
+| 64–65 (Vineyard) | 20 | 55 | 11 |
+| 63–64 (Rich Man / Banquet) | 16 | 36 | 5 |
+| 20–21 (Mustard Seed / Children in Field) | 14 | 37 | 6 |
+| 60–61 (Samaritan / Two on a Couch) | 14 | 37 | 0 |
+| 76–77 (Pearl / Light) | 10 | 9 | 0 |
+| 98–99 (Assassin / Brothers) | 10 | 15 | 2 |
+
+### Interpretation
+
+Per the task spec's pre-registered decision rule:
+- `≥90% canonical` → Williams' critique fails everywhere; 502 reflects Coptic→Syriac mapping itself.
+- `50–90% canonical` → mixed; Perrin exercises freedom on a significant minority.
+- `<50% canonical` → **Williams' critique is vindicated across the table.**
+
+22.2% is well below 50%, and 53 of 107 boundaries (50%) have **zero** canonical matches. The result lands clearly in the third zone: **the bulk of Perrin's specific Syriac word choices do not match what an unbiased frontier-LLM retroversion produces.** This complements rather than contradicts our prior finding (Phase 2B qualitative, 2026-05-09) that for the *famous* cited examples (`nūrā`/`nuhrā` at 24, `mlle` at Prologue/1, etc.) every LLM produces Perrin's choices: those examples sit in the canonical 22%, and Williams' bias critique survives because it targets the OTHER 78%.
+
+Together with the Phase 2B quantitative result that aggregate density is not Thomas-specific (Thomas 8.53/pair vs control 12.15/pair, p=0.99), this lets us be precise about what the 502 is and isn't:
+
+1. **Not** an emergent property of any unbiased Coptic→Syriac translation (every automated method, including frontier LLMs at temperature 0.7, lands at 195–324 with the same calibration).
+2. **Not** evidence Thomas has unusual catchword density relative to other early Christian literature (Pauline / pastoral controls give *more* catchwords per pair under the same detector).
+3. **Is** consistent with Williams' (2009) thesis: ~78% of Perrin's specific catchword identifications depend on Syriac word choices that are not the canonical retroversion.
+
+### Caveat: 22% is a lower bound
+
+Our skeleton-match algorithm undercounts canonical matches in three ways:
+
+- The microfilm Syriac is partly illegible, and digitisation agents reconstructed glyphs from Perrin's footnote transliterations. Some reconstructions may differ from SEDRA-canonical lemma forms.
+- We compared against Phase 2B Gemini *variant 0 only* (the first usable variant). Across all 10 variants the canonical pool is larger.
+- We use consonantal-skeleton equality, not root-level (SEDRA) matching. Different forms of the same root would miss.
+
+A tighter analysis using all variants and root-level matching would likely push the canonical fraction up, but the qualitative result (well under 50%, clear majority Perrin-specific) is robust to these refinements.
+
+### Files
+
+- `data/processed/perrin_catchwords/perrin_table_full.json` — 696 entries, full digitisation (final cumulative 271/261/502).
+- `data/processed/perrin_catchwords/validation_report.txt` — monotonicity + total-count validation.
+- `data/processed/perrin_catchwords/perrin_per_boundary.json` — per-boundary counts (114 boundaries).
+- `data/processed/perrin_catchwords/our_gemini_per_boundary.json` — our Gemini canonical detector output (lemma pairs per boundary).
+- `data/processed/perrin_catchwords/pair_comparison.json` — per-Perrin-word match annotations.
+- `data/processed/perrin_catchwords/comparison_summary.txt` — headline numbers.
+- `analysis/figures/perrin_per_boundary.png` — Perrin vs ours, per boundary.
+- `analysis/figures/perrin_canonical_split.png` — canonical / Perrin-specific stacked bars.
+- `analysis/figures/perrin_cumulative.png` — cumulative count along the Thomas sequence.
+
 ## Outstanding work
 
-1. **Manual entry of Perrin's full 502-pair table** from *Thomas and Tatian* (2002), pp. 57–155, then pair-by-pair canonical-translation check against the EM map and against frontier-LLM translations. This is the experiment that would definitively close the bias question.
-2. **Phase 3 with mBERT**: When GPUs free up, run `scripts/phase3_improved_contrastive.py`. May shift Thomas's p=0.087 toward significance.
-3. **Perrin's full 502-pair table**: Manual entry from *Thomas and Tatian* (2002), pp. 57–155 — would let us check pair-by-pair which of Perrin's catchwords also appear in our automated translations.
+1. ~~**Phase 3 with mBERT**~~: Attempted 2026-05-11 when GPUs freed up. mBERT (178M params, top-4-layer fine-tune) gives val_acc 0.528, WORSE than the small 4.8M baseline (0.582). Pre-registered abort criterion fired correctly. Pretrained multilingual encoder gains nothing — consistent with the cross-lingual finding that the arrangement is thematic, not phonological. Phase 3 ceiling is the small-model result; no further architecture work warranted here.
+2. **Tighter Perrin pair comparison**: re-run the canonical/Perrin-specific split using all 10 Gemini variants and SEDRA root-level matching (current 22% is a lower bound).

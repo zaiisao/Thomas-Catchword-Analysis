@@ -92,10 +92,76 @@ GREEK = LanguageProfile(
 )
 
 
+HEBREW = LanguageProfile(
+    name="hebrew",
+    # Standard Biblical Hebrew confusable consonant groups (phonological +
+    # scribal). Mirrors the Syriac groupings where the languages overlap.
+    confusion_groups=(
+        frozenset({"ד", "ר"}),                  # dalet / resh — visually close (cf. Syriac)
+        frozenset({"ב", "פ"}),                  # bet / pe — labials
+        frozenset({"ת", "ט"}),                  # tav / tet — dentals
+        frozenset({"ס", "שׁ", "שׂ", "ש", "צ"}),  # sibilants samek/shin/sin/tsade
+        frozenset({"ע", "א"}),                  # ʿayin / aleph — gutturals
+        frozenset({"ח", "ה"}),                  # het / he — gutturals
+        frozenset({"כ", "ק"}),                  # kaf / qof — velars
+    ),
+    # Matres lectionis: aleph, he, waw, yod.
+    weak_consonants=frozenset({"א", "ה", "ו", "י"}),
+    # Hebrew translations from Gemini will not have POS tags. The
+    # detect-by-tokens code path passes parse="MS-EMP" (a content marker)
+    # for every token — content_pos doesn't filter when require_content_pos=False.
+    content_pos=frozenset({"MS", "FS", "MP", "FP"}),
+)
+
+
+ARABIC = LanguageProfile(
+    name="arabic",
+    # Classical Arabic confusable consonant groups (emphatics vs plain,
+    # pharyngeals, and visually similar letters).
+    confusion_groups=(
+        frozenset({"ع", "ء", "أ", "إ", "ؤ", "ئ", "ا"}),  # hamza/ʿayin/alif variants
+        frozenset({"ح", "ه", "ة"}),                     # pharyngeal/glottal/ta-marbuta
+        frozenset({"ك", "ق"}),                          # velars
+        frozenset({"ب", "ف"}),                          # labials (cf. Syriac/Hebrew)
+        frozenset({"ط", "ت"}),                          # emphatic/plain dental
+        frozenset({"ظ", "ذ", "ث"}),                     # interdentals
+        frozenset({"ص", "س", "ش"}),                     # sibilants
+        frozenset({"ض", "د"}),                          # emphatic/plain dental stop
+        frozenset({"ر", "ل"}),                          # liquids
+        frozenset({"ى", "ي"}),                          # alif maqsura / yaa
+    ),
+    weak_consonants=frozenset({"ا", "و", "ي", "ى", "ء", "ة"}),
+    content_pos=frozenset({"MS", "FS", "MP", "FP"}),
+)
+
+
+ARAMAIC = LanguageProfile(
+    name="aramaic",
+    # Jewish Babylonian Aramaic uses Hebrew script. Confusion groups mirror
+    # those of Syriac (same Northwest-Semitic phonology) but spelled in
+    # Hebrew letters. JBA orthography overlaps heavily with Hebrew.
+    confusion_groups=(
+        frozenset({"ד", "ר"}),                  # daleth / resh — visually close
+        frozenset({"ב", "פ"}),                  # bet / pe — labials
+        frozenset({"ת", "ט"}),                  # tav / tet — dentals
+        frozenset({"ס", "שׁ", "שׂ", "ש", "צ"}),  # sibilants
+        frozenset({"ע", "א"}),                  # ʿayin / aleph — gutturals
+        frozenset({"ח", "ה"}),                  # het / he — gutturals
+        frozenset({"כ", "ק"}),                  # kaf / qof — velars
+    ),
+    # JBA matres lectionis — same as Hebrew/Syriac inventory.
+    weak_consonants=frozenset({"א", "ה", "ו", "י"}),
+    content_pos=frozenset({"MS", "FS", "MP", "FP"}),
+)
+
+
 PROFILES: dict[str, LanguageProfile] = {
     "syriac": SYRIAC,
     "coptic": COPTIC,
     "greek": GREEK,
+    "hebrew": HEBREW,
+    "arabic": ARABIC,
+    "aramaic": ARAMAIC,
 }
 
 

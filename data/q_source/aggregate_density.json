@@ -1,0 +1,2641 @@
+{
+  "greek": {
+    "skipped": false,
+    "n_q_pairs": 55,
+    "n_control_pairs": 9,
+    "q_total_catchwords": 1651,
+    "control_total_catchwords": 546,
+    "q_mean_per_pair": 30.01818181818182,
+    "control_mean_per_pair": 60.666666666666664,
+    "q_mean_density": 68.27949673871461,
+    "control_mean_density": 37.05698460685133,
+    "q_mean_pair_len": 74.21818181818182,
+    "control_mean_pair_len": 131.44444444444446,
+    "mw_q_gt_ctrl_raw_p": 0.9997899297988152,
+    "mw_q_gt_ctrl_density_p": 0.00016403346080046742,
+    "per_q_pair": [
+      {
+        "a": 1,
+        "b": 2,
+        "len_a": 69,
+        "len_b": 46,
+        "n_catchwords": 30,
+        "density": 94.5179584120983
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "len_a": 46,
+        "len_b": 187,
+        "n_catchwords": 58,
+        "density": 67.42617995814926
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "len_a": 187,
+        "len_b": 79,
+        "n_catchwords": 68,
+        "density": 46.029919447640964
+      },
+      {
+        "a": 4,
+        "b": 5,
+        "len_a": 79,
+        "len_b": 137,
+        "n_catchwords": 63,
+        "density": 58.20936893652407
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "len_a": 137,
+        "len_b": 39,
+        "n_catchwords": 28,
+        "density": 52.40501590866554
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "len_a": 39,
+        "len_b": 28,
+        "n_catchwords": 6,
+        "density": 54.94505494505495
+      },
+      {
+        "a": 7,
+        "b": 8,
+        "len_a": 28,
+        "len_b": 68,
+        "n_catchwords": 11,
+        "density": 57.77310924369748
+      },
+      {
+        "a": 8,
+        "b": 9,
+        "len_a": 68,
+        "len_b": 62,
+        "n_catchwords": 16,
+        "density": 37.95066413662239
+      },
+      {
+        "a": 9,
+        "b": 10,
+        "len_a": 62,
+        "len_b": 85,
+        "n_catchwords": 17,
+        "density": 32.25806451612903
+      },
+      {
+        "a": 10,
+        "b": 11,
+        "len_a": 85,
+        "len_b": 176,
+        "n_catchwords": 71,
+        "density": 47.45989304812834
+      },
+      {
+        "a": 11,
+        "b": 12,
+        "len_a": 176,
+        "len_b": 94,
+        "n_catchwords": 75,
+        "density": 45.33365570599613
+      },
+      {
+        "a": 12,
+        "b": 13,
+        "len_a": 94,
+        "len_b": 91,
+        "n_catchwords": 38,
+        "density": 44.423661444938034
+      },
+      {
+        "a": 13,
+        "b": 14,
+        "len_a": 91,
+        "len_b": 66,
+        "n_catchwords": 34,
+        "density": 56.61005661005661
+      },
+      {
+        "a": 14,
+        "b": 15,
+        "len_a": 66,
+        "len_b": 74,
+        "n_catchwords": 30,
+        "density": 61.42506142506142
+      },
+      {
+        "a": 15,
+        "b": 16,
+        "len_a": 74,
+        "len_b": 177,
+        "n_catchwords": 62,
+        "density": 47.335471064284626
+      },
+      {
+        "a": 16,
+        "b": 17,
+        "len_a": 177,
+        "len_b": 45,
+        "n_catchwords": 31,
+        "density": 38.9202762084118
+      },
+      {
+        "a": 17,
+        "b": 18,
+        "len_a": 45,
+        "len_b": 18,
+        "n_catchwords": 2,
+        "density": 24.691358024691358
+      },
+      {
+        "a": 18,
+        "b": 19,
+        "len_a": 18,
+        "len_b": 100,
+        "n_catchwords": 7,
+        "density": 38.888888888888886
+      },
+      {
+        "a": 19,
+        "b": 20,
+        "len_a": 100,
+        "len_b": 35,
+        "n_catchwords": 22,
+        "density": 62.85714285714286
+      },
+      {
+        "a": 20,
+        "b": 21,
+        "len_a": 35,
+        "len_b": 69,
+        "n_catchwords": 22,
+        "density": 91.09730848861284
+      },
+      {
+        "a": 21,
+        "b": 22,
+        "len_a": 69,
+        "len_b": 115,
+        "n_catchwords": 46,
+        "density": 57.971014492753625
+      },
+      {
+        "a": 22,
+        "b": 23,
+        "len_a": 115,
+        "len_b": 46,
+        "n_catchwords": 35,
+        "density": 66.1625708884688
+      },
+      {
+        "a": 23,
+        "b": 24,
+        "len_a": 46,
+        "len_b": 48,
+        "n_catchwords": 11,
+        "density": 49.81884057971014
+      },
+      {
+        "a": 24,
+        "b": 25,
+        "len_a": 48,
+        "len_b": 90,
+        "n_catchwords": 27,
+        "density": 62.5
+      },
+      {
+        "a": 25,
+        "b": 26,
+        "len_a": 90,
+        "len_b": 81,
+        "n_catchwords": 46,
+        "density": 63.10013717421125
+      },
+      {
+        "a": 26,
+        "b": 27,
+        "len_a": 81,
+        "len_b": 102,
+        "n_catchwords": 37,
+        "density": 44.78334543694021
+      },
+      {
+        "a": 27,
+        "b": 28,
+        "len_a": 102,
+        "len_b": 121,
+        "n_catchwords": 48,
+        "density": 38.89158969372873
+      },
+      {
+        "a": 28,
+        "b": 29,
+        "len_a": 121,
+        "len_b": 34,
+        "n_catchwords": 31,
+        "density": 75.35245503159942
+      },
+      {
+        "a": 29,
+        "b": 30,
+        "len_a": 34,
+        "len_b": 69,
+        "n_catchwords": 24,
+        "density": 102.30179028132993
+      },
+      {
+        "a": 30,
+        "b": 31,
+        "len_a": 69,
+        "len_b": 37,
+        "n_catchwords": 16,
+        "density": 62.671367019193106
+      },
+      {
+        "a": 31,
+        "b": 32,
+        "len_a": 37,
+        "len_b": 20,
+        "n_catchwords": 14,
+        "density": 189.1891891891892
+      },
+      {
+        "a": 32,
+        "b": 33,
+        "len_a": 20,
+        "len_b": 33,
+        "n_catchwords": 11,
+        "density": 166.66666666666666
+      },
+      {
+        "a": 33,
+        "b": 34,
+        "len_a": 33,
+        "len_b": 154,
+        "n_catchwords": 35,
+        "density": 68.87052341597796
+      },
+      {
+        "a": 34,
+        "b": 35,
+        "len_a": 154,
+        "len_b": 34,
+        "n_catchwords": 21,
+        "density": 40.106951871657756
+      },
+      {
+        "a": 35,
+        "b": 36,
+        "len_a": 34,
+        "len_b": 99,
+        "n_catchwords": 16,
+        "density": 47.534165181224004
+      },
+      {
+        "a": 36,
+        "b": 37,
+        "len_a": 99,
+        "len_b": 74,
+        "n_catchwords": 30,
+        "density": 40.95004095004095
+      },
+      {
+        "a": 37,
+        "b": 38,
+        "len_a": 74,
+        "len_b": 41,
+        "n_catchwords": 21,
+        "density": 69.21555702043507
+      },
+      {
+        "a": 38,
+        "b": 39,
+        "len_a": 41,
+        "len_b": 46,
+        "n_catchwords": 22,
+        "density": 116.64899257688229
+      },
+      {
+        "a": 39,
+        "b": 40,
+        "len_a": 46,
+        "len_b": 36,
+        "n_catchwords": 16,
+        "density": 96.6183574879227
+      },
+      {
+        "a": 40,
+        "b": 41,
+        "len_a": 36,
+        "len_b": 23,
+        "n_catchwords": 12,
+        "density": 144.92753623188406
+      },
+      {
+        "a": 41,
+        "b": 42,
+        "len_a": 23,
+        "len_b": 67,
+        "n_catchwords": 9,
+        "density": 58.40363400389357
+      },
+      {
+        "a": 42,
+        "b": 43,
+        "len_a": 67,
+        "len_b": 49,
+        "n_catchwords": 20,
+        "density": 60.91989034419738
+      },
+      {
+        "a": 43,
+        "b": 44,
+        "len_a": 49,
+        "len_b": 51,
+        "n_catchwords": 16,
+        "density": 64.02561024409765
+      },
+      {
+        "a": 44,
+        "b": 45,
+        "len_a": 51,
+        "len_b": 144,
+        "n_catchwords": 43,
+        "density": 58.55119825708061
+      },
+      {
+        "a": 45,
+        "b": 46,
+        "len_a": 144,
+        "len_b": 44,
+        "n_catchwords": 42,
+        "density": 66.2878787878788
+      },
+      {
+        "a": 46,
+        "b": 47,
+        "len_a": 44,
+        "len_b": 28,
+        "n_catchwords": 9,
+        "density": 73.05194805194805
+      },
+      {
+        "a": 47,
+        "b": 48,
+        "len_a": 28,
+        "len_b": 76,
+        "n_catchwords": 20,
+        "density": 93.98496240601503
+      },
+      {
+        "a": 48,
+        "b": 49,
+        "len_a": 76,
+        "len_b": 25,
+        "n_catchwords": 16,
+        "density": 84.21052631578947
+      },
+      {
+        "a": 49,
+        "b": 50,
+        "len_a": 25,
+        "len_b": 46,
+        "n_catchwords": 12,
+        "density": 104.34782608695653
+      },
+      {
+        "a": 50,
+        "b": 51,
+        "len_a": 46,
+        "len_b": 39,
+        "n_catchwords": 24,
+        "density": 133.77926421404683
+      },
+      {
+        "a": 51,
+        "b": 52,
+        "len_a": 39,
+        "len_b": 28,
+        "n_catchwords": 9,
+        "density": 82.41758241758242
+      },
+      {
+        "a": 52,
+        "b": 53,
+        "len_a": 28,
+        "len_b": 23,
+        "n_catchwords": 5,
+        "density": 77.63975155279503
+      },
+      {
+        "a": 53,
+        "b": 54,
+        "len_a": 23,
+        "len_b": 209,
+        "n_catchwords": 22,
+        "density": 45.76659038901602
+      },
+      {
+        "a": 54,
+        "b": 55,
+        "len_a": 209,
+        "len_b": 219,
+        "n_catchwords": 144,
+        "density": 31.46096873566232
+      },
+      {
+        "a": 55,
+        "b": 56,
+        "len_a": 219,
+        "len_b": 41,
+        "n_catchwords": 50,
+        "density": 55.685488361732936
+      }
+    ],
+    "per_control_pair": [
+      {
+        "a": 1001,
+        "b": 1002,
+        "len_a": 128,
+        "len_b": 145,
+        "n_catchwords": 72,
+        "density": 38.793103448275865
+      },
+      {
+        "a": 1002,
+        "b": 1003,
+        "len_a": 145,
+        "len_b": 155,
+        "n_catchwords": 77,
+        "density": 34.260289210233594
+      },
+      {
+        "a": 1003,
+        "b": 1004,
+        "len_a": 155,
+        "len_b": 120,
+        "n_catchwords": 61,
+        "density": 32.795698924731184
+      },
+      {
+        "a": 1004,
+        "b": 1005,
+        "len_a": 120,
+        "len_b": 187,
+        "n_catchwords": 42,
+        "density": 18.71657754010695
+      },
+      {
+        "a": 1005,
+        "b": 1006,
+        "len_a": 187,
+        "len_b": 69,
+        "n_catchwords": 32,
+        "density": 24.800434007595133
+      },
+      {
+        "a": 1006,
+        "b": 1007,
+        "len_a": 69,
+        "len_b": 122,
+        "n_catchwords": 45,
+        "density": 53.456878118317896
+      },
+      {
+        "a": 1007,
+        "b": 1008,
+        "len_a": 122,
+        "len_b": 103,
+        "n_catchwords": 53,
+        "density": 42.17730383574725
+      },
+      {
+        "a": 1008,
+        "b": 1009,
+        "len_a": 103,
+        "len_b": 148,
+        "n_catchwords": 54,
+        "density": 35.423773287850956
+      },
+      {
+        "a": 1009,
+        "b": 1010,
+        "len_a": 148,
+        "len_b": 140,
+        "n_catchwords": 110,
+        "density": 53.08880308880309
+      }
+    ]
+  },
+  "aramaic": {
+    "skipped": false,
+    "n_q_pairs": 55,
+    "n_control_pairs": 9,
+    "q_total_catchwords": 1073,
+    "control_total_catchwords": 545,
+    "q_mean_per_pair": 19.509090909090908,
+    "control_mean_per_pair": 60.55555555555556,
+    "q_mean_density": 66.4794401335543,
+    "control_mean_density": 55.590862306503546,
+    "q_mean_pair_len": 57.336363636363636,
+    "control_mean_pair_len": 107.05555555555556,
+    "mw_q_gt_ctrl_raw_p": 0.9999888984960474,
+    "mw_q_gt_ctrl_density_p": 0.23743829236091796,
+    "per_q_pair": [
+      {
+        "a": 1,
+        "b": 2,
+        "len_a": 53,
+        "len_b": 27,
+        "n_catchwords": 16,
+        "density": 111.80992313067784
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "len_a": 27,
+        "len_b": 138,
+        "n_catchwords": 24,
+        "density": 64.4122383252818
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "len_a": 138,
+        "len_b": 50,
+        "n_catchwords": 24,
+        "density": 34.78260869565217
+      },
+      {
+        "a": 4,
+        "b": 5,
+        "len_a": 50,
+        "len_b": 113,
+        "n_catchwords": 24,
+        "density": 42.47787610619469
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "len_a": 113,
+        "len_b": 33,
+        "n_catchwords": 14,
+        "density": 37.54357736658621
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "len_a": 33,
+        "len_b": 21,
+        "n_catchwords": 3,
+        "density": 43.29004329004329
+      },
+      {
+        "a": 7,
+        "b": 8,
+        "len_a": 21,
+        "len_b": 39,
+        "n_catchwords": 2,
+        "density": 24.42002442002442
+      },
+      {
+        "a": 8,
+        "b": 9,
+        "len_a": 39,
+        "len_b": 47,
+        "n_catchwords": 10,
+        "density": 54.55537370430988
+      },
+      {
+        "a": 9,
+        "b": 10,
+        "len_a": 47,
+        "len_b": 66,
+        "n_catchwords": 29,
+        "density": 93.48807221147646
+      },
+      {
+        "a": 10,
+        "b": 11,
+        "len_a": 66,
+        "len_b": 145,
+        "n_catchwords": 71,
+        "density": 74.19017763845349
+      },
+      {
+        "a": 11,
+        "b": 12,
+        "len_a": 145,
+        "len_b": 78,
+        "n_catchwords": 73,
+        "density": 64.5446507515473
+      },
+      {
+        "a": 12,
+        "b": 13,
+        "len_a": 78,
+        "len_b": 67,
+        "n_catchwords": 29,
+        "density": 55.491771909682356
+      },
+      {
+        "a": 13,
+        "b": 14,
+        "len_a": 67,
+        "len_b": 54,
+        "n_catchwords": 20,
+        "density": 55.2791597567717
+      },
+      {
+        "a": 14,
+        "b": 15,
+        "len_a": 54,
+        "len_b": 53,
+        "n_catchwords": 29,
+        "density": 101.3277428371768
+      },
+      {
+        "a": 15,
+        "b": 16,
+        "len_a": 53,
+        "len_b": 125,
+        "n_catchwords": 46,
+        "density": 69.43396226415095
+      },
+      {
+        "a": 16,
+        "b": 17,
+        "len_a": 125,
+        "len_b": 39,
+        "n_catchwords": 18,
+        "density": 36.92307692307692
+      },
+      {
+        "a": 17,
+        "b": 18,
+        "len_a": 39,
+        "len_b": 16,
+        "n_catchwords": 1,
+        "density": 16.025641025641026
+      },
+      {
+        "a": 18,
+        "b": 19,
+        "len_a": 16,
+        "len_b": 77,
+        "n_catchwords": 9,
+        "density": 73.05194805194805
+      },
+      {
+        "a": 19,
+        "b": 20,
+        "len_a": 77,
+        "len_b": 24,
+        "n_catchwords": 10,
+        "density": 54.11255411255411
+      },
+      {
+        "a": 20,
+        "b": 21,
+        "len_a": 24,
+        "len_b": 60,
+        "n_catchwords": 9,
+        "density": 62.5
+      },
+      {
+        "a": 21,
+        "b": 22,
+        "len_a": 60,
+        "len_b": 88,
+        "n_catchwords": 32,
+        "density": 60.60606060606061
+      },
+      {
+        "a": 22,
+        "b": 23,
+        "len_a": 88,
+        "len_b": 34,
+        "n_catchwords": 27,
+        "density": 90.24064171122994
+      },
+      {
+        "a": 23,
+        "b": 24,
+        "len_a": 34,
+        "len_b": 43,
+        "n_catchwords": 18,
+        "density": 123.11901504787961
+      },
+      {
+        "a": 24,
+        "b": 25,
+        "len_a": 43,
+        "len_b": 69,
+        "n_catchwords": 23,
+        "density": 77.51937984496124
+      },
+      {
+        "a": 25,
+        "b": 26,
+        "len_a": 69,
+        "len_b": 62,
+        "n_catchwords": 34,
+        "density": 79.47639083683964
+      },
+      {
+        "a": 26,
+        "b": 27,
+        "len_a": 62,
+        "len_b": 75,
+        "n_catchwords": 42,
+        "density": 90.3225806451613
+      },
+      {
+        "a": 27,
+        "b": 28,
+        "len_a": 75,
+        "len_b": 93,
+        "n_catchwords": 48,
+        "density": 68.81720430107526
+      },
+      {
+        "a": 28,
+        "b": 29,
+        "len_a": 93,
+        "len_b": 22,
+        "n_catchwords": 7,
+        "density": 34.21309872922776
+      },
+      {
+        "a": 29,
+        "b": 30,
+        "len_a": 22,
+        "len_b": 61,
+        "n_catchwords": 4,
+        "density": 29.806259314456035
+      },
+      {
+        "a": 30,
+        "b": 31,
+        "len_a": 61,
+        "len_b": 25,
+        "n_catchwords": 10,
+        "density": 65.57377049180327
+      },
+      {
+        "a": 31,
+        "b": 32,
+        "len_a": 25,
+        "len_b": 15,
+        "n_catchwords": 6,
+        "density": 160.0
+      },
+      {
+        "a": 32,
+        "b": 33,
+        "len_a": 15,
+        "len_b": 27,
+        "n_catchwords": 5,
+        "density": 123.45679012345678
+      },
+      {
+        "a": 33,
+        "b": 34,
+        "len_a": 27,
+        "len_b": 125,
+        "n_catchwords": 19,
+        "density": 56.29629629629629
+      },
+      {
+        "a": 34,
+        "b": 35,
+        "len_a": 125,
+        "len_b": 30,
+        "n_catchwords": 20,
+        "density": 53.33333333333333
+      },
+      {
+        "a": 35,
+        "b": 36,
+        "len_a": 30,
+        "len_b": 66,
+        "n_catchwords": 11,
+        "density": 55.55555555555556
+      },
+      {
+        "a": 36,
+        "b": 37,
+        "len_a": 66,
+        "len_b": 61,
+        "n_catchwords": 21,
+        "density": 52.16095380029807
+      },
+      {
+        "a": 37,
+        "b": 38,
+        "len_a": 61,
+        "len_b": 33,
+        "n_catchwords": 10,
+        "density": 49.67709885742673
+      },
+      {
+        "a": 38,
+        "b": 39,
+        "len_a": 33,
+        "len_b": 33,
+        "n_catchwords": 6,
+        "density": 55.09641873278237
+      },
+      {
+        "a": 39,
+        "b": 40,
+        "len_a": 33,
+        "len_b": 22,
+        "n_catchwords": 4,
+        "density": 55.09641873278237
+      },
+      {
+        "a": 40,
+        "b": 41,
+        "len_a": 22,
+        "len_b": 19,
+        "n_catchwords": 8,
+        "density": 191.38755980861242
+      },
+      {
+        "a": 41,
+        "b": 42,
+        "len_a": 19,
+        "len_b": 56,
+        "n_catchwords": 5,
+        "density": 46.992481203007515
+      },
+      {
+        "a": 42,
+        "b": 43,
+        "len_a": 56,
+        "len_b": 38,
+        "n_catchwords": 8,
+        "density": 37.59398496240601
+      },
+      {
+        "a": 43,
+        "b": 44,
+        "len_a": 38,
+        "len_b": 38,
+        "n_catchwords": 9,
+        "density": 62.32686980609419
+      },
+      {
+        "a": 44,
+        "b": 45,
+        "len_a": 38,
+        "len_b": 117,
+        "n_catchwords": 24,
+        "density": 53.98110661268556
+      },
+      {
+        "a": 45,
+        "b": 46,
+        "len_a": 117,
+        "len_b": 32,
+        "n_catchwords": 19,
+        "density": 50.74786324786325
+      },
+      {
+        "a": 46,
+        "b": 47,
+        "len_a": 32,
+        "len_b": 22,
+        "n_catchwords": 11,
+        "density": 156.25
+      },
+      {
+        "a": 47,
+        "b": 48,
+        "len_a": 22,
+        "len_b": 60,
+        "n_catchwords": 11,
+        "density": 83.33333333333333
+      },
+      {
+        "a": 48,
+        "b": 49,
+        "len_a": 60,
+        "len_b": 21,
+        "n_catchwords": 7,
+        "density": 55.55555555555556
+      },
+      {
+        "a": 49,
+        "b": 50,
+        "len_a": 21,
+        "len_b": 37,
+        "n_catchwords": 0,
+        "density": 0.0
+      },
+      {
+        "a": 50,
+        "b": 51,
+        "len_a": 37,
+        "len_b": 27,
+        "n_catchwords": 2,
+        "density": 20.02002002002002
+      },
+      {
+        "a": 51,
+        "b": 52,
+        "len_a": 27,
+        "len_b": 25,
+        "n_catchwords": 6,
+        "density": 88.88888888888889
+      },
+      {
+        "a": 52,
+        "b": 53,
+        "len_a": 25,
+        "len_b": 16,
+        "n_catchwords": 4,
+        "density": 100.0
+      },
+      {
+        "a": 53,
+        "b": 54,
+        "len_a": 16,
+        "len_b": 155,
+        "n_catchwords": 18,
+        "density": 72.58064516129032
+      },
+      {
+        "a": 54,
+        "b": 55,
+        "len_a": 155,
+        "len_b": 195,
+        "n_catchwords": 107,
+        "density": 35.401157981803145
+      },
+      {
+        "a": 55,
+        "b": 56,
+        "len_a": 195,
+        "len_b": 26,
+        "n_catchwords": 26,
+        "density": 51.282051282051285
+      }
+    ],
+    "per_control_pair": [
+      {
+        "a": 1001,
+        "b": 1002,
+        "len_a": 97,
+        "len_b": 125,
+        "n_catchwords": 67,
+        "density": 55.25773195876289
+      },
+      {
+        "a": 1002,
+        "b": 1003,
+        "len_a": 125,
+        "len_b": 119,
+        "n_catchwords": 93,
+        "density": 62.52100840336134
+      },
+      {
+        "a": 1003,
+        "b": 1004,
+        "len_a": 119,
+        "len_b": 86,
+        "n_catchwords": 49,
+        "density": 47.879616963064294
+      },
+      {
+        "a": 1004,
+        "b": 1005,
+        "len_a": 86,
+        "len_b": 166,
+        "n_catchwords": 63,
+        "density": 44.130008405715884
+      },
+      {
+        "a": 1005,
+        "b": 1006,
+        "len_a": 166,
+        "len_b": 53,
+        "n_catchwords": 43,
+        "density": 48.8747442600591
+      },
+      {
+        "a": 1006,
+        "b": 1007,
+        "len_a": 53,
+        "len_b": 111,
+        "n_catchwords": 34,
+        "density": 57.79364269930308
+      },
+      {
+        "a": 1007,
+        "b": 1008,
+        "len_a": 111,
+        "len_b": 92,
+        "n_catchwords": 55,
+        "density": 53.85820603211908
+      },
+      {
+        "a": 1008,
+        "b": 1009,
+        "len_a": 92,
+        "len_b": 114,
+        "n_catchwords": 65,
+        "density": 61.97559115179252
+      },
+      {
+        "a": 1009,
+        "b": 1010,
+        "len_a": 114,
+        "len_b": 98,
+        "n_catchwords": 76,
+        "density": 68.02721088435374
+      }
+    ]
+  },
+  "syriac": {
+    "skipped": false,
+    "n_q_pairs": 54,
+    "n_control_pairs": 9,
+    "q_total_catchwords": 1470,
+    "control_total_catchwords": 650,
+    "q_mean_per_pair": 27.22222222222222,
+    "control_mean_per_pair": 72.22222222222223,
+    "q_mean_density": 81.82560097307152,
+    "control_mean_density": 62.454692505500084,
+    "q_mean_pair_len": 62.77777777777778,
+    "control_mean_pair_len": 112.72222222222223,
+    "mw_q_gt_ctrl_raw_p": 0.9999823408942369,
+    "mw_q_gt_ctrl_density_p": 0.10259286847523036,
+    "per_q_pair": [
+      {
+        "a": 1,
+        "b": 2,
+        "len_a": 60,
+        "len_b": 30,
+        "n_catchwords": 24,
+        "density": 133.33333333333334
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "len_a": 30,
+        "len_b": 142,
+        "n_catchwords": 28,
+        "density": 65.72769953051643
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "len_a": 142,
+        "len_b": 54,
+        "n_catchwords": 44,
+        "density": 57.38132498695879
+      },
+      {
+        "a": 4,
+        "b": 5,
+        "len_a": 54,
+        "len_b": 138,
+        "n_catchwords": 43,
+        "density": 57.70263016639828
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "len_a": 138,
+        "len_b": 34,
+        "n_catchwords": 28,
+        "density": 59.67604433077579
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "len_a": 34,
+        "len_b": 27,
+        "n_catchwords": 10,
+        "density": 108.93246187363835
+      },
+      {
+        "a": 7,
+        "b": 8,
+        "len_a": 27,
+        "len_b": 46,
+        "n_catchwords": 11,
+        "density": 88.56682769726247
+      },
+      {
+        "a": 8,
+        "b": 9,
+        "len_a": 46,
+        "len_b": 54,
+        "n_catchwords": 9,
+        "density": 36.231884057971016
+      },
+      {
+        "a": 9,
+        "b": 10,
+        "len_a": 54,
+        "len_b": 72,
+        "n_catchwords": 24,
+        "density": 61.72839506172839
+      },
+      {
+        "a": 10,
+        "b": 11,
+        "len_a": 72,
+        "len_b": 157,
+        "n_catchwords": 101,
+        "density": 89.34890304317055
+      },
+      {
+        "a": 11,
+        "b": 12,
+        "len_a": 157,
+        "len_b": 87,
+        "n_catchwords": 85,
+        "density": 62.23003148107475
+      },
+      {
+        "a": 12,
+        "b": 13,
+        "len_a": 87,
+        "len_b": 78,
+        "n_catchwords": 52,
+        "density": 76.62835249042145
+      },
+      {
+        "a": 13,
+        "b": 14,
+        "len_a": 78,
+        "len_b": 58,
+        "n_catchwords": 37,
+        "density": 81.78603006189213
+      },
+      {
+        "a": 14,
+        "b": 15,
+        "len_a": 58,
+        "len_b": 58,
+        "n_catchwords": 25,
+        "density": 74.31629013079667
+      },
+      {
+        "a": 15,
+        "b": 16,
+        "len_a": 58,
+        "len_b": 135,
+        "n_catchwords": 62,
+        "density": 79.18263090676885
+      },
+      {
+        "a": 16,
+        "b": 17,
+        "len_a": 135,
+        "len_b": 38,
+        "n_catchwords": 31,
+        "density": 60.42884990253412
+      },
+      {
+        "a": 17,
+        "b": 19,
+        "len_a": 38,
+        "len_b": 81,
+        "n_catchwords": 9,
+        "density": 29.239766081871345
+      },
+      {
+        "a": 19,
+        "b": 20,
+        "len_a": 81,
+        "len_b": 23,
+        "n_catchwords": 9,
+        "density": 48.30917874396135
+      },
+      {
+        "a": 20,
+        "b": 21,
+        "len_a": 23,
+        "len_b": 64,
+        "n_catchwords": 6,
+        "density": 40.76086956521739
+      },
+      {
+        "a": 21,
+        "b": 22,
+        "len_a": 64,
+        "len_b": 95,
+        "n_catchwords": 41,
+        "density": 67.4342105263158
+      },
+      {
+        "a": 22,
+        "b": 23,
+        "len_a": 95,
+        "len_b": 37,
+        "n_catchwords": 27,
+        "density": 76.81365576102418
+      },
+      {
+        "a": 23,
+        "b": 24,
+        "len_a": 37,
+        "len_b": 46,
+        "n_catchwords": 19,
+        "density": 111.63337250293772
+      },
+      {
+        "a": 24,
+        "b": 25,
+        "len_a": 46,
+        "len_b": 73,
+        "n_catchwords": 23,
+        "density": 68.4931506849315
+      },
+      {
+        "a": 25,
+        "b": 26,
+        "len_a": 73,
+        "len_b": 64,
+        "n_catchwords": 35,
+        "density": 74.91438356164383
+      },
+      {
+        "a": 26,
+        "b": 27,
+        "len_a": 64,
+        "len_b": 87,
+        "n_catchwords": 50,
+        "density": 89.79885057471263
+      },
+      {
+        "a": 27,
+        "b": 28,
+        "len_a": 87,
+        "len_b": 100,
+        "n_catchwords": 58,
+        "density": 66.66666666666667
+      },
+      {
+        "a": 28,
+        "b": 29,
+        "len_a": 100,
+        "len_b": 25,
+        "n_catchwords": 15,
+        "density": 60.0
+      },
+      {
+        "a": 29,
+        "b": 30,
+        "len_a": 25,
+        "len_b": 67,
+        "n_catchwords": 17,
+        "density": 101.49253731343283
+      },
+      {
+        "a": 30,
+        "b": 31,
+        "len_a": 67,
+        "len_b": 27,
+        "n_catchwords": 17,
+        "density": 93.97457158651189
+      },
+      {
+        "a": 31,
+        "b": 32,
+        "len_a": 27,
+        "len_b": 17,
+        "n_catchwords": 10,
+        "density": 217.8649237472767
+      },
+      {
+        "a": 32,
+        "b": 33,
+        "len_a": 17,
+        "len_b": 27,
+        "n_catchwords": 5,
+        "density": 108.93246187363835
+      },
+      {
+        "a": 33,
+        "b": 34,
+        "len_a": 27,
+        "len_b": 139,
+        "n_catchwords": 33,
+        "density": 87.92965627498002
+      },
+      {
+        "a": 34,
+        "b": 35,
+        "len_a": 139,
+        "len_b": 28,
+        "n_catchwords": 27,
+        "density": 69.37307297019527
+      },
+      {
+        "a": 35,
+        "b": 36,
+        "len_a": 28,
+        "len_b": 68,
+        "n_catchwords": 6,
+        "density": 31.51260504201681
+      },
+      {
+        "a": 36,
+        "b": 37,
+        "len_a": 68,
+        "len_b": 67,
+        "n_catchwords": 34,
+        "density": 74.6268656716418
+      },
+      {
+        "a": 37,
+        "b": 38,
+        "len_a": 67,
+        "len_b": 41,
+        "n_catchwords": 34,
+        "density": 123.77138696760102
+      },
+      {
+        "a": 38,
+        "b": 39,
+        "len_a": 41,
+        "len_b": 36,
+        "n_catchwords": 23,
+        "density": 155.82655826558266
+      },
+      {
+        "a": 39,
+        "b": 40,
+        "len_a": 36,
+        "len_b": 23,
+        "n_catchwords": 8,
+        "density": 96.6183574879227
+      },
+      {
+        "a": 40,
+        "b": 41,
+        "len_a": 23,
+        "len_b": 19,
+        "n_catchwords": 14,
+        "density": 320.3661327231121
+      },
+      {
+        "a": 41,
+        "b": 42,
+        "len_a": 19,
+        "len_b": 63,
+        "n_catchwords": 6,
+        "density": 50.125313283208015
+      },
+      {
+        "a": 42,
+        "b": 43,
+        "len_a": 63,
+        "len_b": 40,
+        "n_catchwords": 19,
+        "density": 75.39682539682539
+      },
+      {
+        "a": 43,
+        "b": 44,
+        "len_a": 40,
+        "len_b": 41,
+        "n_catchwords": 10,
+        "density": 60.97560975609756
+      },
+      {
+        "a": 44,
+        "b": 45,
+        "len_a": 41,
+        "len_b": 130,
+        "n_catchwords": 31,
+        "density": 58.16135084427768
+      },
+      {
+        "a": 45,
+        "b": 46,
+        "len_a": 130,
+        "len_b": 30,
+        "n_catchwords": 21,
+        "density": 53.84615384615385
+      },
+      {
+        "a": 46,
+        "b": 47,
+        "len_a": 30,
+        "len_b": 24,
+        "n_catchwords": 10,
+        "density": 138.88888888888889
+      },
+      {
+        "a": 47,
+        "b": 48,
+        "len_a": 24,
+        "len_b": 63,
+        "n_catchwords": 12,
+        "density": 79.36507936507937
+      },
+      {
+        "a": 48,
+        "b": 49,
+        "len_a": 63,
+        "len_b": 22,
+        "n_catchwords": 5,
+        "density": 36.075036075036074
+      },
+      {
+        "a": 49,
+        "b": 50,
+        "len_a": 22,
+        "len_b": 38,
+        "n_catchwords": 3,
+        "density": 35.885167464114836
+      },
+      {
+        "a": 50,
+        "b": 51,
+        "len_a": 38,
+        "len_b": 30,
+        "n_catchwords": 12,
+        "density": 105.26315789473684
+      },
+      {
+        "a": 51,
+        "b": 52,
+        "len_a": 30,
+        "len_b": 25,
+        "n_catchwords": 4,
+        "density": 53.33333333333333
+      },
+      {
+        "a": 52,
+        "b": 53,
+        "len_a": 25,
+        "len_b": 21,
+        "n_catchwords": 3,
+        "density": 57.142857142857146
+      },
+      {
+        "a": 53,
+        "b": 54,
+        "len_a": 21,
+        "len_b": 153,
+        "n_catchwords": 37,
+        "density": 115.15717398070339
+      },
+      {
+        "a": 54,
+        "b": 55,
+        "len_a": 153,
+        "len_b": 204,
+        "n_catchwords": 137,
+        "density": 43.89337434320133
+      },
+      {
+        "a": 55,
+        "b": 56,
+        "len_a": 204,
+        "len_b": 28,
+        "n_catchwords": 26,
+        "density": 45.51820728291317
+      }
+    ],
+    "per_control_pair": [
+      {
+        "a": 1001,
+        "b": 1002,
+        "len_a": 91,
+        "len_b": 120,
+        "n_catchwords": 75,
+        "density": 68.68131868131869
+      },
+      {
+        "a": 1002,
+        "b": 1003,
+        "len_a": 120,
+        "len_b": 122,
+        "n_catchwords": 95,
+        "density": 64.89071038251366
+      },
+      {
+        "a": 1003,
+        "b": 1004,
+        "len_a": 122,
+        "len_b": 94,
+        "n_catchwords": 63,
+        "density": 54.93547261946286
+      },
+      {
+        "a": 1004,
+        "b": 1005,
+        "len_a": 94,
+        "len_b": 190,
+        "n_catchwords": 55,
+        "density": 30.795072788353863
+      },
+      {
+        "a": 1005,
+        "b": 1006,
+        "len_a": 190,
+        "len_b": 54,
+        "n_catchwords": 45,
+        "density": 43.859649122807014
+      },
+      {
+        "a": 1006,
+        "b": 1007,
+        "len_a": 54,
+        "len_b": 117,
+        "n_catchwords": 47,
+        "density": 74.3906299461855
+      },
+      {
+        "a": 1007,
+        "b": 1008,
+        "len_a": 117,
+        "len_b": 104,
+        "n_catchwords": 64,
+        "density": 52.596975673898754
+      },
+      {
+        "a": 1008,
+        "b": 1009,
+        "len_a": 104,
+        "len_b": 119,
+        "n_catchwords": 95,
+        "density": 76.76147382029734
+      },
+      {
+        "a": 1009,
+        "b": 1010,
+        "len_a": 119,
+        "len_b": 98,
+        "n_catchwords": 111,
+        "density": 95.180929514663
+      }
+    ]
+  },
+  "hebrew": {
+    "skipped": false,
+    "n_q_pairs": 55,
+    "n_control_pairs": 9,
+    "q_total_catchwords": 1457,
+    "control_total_catchwords": 502,
+    "q_mean_per_pair": 26.490909090909092,
+    "control_mean_per_pair": 55.77777777777778,
+    "q_mean_density": 83.6607861356807,
+    "control_mean_density": 51.44441353226681,
+    "q_mean_pair_len": 62.07272727272727,
+    "control_mean_pair_len": 109.16666666666667,
+    "mw_q_gt_ctrl_raw_p": 0.9998881055952838,
+    "mw_q_gt_ctrl_density_p": 0.0020036851087104697,
+    "per_q_pair": [
+      {
+        "a": 1,
+        "b": 2,
+        "len_a": 60,
+        "len_b": 34,
+        "n_catchwords": 17,
+        "density": 83.33333333333333
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "len_a": 34,
+        "len_b": 143,
+        "n_catchwords": 32,
+        "density": 65.8165364047717
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "len_a": 143,
+        "len_b": 55,
+        "n_catchwords": 46,
+        "density": 58.486967577876676
+      },
+      {
+        "a": 4,
+        "b": 5,
+        "len_a": 55,
+        "len_b": 125,
+        "n_catchwords": 52,
+        "density": 75.63636363636364
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "len_a": 125,
+        "len_b": 36,
+        "n_catchwords": 36,
+        "density": 80.0
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "len_a": 36,
+        "len_b": 22,
+        "n_catchwords": 8,
+        "density": 101.01010101010102
+      },
+      {
+        "a": 7,
+        "b": 8,
+        "len_a": 22,
+        "len_b": 46,
+        "n_catchwords": 6,
+        "density": 59.28853754940711
+      },
+      {
+        "a": 8,
+        "b": 9,
+        "len_a": 46,
+        "len_b": 47,
+        "n_catchwords": 6,
+        "density": 27.752081406105457
+      },
+      {
+        "a": 9,
+        "b": 10,
+        "len_a": 47,
+        "len_b": 72,
+        "n_catchwords": 19,
+        "density": 56.146572104018915
+      },
+      {
+        "a": 10,
+        "b": 11,
+        "len_a": 72,
+        "len_b": 156,
+        "n_catchwords": 85,
+        "density": 75.67663817663818
+      },
+      {
+        "a": 11,
+        "b": 12,
+        "len_a": 156,
+        "len_b": 77,
+        "n_catchwords": 85,
+        "density": 70.76257076257076
+      },
+      {
+        "a": 12,
+        "b": 13,
+        "len_a": 77,
+        "len_b": 79,
+        "n_catchwords": 50,
+        "density": 82.1962847279303
+      },
+      {
+        "a": 13,
+        "b": 14,
+        "len_a": 79,
+        "len_b": 63,
+        "n_catchwords": 38,
+        "density": 76.35121559172192
+      },
+      {
+        "a": 14,
+        "b": 15,
+        "len_a": 63,
+        "len_b": 55,
+        "n_catchwords": 30,
+        "density": 86.58008658008659
+      },
+      {
+        "a": 15,
+        "b": 16,
+        "len_a": 55,
+        "len_b": 141,
+        "n_catchwords": 43,
+        "density": 55.44809800128949
+      },
+      {
+        "a": 16,
+        "b": 17,
+        "len_a": 141,
+        "len_b": 35,
+        "n_catchwords": 25,
+        "density": 50.65856129685917
+      },
+      {
+        "a": 17,
+        "b": 18,
+        "len_a": 35,
+        "len_b": 15,
+        "n_catchwords": 5,
+        "density": 95.23809523809524
+      },
+      {
+        "a": 18,
+        "b": 19,
+        "len_a": 15,
+        "len_b": 84,
+        "n_catchwords": 23,
+        "density": 182.53968253968256
+      },
+      {
+        "a": 19,
+        "b": 20,
+        "len_a": 84,
+        "len_b": 27,
+        "n_catchwords": 16,
+        "density": 70.54673721340387
+      },
+      {
+        "a": 20,
+        "b": 21,
+        "len_a": 27,
+        "len_b": 59,
+        "n_catchwords": 13,
+        "density": 81.60703075957314
+      },
+      {
+        "a": 21,
+        "b": 22,
+        "len_a": 59,
+        "len_b": 93,
+        "n_catchwords": 27,
+        "density": 49.20721705850191
+      },
+      {
+        "a": 22,
+        "b": 23,
+        "len_a": 93,
+        "len_b": 43,
+        "n_catchwords": 32,
+        "density": 80.02000500125033
+      },
+      {
+        "a": 23,
+        "b": 24,
+        "len_a": 43,
+        "len_b": 45,
+        "n_catchwords": 11,
+        "density": 56.84754521963824
+      },
+      {
+        "a": 24,
+        "b": 25,
+        "len_a": 45,
+        "len_b": 74,
+        "n_catchwords": 18,
+        "density": 54.054054054054056
+      },
+      {
+        "a": 25,
+        "b": 26,
+        "len_a": 74,
+        "len_b": 61,
+        "n_catchwords": 27,
+        "density": 59.81391227292867
+      },
+      {
+        "a": 26,
+        "b": 27,
+        "len_a": 61,
+        "len_b": 90,
+        "n_catchwords": 31,
+        "density": 56.466302367941715
+      },
+      {
+        "a": 27,
+        "b": 28,
+        "len_a": 90,
+        "len_b": 103,
+        "n_catchwords": 64,
+        "density": 69.03991370010787
+      },
+      {
+        "a": 28,
+        "b": 29,
+        "len_a": 103,
+        "len_b": 25,
+        "n_catchwords": 14,
+        "density": 54.36893203883495
+      },
+      {
+        "a": 29,
+        "b": 30,
+        "len_a": 25,
+        "len_b": 62,
+        "n_catchwords": 14,
+        "density": 90.3225806451613
+      },
+      {
+        "a": 30,
+        "b": 31,
+        "len_a": 62,
+        "len_b": 25,
+        "n_catchwords": 14,
+        "density": 90.3225806451613
+      },
+      {
+        "a": 31,
+        "b": 32,
+        "len_a": 25,
+        "len_b": 16,
+        "n_catchwords": 6,
+        "density": 150.0
+      },
+      {
+        "a": 32,
+        "b": 33,
+        "len_a": 16,
+        "len_b": 30,
+        "n_catchwords": 12,
+        "density": 250.0
+      },
+      {
+        "a": 33,
+        "b": 34,
+        "len_a": 30,
+        "len_b": 133,
+        "n_catchwords": 40,
+        "density": 100.25062656641603
+      },
+      {
+        "a": 34,
+        "b": 35,
+        "len_a": 133,
+        "len_b": 34,
+        "n_catchwords": 21,
+        "density": 46.43962848297213
+      },
+      {
+        "a": 35,
+        "b": 36,
+        "len_a": 34,
+        "len_b": 73,
+        "n_catchwords": 18,
+        "density": 72.522159548751
+      },
+      {
+        "a": 36,
+        "b": 37,
+        "len_a": 73,
+        "len_b": 63,
+        "n_catchwords": 29,
+        "density": 63.05718634485758
+      },
+      {
+        "a": 37,
+        "b": 38,
+        "len_a": 63,
+        "len_b": 38,
+        "n_catchwords": 15,
+        "density": 62.65664160401002
+      },
+      {
+        "a": 38,
+        "b": 39,
+        "len_a": 38,
+        "len_b": 36,
+        "n_catchwords": 13,
+        "density": 95.02923976608187
+      },
+      {
+        "a": 39,
+        "b": 40,
+        "len_a": 36,
+        "len_b": 26,
+        "n_catchwords": 7,
+        "density": 74.78632478632478
+      },
+      {
+        "a": 40,
+        "b": 41,
+        "len_a": 26,
+        "len_b": 22,
+        "n_catchwords": 15,
+        "density": 262.23776223776224
+      },
+      {
+        "a": 41,
+        "b": 42,
+        "len_a": 22,
+        "len_b": 60,
+        "n_catchwords": 11,
+        "density": 83.33333333333333
+      },
+      {
+        "a": 42,
+        "b": 43,
+        "len_a": 60,
+        "len_b": 39,
+        "n_catchwords": 10,
+        "density": 42.73504273504274
+      },
+      {
+        "a": 43,
+        "b": 44,
+        "len_a": 39,
+        "len_b": 43,
+        "n_catchwords": 15,
+        "density": 89.44543828264759
+      },
+      {
+        "a": 44,
+        "b": 45,
+        "len_a": 43,
+        "len_b": 130,
+        "n_catchwords": 42,
+        "density": 75.13416815742397
+      },
+      {
+        "a": 45,
+        "b": 46,
+        "len_a": 130,
+        "len_b": 40,
+        "n_catchwords": 45,
+        "density": 86.53846153846155
+      },
+      {
+        "a": 46,
+        "b": 47,
+        "len_a": 40,
+        "len_b": 22,
+        "n_catchwords": 14,
+        "density": 159.09090909090907
+      },
+      {
+        "a": 47,
+        "b": 48,
+        "len_a": 22,
+        "len_b": 67,
+        "n_catchwords": 12,
+        "density": 81.41112618724559
+      },
+      {
+        "a": 48,
+        "b": 49,
+        "len_a": 67,
+        "len_b": 27,
+        "n_catchwords": 22,
+        "density": 121.61415146489773
+      },
+      {
+        "a": 49,
+        "b": 50,
+        "len_a": 27,
+        "len_b": 35,
+        "n_catchwords": 14,
+        "density": 148.14814814814815
+      },
+      {
+        "a": 50,
+        "b": 51,
+        "len_a": 35,
+        "len_b": 32,
+        "n_catchwords": 6,
+        "density": 53.57142857142857
+      },
+      {
+        "a": 51,
+        "b": 52,
+        "len_a": 32,
+        "len_b": 26,
+        "n_catchwords": 3,
+        "density": 36.05769230769231
+      },
+      {
+        "a": 52,
+        "b": 53,
+        "len_a": 26,
+        "len_b": 20,
+        "n_catchwords": 4,
+        "density": 76.92307692307693
+      },
+      {
+        "a": 53,
+        "b": 54,
+        "len_a": 20,
+        "len_b": 160,
+        "n_catchwords": 23,
+        "density": 71.875
+      },
+      {
+        "a": 54,
+        "b": 55,
+        "len_a": 160,
+        "len_b": 205,
+        "n_catchwords": 135,
+        "density": 41.15853658536586
+      },
+      {
+        "a": 55,
+        "b": 56,
+        "len_a": 205,
+        "len_b": 30,
+        "n_catchwords": 38,
+        "density": 61.78861788617886
+      }
+    ],
+    "per_control_pair": [
+      {
+        "a": 1001,
+        "b": 1002,
+        "len_a": 104,
+        "len_b": 125,
+        "n_catchwords": 56,
+        "density": 43.07692307692307
+      },
+      {
+        "a": 1002,
+        "b": 1003,
+        "len_a": 125,
+        "len_b": 116,
+        "n_catchwords": 53,
+        "density": 36.55172413793103
+      },
+      {
+        "a": 1003,
+        "b": 1004,
+        "len_a": 116,
+        "len_b": 90,
+        "n_catchwords": 35,
+        "density": 33.524904214559385
+      },
+      {
+        "a": 1004,
+        "b": 1005,
+        "len_a": 90,
+        "len_b": 168,
+        "n_catchwords": 43,
+        "density": 28.43915343915344
+      },
+      {
+        "a": 1005,
+        "b": 1006,
+        "len_a": 168,
+        "len_b": 52,
+        "n_catchwords": 49,
+        "density": 56.08974358974359
+      },
+      {
+        "a": 1006,
+        "b": 1007,
+        "len_a": 52,
+        "len_b": 119,
+        "n_catchwords": 39,
+        "density": 63.02521008403362
+      },
+      {
+        "a": 1007,
+        "b": 1008,
+        "len_a": 119,
+        "len_b": 98,
+        "n_catchwords": 52,
+        "density": 44.58926427713943
+      },
+      {
+        "a": 1008,
+        "b": 1009,
+        "len_a": 98,
+        "len_b": 114,
+        "n_catchwords": 60,
+        "density": 53.70569280343717
+      },
+      {
+        "a": 1009,
+        "b": 1010,
+        "len_a": 114,
+        "len_b": 97,
+        "n_catchwords": 115,
+        "density": 103.99710616748055
+      }
+    ]
+  },
+  "arabic": {
+    "skipped": false,
+    "n_q_pairs": 54,
+    "n_control_pairs": 9,
+    "q_total_catchwords": 1137,
+    "control_total_catchwords": 479,
+    "q_mean_per_pair": 21.055555555555557,
+    "control_mean_per_pair": 53.22222222222222,
+    "q_mean_density": 70.49797418892761,
+    "control_mean_density": 46.0775654003922,
+    "q_mean_pair_len": 60.72222222222222,
+    "control_mean_pair_len": 112.61111111111111,
+    "mw_q_gt_ctrl_raw_p": 0.9999792458078837,
+    "mw_q_gt_ctrl_density_p": 0.006134064342144248,
+    "per_q_pair": [
+      {
+        "a": 1,
+        "b": 2,
+        "len_a": 61,
+        "len_b": 32,
+        "n_catchwords": 14,
+        "density": 71.72131147540983
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "len_a": 32,
+        "len_b": 149,
+        "n_catchwords": 24,
+        "density": 50.335570469798654
+      },
+      {
+        "a": 3,
+        "b": 4,
+        "len_a": 149,
+        "len_b": 56,
+        "n_catchwords": 43,
+        "density": 51.53403643336529
+      },
+      {
+        "a": 4,
+        "b": 5,
+        "len_a": 56,
+        "len_b": 116,
+        "n_catchwords": 39,
+        "density": 60.03694581280788
+      },
+      {
+        "a": 5,
+        "b": 6,
+        "len_a": 116,
+        "len_b": 34,
+        "n_catchwords": 28,
+        "density": 70.99391480730223
+      },
+      {
+        "a": 6,
+        "b": 7,
+        "len_a": 34,
+        "len_b": 27,
+        "n_catchwords": 10,
+        "density": 108.93246187363835
+      },
+      {
+        "a": 7,
+        "b": 8,
+        "len_a": 27,
+        "len_b": 51,
+        "n_catchwords": 6,
+        "density": 43.572984749455344
+      },
+      {
+        "a": 8,
+        "b": 9,
+        "len_a": 51,
+        "len_b": 51,
+        "n_catchwords": 12,
+        "density": 46.1361014994233
+      },
+      {
+        "a": 9,
+        "b": 10,
+        "len_a": 51,
+        "len_b": 71,
+        "n_catchwords": 11,
+        "density": 30.378348522507597
+      },
+      {
+        "a": 10,
+        "b": 11,
+        "len_a": 71,
+        "len_b": 150,
+        "n_catchwords": 64,
+        "density": 60.093896713615024
+      },
+      {
+        "a": 11,
+        "b": 12,
+        "len_a": 150,
+        "len_b": 77,
+        "n_catchwords": 58,
+        "density": 50.21645021645022
+      },
+      {
+        "a": 12,
+        "b": 13,
+        "len_a": 77,
+        "len_b": 81,
+        "n_catchwords": 23,
+        "density": 36.87670354337021
+      },
+      {
+        "a": 13,
+        "b": 14,
+        "len_a": 81,
+        "len_b": 60,
+        "n_catchwords": 24,
+        "density": 49.382716049382715
+      },
+      {
+        "a": 14,
+        "b": 15,
+        "len_a": 60,
+        "len_b": 52,
+        "n_catchwords": 11,
+        "density": 35.256410256410255
+      },
+      {
+        "a": 15,
+        "b": 17,
+        "len_a": 52,
+        "len_b": 47,
+        "n_catchwords": 9,
+        "density": 36.824877250409166
+      },
+      {
+        "a": 17,
+        "b": 18,
+        "len_a": 47,
+        "len_b": 16,
+        "n_catchwords": 6,
+        "density": 79.78723404255318
+      },
+      {
+        "a": 18,
+        "b": 19,
+        "len_a": 16,
+        "len_b": 92,
+        "n_catchwords": 16,
+        "density": 108.69565217391305
+      },
+      {
+        "a": 19,
+        "b": 20,
+        "len_a": 92,
+        "len_b": 27,
+        "n_catchwords": 17,
+        "density": 68.43800322061192
+      },
+      {
+        "a": 20,
+        "b": 21,
+        "len_a": 27,
+        "len_b": 60,
+        "n_catchwords": 16,
+        "density": 98.76543209876543
+      },
+      {
+        "a": 21,
+        "b": 22,
+        "len_a": 60,
+        "len_b": 93,
+        "n_catchwords": 38,
+        "density": 68.10035842293907
+      },
+      {
+        "a": 22,
+        "b": 23,
+        "len_a": 93,
+        "len_b": 41,
+        "n_catchwords": 26,
+        "density": 68.18777865198007
+      },
+      {
+        "a": 23,
+        "b": 24,
+        "len_a": 41,
+        "len_b": 48,
+        "n_catchwords": 19,
+        "density": 96.54471544715447
+      },
+      {
+        "a": 24,
+        "b": 25,
+        "len_a": 48,
+        "len_b": 71,
+        "n_catchwords": 18,
+        "density": 52.816901408450704
+      },
+      {
+        "a": 25,
+        "b": 26,
+        "len_a": 71,
+        "len_b": 61,
+        "n_catchwords": 19,
+        "density": 43.86977603324867
+      },
+      {
+        "a": 26,
+        "b": 27,
+        "len_a": 61,
+        "len_b": 87,
+        "n_catchwords": 29,
+        "density": 54.6448087431694
+      },
+      {
+        "a": 27,
+        "b": 28,
+        "len_a": 87,
+        "len_b": 94,
+        "n_catchwords": 48,
+        "density": 58.6940572267058
+      },
+      {
+        "a": 28,
+        "b": 29,
+        "len_a": 94,
+        "len_b": 30,
+        "n_catchwords": 12,
+        "density": 42.5531914893617
+      },
+      {
+        "a": 29,
+        "b": 30,
+        "len_a": 30,
+        "len_b": 63,
+        "n_catchwords": 13,
+        "density": 68.78306878306879
+      },
+      {
+        "a": 30,
+        "b": 31,
+        "len_a": 63,
+        "len_b": 25,
+        "n_catchwords": 9,
+        "density": 57.142857142857146
+      },
+      {
+        "a": 31,
+        "b": 32,
+        "len_a": 25,
+        "len_b": 18,
+        "n_catchwords": 10,
+        "density": 222.22222222222223
+      },
+      {
+        "a": 32,
+        "b": 33,
+        "len_a": 18,
+        "len_b": 28,
+        "n_catchwords": 8,
+        "density": 158.73015873015873
+      },
+      {
+        "a": 33,
+        "b": 34,
+        "len_a": 28,
+        "len_b": 138,
+        "n_catchwords": 41,
+        "density": 106.10766045548654
+      },
+      {
+        "a": 34,
+        "b": 35,
+        "len_a": 138,
+        "len_b": 28,
+        "n_catchwords": 18,
+        "density": 46.58385093167702
+      },
+      {
+        "a": 35,
+        "b": 36,
+        "len_a": 28,
+        "len_b": 70,
+        "n_catchwords": 9,
+        "density": 45.91836734693878
+      },
+      {
+        "a": 36,
+        "b": 37,
+        "len_a": 70,
+        "len_b": 66,
+        "n_catchwords": 28,
+        "density": 60.60606060606061
+      },
+      {
+        "a": 37,
+        "b": 38,
+        "len_a": 66,
+        "len_b": 39,
+        "n_catchwords": 17,
+        "density": 66.04506604506605
+      },
+      {
+        "a": 38,
+        "b": 39,
+        "len_a": 39,
+        "len_b": 34,
+        "n_catchwords": 11,
+        "density": 82.95625942684767
+      },
+      {
+        "a": 39,
+        "b": 40,
+        "len_a": 34,
+        "len_b": 25,
+        "n_catchwords": 5,
+        "density": 58.8235294117647
+      },
+      {
+        "a": 40,
+        "b": 41,
+        "len_a": 25,
+        "len_b": 20,
+        "n_catchwords": 9,
+        "density": 180.0
+      },
+      {
+        "a": 41,
+        "b": 42,
+        "len_a": 20,
+        "len_b": 62,
+        "n_catchwords": 6,
+        "density": 48.38709677419355
+      },
+      {
+        "a": 42,
+        "b": 43,
+        "len_a": 62,
+        "len_b": 36,
+        "n_catchwords": 15,
+        "density": 67.20430107526882
+      },
+      {
+        "a": 43,
+        "b": 44,
+        "len_a": 36,
+        "len_b": 41,
+        "n_catchwords": 12,
+        "density": 81.30081300813009
+      },
+      {
+        "a": 44,
+        "b": 45,
+        "len_a": 41,
+        "len_b": 128,
+        "n_catchwords": 26,
+        "density": 49.54268292682927
+      },
+      {
+        "a": 45,
+        "b": 46,
+        "len_a": 128,
+        "len_b": 33,
+        "n_catchwords": 25,
+        "density": 59.18560606060606
+      },
+      {
+        "a": 46,
+        "b": 47,
+        "len_a": 33,
+        "len_b": 22,
+        "n_catchwords": 12,
+        "density": 165.28925619834712
+      },
+      {
+        "a": 47,
+        "b": 48,
+        "len_a": 22,
+        "len_b": 62,
+        "n_catchwords": 11,
+        "density": 80.64516129032258
+      },
+      {
+        "a": 48,
+        "b": 49,
+        "len_a": 62,
+        "len_b": 24,
+        "n_catchwords": 9,
+        "density": 60.483870967741936
+      },
+      {
+        "a": 49,
+        "b": 50,
+        "len_a": 24,
+        "len_b": 41,
+        "n_catchwords": 4,
+        "density": 40.650406504065046
+      },
+      {
+        "a": 50,
+        "b": 51,
+        "len_a": 41,
+        "len_b": 32,
+        "n_catchwords": 9,
+        "density": 68.59756097560975
+      },
+      {
+        "a": 51,
+        "b": 52,
+        "len_a": 32,
+        "len_b": 27,
+        "n_catchwords": 7,
+        "density": 81.01851851851852
+      },
+      {
+        "a": 52,
+        "b": 53,
+        "len_a": 27,
+        "len_b": 18,
+        "n_catchwords": 3,
+        "density": 61.72839506172839
+      },
+      {
+        "a": 53,
+        "b": 54,
+        "len_a": 18,
+        "len_b": 178,
+        "n_catchwords": 17,
+        "density": 53.05867665418227
+      },
+      {
+        "a": 54,
+        "b": 55,
+        "len_a": 178,
+        "len_b": 202,
+        "n_catchwords": 130,
+        "density": 36.155300923350765
+      },
+      {
+        "a": 55,
+        "b": 56,
+        "len_a": 202,
+        "len_b": 29,
+        "n_catchwords": 33,
+        "density": 56.33321952884944
+      }
+    ],
+    "per_control_pair": [
+      {
+        "a": 1001,
+        "b": 1002,
+        "len_a": 111,
+        "len_b": 135,
+        "n_catchwords": 64,
+        "density": 42.70937604270938
+      },
+      {
+        "a": 1002,
+        "b": 1003,
+        "len_a": 135,
+        "len_b": 119,
+        "n_catchwords": 50,
+        "density": 31.12356053532524
+      },
+      {
+        "a": 1003,
+        "b": 1004,
+        "len_a": 119,
+        "len_b": 88,
+        "n_catchwords": 39,
+        "density": 37.242169595110774
+      },
+      {
+        "a": 1004,
+        "b": 1005,
+        "len_a": 88,
+        "len_b": 169,
+        "n_catchwords": 40,
+        "density": 26.896180742334586
+      },
+      {
+        "a": 1005,
+        "b": 1006,
+        "len_a": 169,
+        "len_b": 55,
+        "n_catchwords": 36,
+        "density": 38.73050026896181
+      },
+      {
+        "a": 1006,
+        "b": 1007,
+        "len_a": 55,
+        "len_b": 118,
+        "n_catchwords": 49,
+        "density": 75.50077041602465
+      },
+      {
+        "a": 1007,
+        "b": 1008,
+        "len_a": 118,
+        "len_b": 92,
+        "n_catchwords": 50,
+        "density": 46.05747973470892
+      },
+      {
+        "a": 1008,
+        "b": 1009,
+        "len_a": 92,
+        "len_b": 129,
+        "n_catchwords": 54,
+        "density": 45.5005055611729
+      },
+      {
+        "a": 1009,
+        "b": 1010,
+        "len_a": 129,
+        "len_b": 106,
+        "n_catchwords": 97,
+        "density": 70.93754570718151
+      }
+    ]
+  }
+}
