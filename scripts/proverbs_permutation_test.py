@@ -48,7 +48,7 @@ PUNCT_RE = {
     "hebrew":  re.compile("[" + "־" + "׀" + "׃" + "׆" + "׳" + "״" + "]"),
     "aramaic": re.compile("[" + "־" + "׀" + "׃" + "׆" + "׳" + "״" + "]"),
     "syriac":  re.compile(r"[܀-܏]"),
-    "greek":   re.compile(r"[ʹ͵;·;.,·]"),
+    "greek":   re.compile(r"[ʹ͵;·;.,·]"),
     "arabic":  re.compile("[" + "،" + "؛" + "؟" + "۔" + "٪" + "٫" + "٬" + "٭" + "]"),
 }
 
