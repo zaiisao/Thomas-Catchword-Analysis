@@ -120,16 +120,19 @@ def pair_verses(coptic, syriac):
     return pairs
 
 
-def binary_align_corpus(pairs, aligner: BinaryAligner):
+def binary_align_corpus_raw(pairs, aligner: BinaryAligner):
     """BinaryAlign on every verse pair, source = Syriac, target = Coptic.
-    Returns t[coptic][syriac] = P(coptic | syriac) — same shape the
-    IBM-1 routine returned, so the downstream re-keying logic is unchanged.
+    Returns the raw co-occurrence count dict raw_score[coptic][syriac]
+    accumulated from soft alignment probabilities above threshold.
+    Normalisation is deferred to `normalize_raw` so that shard outputs can
+    be merged additively before the column-normalisation step.
     """
     raw_score: dict[str, dict[str, float]] = defaultdict(lambda: defaultdict(float))
     print(f"  BinaryAlign: pairs={len(pairs)}  "
           f"model={aligner.cfg.model_name}  "
           f"threshold={aligner.cfg.threshold}  "
-          f"symmetrize={aligner.cfg.symmetrize}")
+          f"symmetrize={aligner.cfg.symmetrize}  "
+          f"batch_size={aligner.cfg.batch_size}", flush=True)
     n_aligned_pairs = 0
     for idx, (src_lemmas, tgt_lemmas, _) in enumerate(pairs):
         if not src_lemmas or not tgt_lemmas:
@@ -140,9 +143,13 @@ def binary_align_corpus(pairs, aligner: BinaryAligner):
             n_aligned_pairs += 1
         if (idx + 1) % 200 == 0:
             print(f"    aligned {idx+1}/{len(pairs)} verse pairs "
-                  f"({n_aligned_pairs} word-pair hits)")
-    print(f"  BinaryAlign: total aligned word-pairs = {n_aligned_pairs}")
+                  f"({n_aligned_pairs} word-pair hits)", flush=True)
+    print(f"  BinaryAlign: total aligned word-pairs = {n_aligned_pairs}", flush=True)
+    return raw_score
 
+
+def normalize_raw(raw_score):
+    """Column-normalise raw_score[tg][src] -> t[tg][src] = P(tg | src)."""
     col_totals: dict[str, float] = defaultdict(float)
     for tg, sr_dict in raw_score.items():
         for sr, v in sr_dict.items():
@@ -152,7 +159,12 @@ def binary_align_corpus(pairs, aligner: BinaryAligner):
         for sr, v in sr_dict.items():
             if col_totals[sr] > 0:
                 t[tg][sr] = v / col_totals[sr]
-    return t  # t[coptic][syriac] = P(coptic | syriac)
+    return t
+
+
+def binary_align_corpus(pairs, aligner: BinaryAligner):
+    """Convenience wrapper that raw-aligns and immediately normalises."""
+    return normalize_raw(binary_align_corpus_raw(pairs, aligner))
 
 
 def main():
@@ -164,7 +176,24 @@ def main():
     ap.add_argument("--threshold", type=float, default=0.5)
     ap.add_argument("--no-symmetrize", action="store_true")
     ap.add_argument("--limit", type=int, default=None)
+    ap.add_argument("--batch-size", type=int, default=32,
+                    help="Source-word queries per GPU forward pass.")
+    ap.add_argument("--shard", default="0:1",
+                    help="ID:N — process verse pairs where idx %% N == ID. "
+                         "Use for multi-GPU sharding.")
+    ap.add_argument("--raw-out", default=None,
+                    help="If set, dump raw co-occurrence counts here as JSON "
+                         "(skip normalisation + JSONL emission); use "
+                         "merge_alignment_shards.py to aggregate shard "
+                         "outputs into the final lexical map.")
+    ap.add_argument("--out", default=str(OUT),
+                    help="Final JSONL output path (when --raw-out is unset).")
     args = ap.parse_args()
+    out_path = Path(args.out)
+
+    shard_id, n_shards = map(int, args.shard.split(":"))
+    if not (0 <= shard_id < n_shards):
+        sys.exit(f"bad --shard {args.shard}")
 
     if not COPTIC_IN.exists() or not SYRIAC_IN.exists():
         sys.exit("Missing inputs. Run parse_coptic_tt.py and "
@@ -184,6 +213,10 @@ def main():
     if args.limit is not None:
         pairs = pairs[: args.limit]
         print(f"  --limit {args.limit}: truncated to {len(pairs)} pairs")
+    if n_shards > 1:
+        sharded = [p for i, p in enumerate(pairs) if i % n_shards == shard_id]
+        print(f"  --shard {shard_id}:{n_shards}: keeping {len(sharded)}/{len(pairs)} pairs")
+        pairs = sharded
     if not pairs:
         sys.exit("No aligned verses.")
 
@@ -193,6 +226,7 @@ def main():
         head_ckpt=args.head_ckpt,
         threshold=args.threshold,
         symmetrize=not args.no_symmetrize,
+        batch_size=args.batch_size,
     )
     aligner = BinaryAligner(cfg)
     if not aligner._head_trained:
@@ -201,7 +235,32 @@ def main():
               "BinaryAlign behaviour.]")
 
     print(f"\nRunning BinaryAlign on parallel corpus…")
-    t = binary_align_corpus(pairs, aligner)
+    raw_score = binary_align_corpus_raw(pairs, aligner)
+
+    # If sharding, just dump raw counts + per-Syriac-lemma supports; the
+    # merger will aggregate across shards and normalise.
+    if args.raw_out:
+        support = Counter()
+        parse_for_lemma = {}
+        for src_lemmas, _, parse_for in pairs:
+            for sr in set(src_lemmas):
+                support[sr] += 1
+                if sr in parse_for and parse_for[sr]:
+                    parse_for_lemma[sr] = parse_for[sr]
+        raw_out = Path(args.raw_out)
+        raw_out.parent.mkdir(parents=True, exist_ok=True)
+        with raw_out.open("w", encoding="utf-8") as f:
+            json.dump({
+                "raw_score": {tg: dict(sr_dict) for tg, sr_dict in raw_score.items()},
+                "support": dict(support),
+                "parse_for_lemma": parse_for_lemma,
+                "n_pairs": len(pairs),
+                "shard": f"{shard_id}:{n_shards}",
+            }, f, ensure_ascii=False)
+        print(f"\nWrote raw counts -> {raw_out}")
+        return
+
+    t = normalize_raw(raw_score)
 
     # Re-key: t[coptic][syriac] → by_syriac[s] = [(coptic, prob), ...]
     by_syriac = defaultdict(list)
@@ -220,10 +279,10 @@ def main():
             if sr in parse_for and parse_for[sr]:
                 parse_for_lemma[sr] = parse_for[sr]
 
-    OUT.parent.mkdir(parents=True, exist_ok=True)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
     written = 0
     skipped_function = 0
-    with OUT.open("w", encoding="utf-8") as fout:
+    with out_path.open("w", encoding="utf-8") as fout:
         for sr, candidates in sorted(by_syriac.items(),
                                       key=lambda kv: -support.get(kv[0], 0)):
             parse = parse_for_lemma.get(sr, "")
@@ -245,7 +304,7 @@ def main():
             fout.write(json.dumps(rec, ensure_ascii=False) + "\n")
             written += 1
     print(f"\nWrote {written} entries (skipped {skipped_function} function-word lemmas)")
-    print(f"  → {OUT}")
+    print(f"  → {out_path}")
 
     # Spot-check Perrin's key examples
     print()

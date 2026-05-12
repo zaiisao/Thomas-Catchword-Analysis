@@ -72,7 +72,7 @@ class BinaryAlignerConfig:
     max_length: int = 256
     threshold: float = 0.5
     symmetrize: bool = True
-    batch_size: int = 16                      # queries per forward pass
+    batch_size: int = 32                      # source-word queries per GPU fwd pass
     device: str | None = None                 # auto-detect if None
     # Cosine-proxy temperature (only used when head_ckpt is None).  Applied
     # to z-normalised cosine scores, so a temperature of ~2 keeps the most
@@ -117,119 +117,6 @@ class BinaryAligner:
         self.beg_id = self.tokenizer.convert_tokens_to_ids(ALIGN_BEG)
         self.end_id = self.tokenizer.convert_tokens_to_ids(ALIGN_END)
 
-    # ------------------------------------------------------------------ scoring
-
-    @torch.no_grad()
-    def _score_subwords(
-        self, src_words: Sequence[str], tgt_words: Sequence[str], src_idx: int
-    ) -> tuple[torch.Tensor, list[int | None]]:
-        """Returns (probs_per_target_subword [T_tgt], tgt_word_id_per_subword).
-        Only the target-segment subwords are returned; CLS/SEP and source
-        subwords are stripped.
-        """
-        # Build the marked source word sequence
-        marked_src = (
-            list(src_words[:src_idx])
-            + [ALIGN_BEG, src_words[src_idx], ALIGN_END]
-            + list(src_words[src_idx + 1 :])
-        )
-
-        enc = self.tokenizer(
-            marked_src,
-            list(tgt_words),
-            is_split_into_words=True,
-            return_tensors="pt",
-            truncation=True,
-            max_length=self.cfg.max_length,
-            return_attention_mask=True,
-        )
-        enc = {k: v.to(self.device) for k, v in enc.items()}
-        # word_ids per sequence (sequence-aware: 0 = src, 1 = tgt)
-        # We re-derive them from the fast tokenizer.
-        encoding = self.tokenizer(
-            marked_src,
-            list(tgt_words),
-            is_split_into_words=True,
-            truncation=True,
-            max_length=self.cfg.max_length,
-        )
-        seq_ids = encoding.sequence_ids(0)
-        word_ids = encoding.word_ids(0)
-
-        out = self.model(**enc, output_hidden_states=(self.cfg.hidden_layer != -1))
-        if self.cfg.hidden_layer == -1:
-            hidden = out.last_hidden_state[0]  # [seq, dim]
-        else:
-            hidden = out.hidden_states[self.cfg.hidden_layer][0]
-
-        # Indices of target-segment subwords (skip CLS/SEP and source side).
-        # The two marker tokens live in the source segment, so they're filtered.
-        tgt_positions = [
-            i for i, sid in enumerate(seq_ids) if sid == 1 and word_ids[i] is not None
-        ]
-        if not tgt_positions:
-            return torch.empty(0, device=self.device), []
-
-        tgt_word_id_per_subword: list[int | None] = [
-            word_ids[i] for i in tgt_positions
-        ]
-        tgt_hidden = hidden[tgt_positions]  # [T_tgt, dim]
-
-        if self._head_trained:
-            logits = self.head(tgt_hidden).squeeze(-1)  # [T_tgt]
-            probs = torch.sigmoid(logits)
-        else:
-            # Cosine-similarity proxy.  Build the source-word representation
-            # by averaging hidden states inside the [ALIGN_BEG]…[ALIGN_END]
-            # span.  Then z-normalise the row of cosines before sigmoid: raw
-            # cosine sim between contextualised tokens within a single
-            # sentence is highly anisotropic (typically 0.9+ everywhere), so
-            # without row-centering everything saturates to 1.0 and the
-            # proxy is uninformative.  Row-normalisation preserves the
-            # "independent binary classification per pair" framing (no
-            # softmax across targets) while making the per-target ranking
-            # meaningful.
-            try:
-                input_ids_list = enc["input_ids"][0].tolist()
-                beg_pos = input_ids_list.index(self.beg_id)
-                end_pos = input_ids_list.index(self.end_id)
-                inner = list(range(beg_pos + 1, end_pos))
-                if not inner:
-                    inner = [beg_pos, end_pos]
-                h_src = hidden[inner].mean(dim=0)
-            except ValueError:
-                # markers got truncated — fall back to source-side mean
-                src_positions = [
-                    i for i, sid in enumerate(seq_ids) if sid == 0
-                ]
-                h_src = hidden[src_positions].mean(dim=0)
-
-            cos = F.cosine_similarity(
-                tgt_hidden, h_src.unsqueeze(0).expand_as(tgt_hidden), dim=-1
-            )
-            # z-normalise across targets, then sigmoid with temperature
-            mu = cos.mean()
-            sigma = cos.std(unbiased=False).clamp_min(1e-6)
-            z = (cos - mu) / sigma
-            probs = torch.sigmoid(self.cfg.cos_temperature * z)
-
-        return probs, tgt_word_id_per_subword
-
-    # ----------------------------------------------------------- aggregation
-
-    @staticmethod
-    def _max_aggregate(
-        probs: torch.Tensor, tgt_word_ids: Sequence[int | None], n_tgt_words: int
-    ) -> torch.Tensor:
-        """Max-pool subword probs into word-level probs (length n_tgt_words)."""
-        out = torch.zeros(n_tgt_words, device=probs.device)
-        for k, wid in enumerate(tgt_word_ids):
-            if wid is None or wid >= n_tgt_words:
-                continue
-            if probs[k] > out[wid]:
-                out[wid] = probs[k]
-        return out
-
     # ---------------------------------------------------------- public API
 
     @torch.no_grad()
@@ -237,17 +124,97 @@ class BinaryAligner:
         self, src_words: Sequence[str], tgt_words: Sequence[str]
     ) -> torch.Tensor:
         """[n_src, n_tgt] matrix of  p(a=1 | src_i)  per word pair, after
-        max-aggregation over target subwords.  One forward pass per source
-        word.  No symmetrization."""
+        max-aggregation over target subwords.  One source-word query per
+        row; batched up to `cfg.batch_size` queries per GPU forward pass.
+        No symmetrization."""
         n_src, n_tgt = len(src_words), len(tgt_words)
         if n_src == 0 or n_tgt == 0:
             return torch.zeros(n_src, n_tgt)
         M = torch.zeros(n_src, n_tgt, device=self.device)
-        for i in range(n_src):
-            probs, wids = self._score_subwords(src_words, tgt_words, i)
-            if probs.numel() == 0:
-                continue
-            M[i] = self._max_aggregate(probs, wids, n_tgt)
+        B = max(1, self.cfg.batch_size)
+
+        for start in range(0, n_src, B):
+            idxs = list(range(start, min(start + B, n_src)))
+            srcs = [
+                list(src_words[:i])
+                + [ALIGN_BEG, src_words[i], ALIGN_END]
+                + list(src_words[i + 1 :])
+                for i in idxs
+            ]
+            tgts = [list(tgt_words)] * len(idxs)
+
+            encoding = self.tokenizer(
+                srcs, tgts,
+                is_split_into_words=True,
+                truncation=True,
+                max_length=self.cfg.max_length,
+                padding=True,
+                return_tensors="pt",
+                return_attention_mask=True,
+            )
+            input_ids = encoding["input_ids"].to(self.device)
+            attn = encoding["attention_mask"].to(self.device)
+            out = self.model(input_ids=input_ids, attention_mask=attn,
+                             output_hidden_states=(self.cfg.hidden_layer != -1))
+            if self.cfg.hidden_layer == -1:
+                hidden = out.last_hidden_state               # [B, S, D]
+            else:
+                hidden = out.hidden_states[self.cfg.hidden_layer]
+
+            for b_idx, src_idx in enumerate(idxs):
+                seq_ids = encoding.sequence_ids(b_idx)
+                word_ids = encoding.word_ids(b_idx)
+
+                tgt_positions = [
+                    k for k, sid in enumerate(seq_ids)
+                    if sid == 1 and word_ids[k] is not None
+                ]
+                if not tgt_positions:
+                    continue
+
+                tgt_word_id_per_subword = [word_ids[k] for k in tgt_positions]
+                tgt_hidden = hidden[b_idx, tgt_positions]    # [T_tgt, D]
+
+                if self._head_trained:
+                    logits = self.head(tgt_hidden).squeeze(-1)
+                    probs = torch.sigmoid(logits)
+                else:
+                    # Cosine-similarity proxy with row z-normalisation
+                    # (see design notes in the docstring).
+                    ids_list = input_ids[b_idx].tolist()
+                    try:
+                        beg_pos = ids_list.index(self.beg_id)
+                        end_pos = ids_list.index(self.end_id)
+                        inner = list(range(beg_pos + 1, end_pos))
+                        if not inner:
+                            inner = [beg_pos, end_pos]
+                        h_src = hidden[b_idx, inner].mean(dim=0)
+                    except ValueError:
+                        src_positions = [
+                            k for k, sid in enumerate(seq_ids) if sid == 0
+                        ]
+                        h_src = hidden[b_idx, src_positions].mean(dim=0)
+
+                    cos = F.cosine_similarity(
+                        tgt_hidden,
+                        h_src.unsqueeze(0).expand_as(tgt_hidden),
+                        dim=-1,
+                    )
+                    mu = cos.mean()
+                    sigma = cos.std(unbiased=False).clamp_min(1e-6)
+                    z = (cos - mu) / sigma
+                    probs = torch.sigmoid(self.cfg.cos_temperature * z)
+
+                # Max-aggregate subwords -> words (vectorised via scatter_max
+                # would be ideal; for small T_tgt the python loop is fine).
+                row = torch.zeros(n_tgt, device=self.device)
+                for k, wid in enumerate(tgt_word_id_per_subword):
+                    if wid is None or wid >= n_tgt:
+                        continue
+                    if probs[k] > row[wid]:
+                        row[wid] = probs[k]
+                M[src_idx] = row
+
         return M.cpu()
 
     @torch.no_grad()

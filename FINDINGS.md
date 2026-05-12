@@ -47,6 +47,98 @@ This single file contains everything. Sub-documents are kept for historical trac
 | **Phase 3.1** | Can a model trained on those texts learn to discriminate consecutive strophes? | Hard-negative contrastive (same-work, ≥3 strophes apart) + InfoNCE | val_acc **0.582** (vs 0.50 chance) |
 | **Phase 3.2** | Does that learned model see the same pattern in beam-translated Thomas? | Permutation test: adjacent vs shuffled cos_sim | p = **0.087** (marginal) for beam translation; p = 0.32 (n.s.) for NMT |
 
+## Alignment-method sensitivity (BinaryAlign migration, 2026-05-12)
+
+Methodological intervention: replaced the IBM Model 1 EM word-aligner with **BinaryAlign** (Yan et al. 2024) — word alignment as per-pair binary classification on top of a multilingual encoder. New module: [scripts/align_binary.py](scripts/align_binary.py). Both lexical map builders ([build_lexical_map.py](scripts/build_lexical_map.py), [build_reverse_lexical_map.py](scripts/build_reverse_lexical_map.py)) now feed off BinaryAlign instead of IBM-1 EM. Backbone: xlm-roberta-base (mDeBERTa-v3-base requires torch ≥2.6; falls back). Linear classification head is **not yet trained** — runs use a cosine-similarity proxy with row z-normalisation; supply `--head-ckpt` for paper-faithful behaviour. IBM-1 baseline preserved at `data/processed/_ibm1_baseline/`. Comparison script: [scripts/compare_alignment_methods.py](scripts/compare_alignment_methods.py).
+
+### Map-level comparison (Coptic→Syriac forward)
+
+Both maps have 3,831 lemma entries (identical Coptic-content-lemma vocabulary). On the 8 Perrin example words (fire, light, eye, woman, god, father, eat, said), **8/8 top-1 Syriac candidates agree** with IBM-1 (ܢⲩⲣⲐ, ܢⲩⲒⲣⲐ, ܥⲒⲢⲐ, ܐⲒⲦⲦⲐ, ܐⲗⲐⲐ, ܐⲒⲐ, ܐⲒⲗ, ܐⲣ). Aggregate top-1 agreement: 23.3% all lemmas, **63.8% on lemmas with IBM-1 support ≥ 50**. The key magnitude difference: IBM-1 produces **sharp** distributions (correct candidate at p ≈ 0.95), BinaryAlign-cosine-proxy produces **diffuse** ones (correct candidate at p ≈ 0.05–0.15). This entropy gap is the mechanism for everything downstream.
+
+### Headline deltas (10,000-iter MC, 200-sim stochastic, all at fp=80/thr=0.65)
+
+| Statistic | IBM-1 | BinaryAlign | Δ |
+|---|---:|---:|---|
+| Phase 1 MC mean | 195 | **408** | +213 |
+| Phase 1 MC 90% CI | [175, 216] | [359, 460] | shifts up |
+| Phase 1 P(≥502) | 0.0000 | **0.0021** | nonzero |
+| Phase 1 both-sides% | 45.4 | 75.5 | +30.1 |
+| Phase 1 isolated% | 20.0 | 5.3 | −14.7 |
+| Phase 2A beam λ=0.0 | 311 | 256 | −55 |
+| Phase 2A beam λ=0.3 | 320 | **488** | +168 (within 14 of Perrin's 502) |
+| Phase 2A beam λ=1.0 | 328 | 440 | +112 |
+| Phase 2C stoch λ=0.0 | 317.1 | **677.0** | +359.9, **P(≥502)=1.0** (was 0) |
+| Phase 2C stoch λ=1.0 | 323.6 | **661.2** | +337.6, P(≥502)=1.0 |
+| Detector @ fp=80/thr=0.65 Syr (MAP top-1) | 305 | 249 | −56 |
+| Phase 3 map-source mean adj-pair cos sim | 0.594 | 0.665 | +0.071 |
+| Phase 3 map-source pairs > 0.5 | 71/114 | 78/114 | +7 |
+
+**The signs are opposite for MAP-top-1 vs sampled translation.** MAP-translated Syriac count went *down* (305 → 249) because BinaryAlign's top-1 is sometimes a noisier choice than EM's argmax. But MC sampling, beam search, and stochastic-λ runs all went *up* dramatically because the diffuse `P(s|c)` lets the procedure explore a wider Syriac vocabulary, and a fraction of those alternative samples accidentally satisfy the phonological-similarity threshold across logion boundaries. Under the diffuse null, Perrin's 502 is the median of Phase 2C, not an extreme.
+
+### Round-trip deltas (Syriac → Coptic → Syriac, on known-catchword homiletic corpora)
+
+| Corpus | Original Syr | Coptic interm. | r_MAP IBM-1 | r_MAP BinAln | Phon-pair survival IBM-1 | Phon-pair survival BinAln |
+|---|---:|---:|---:|---:|---:|---:|
+| Ephrem  | 10,735 |  1,556 | 1.18× | **0.96×** | 37.8% | **64.7%** |
+| Jacob   | 41,172 |    809 | 1.15× | **0.75×** | 36.3% | **61.8%** |
+| Narsai  | 69,142 |  1,411 | 1.23× | **0.69×** | 35.1% | **59.4%** |
+| Solomon |    552 |    107 | 1.18× | **0.99×** | 58.5% | **62.3%** |
+
+The **Coptic-intermediate column collapses** by 50–95% because the cosine proxy in the reverse direction (Syriac source) consistently picks Coptic function words (ⲡ "the", ⲛ "of/and", ⲛⲧⲟϥ "he") as top-1 for Syriac content words. Those function-word Coptic lemmas are then filtered out by the forward map's content-only key set, so most of the corpus disappears. Mechanism: xlm-r tokenizes Syriac at ~4.4 subwords/word vs Coptic ~2.1; averaging `h_src` over the marker-bracketed Syriac span washes the source-word signal toward the corpus centroid, where Coptic function-word embeddings live — and there's no sparsity constraint in cosine scoring to push them out.
+
+**But phonological-pair survival went UP** (35% → 60–65%). The subset of the corpus that survives the round-trip is enriched in pairs where both words happened to have meaningful content-lemma forward translations, and the diffuse forward distribution preserves phonological relationships across the round-trip *better* than the sharp IBM-1 distribution did. Two competing effects: reverse map drops most of the data; the data that survives is cleaner.
+
+### What this means
+
+1. **Phase 1's null hypothesis is highly sensitive to map entropy.** With sharp IBM-1, P(≥502)=0. With diffuse BinaryAlign-cosine-proxy, P(≥502)=0.002 in 10k MC, and P(≥502)=1.0 in 200-sim per-logion stochastic. Perrin's "502 cannot arise by chance" depends on which alignment method defines "chance".
+2. **The forward-map experiments measure the entropy of the lexical map, not the data.** Replacing the aligner shifted Phase 1 MC mean from 195 to 408 *without* any change to the Coptic Thomas text or the phonological detector. The Coptic count (235) is unchanged across both maps because it doesn't depend on the map at all.
+3. **The reverse-map degradation is an algorithm artefact, not data evidence.** The collapse of `r_MAP` to 0.7–1.0× under BinaryAlign-cosine-proxy reflects function-word bias in the cosine scoring, not anything about the underlying Syriac literature. The same number under a trained head would likely return to the IBM-1 regime.
+4. **Forward-direction findings are robust to map choice on the categorical question.** All 8 of Perrin's specifically cited Coptic→Syriac top-1 translations agree (ܢⲩⲣⲐ, ܢⲩⲒⲣⲐ, etc.). The disagreement is in the *probabilities*, not the *rankings*.
+
+### How to read the existing FINDINGS table with BinaryAlign in mind
+
+- **Lexical-map-using experiments** (Phase 1, Phase 2A, Phase 2C, round-trip, Phase 3 map-source): treat the IBM-1 numbers in the Headline table as the numbers *under a sharp prior*. Under a diffuse prior (BinaryAlign-cosine-proxy), the Phase 1/2 figures all shift dramatically; Phase 1's "P(≥502)=0" finding becomes "P(≥502) ranges from 0.002 to 1.0 depending on entropy". Only a trained-head BinaryAlign run would give a defensible re-evaluation.
+- **LLM-translation-based experiments** (Phase 2B qualitative + quantitative, all permutation tests, Perrin table comparison, direct-Perrin verification): **invariant**. None of these touch the lexical map.
+- **Phase 3.0 baseline** (consecutive-vs-random on Syriac literature directly): invariant.
+
+### Reproducing the migration
+
+```
+# Replays the full migration in ~15 min on 4× A6000:
+python scripts/build_lexical_map.py --model xlm-roberta-base       # Coptic→Syriac
+# Reverse: 3-way sharded for ~5 min
+CUDA_VISIBLE_DEVICES=0 python scripts/build_reverse_lexical_map.py --model xlm-roberta-base \
+    --batch-size 32 --shard 0:3 --raw-out /tmp/rev_shard0.json &
+CUDA_VISIBLE_DEVICES=2 python scripts/build_reverse_lexical_map.py --model xlm-roberta-base \
+    --batch-size 32 --shard 1:3 --raw-out /tmp/rev_shard1.json &
+CUDA_VISIBLE_DEVICES=3 python scripts/build_reverse_lexical_map.py --model xlm-roberta-base \
+    --batch-size 32 --shard 2:3 --raw-out /tmp/rev_shard2.json &
+wait
+python scripts/merge_alignment_shards.py --shards /tmp/rev_shard*.json \
+    --direction reverse --out data/processed/lexical_mapping/syriac_to_coptic.jsonl
+
+# Re-run map-dependent experiments
+python scripts/calibrate_detector.py
+python scripts/run_monte_carlo.py
+python scripts/phase2a_beam_translate.py
+python scripts/phase2c_constrained_sample.py
+python scripts/roundtrip_translate_to_coptic.py
+python scripts/roundtrip_retranslate_to_syriac.py
+python scripts/roundtrip_pair_survival.py
+python scripts/phase3_apply_to_thomas.py --source both
+
+# Side-by-side delta report
+python scripts/compare_alignment_methods.py
+```
+
+To recover the original IBM-1 maps for comparison:
+```
+cp data/processed/lexical_mapping/_ibm1_baseline/coptic_to_syriac.ibm1.jsonl \
+   data/processed/lexical_mapping/coptic_to_syriac.jsonl
+cp data/processed/lexical_mapping/_ibm1_baseline/syriac_to_coptic.ibm1.jsonl \
+   data/processed/lexical_mapping/syriac_to_coptic.jsonl
+```
+
 ## Three findings, in plain language
 
 **(1) Perrin's 502 cannot be explained by Coptic→Syriac word-mapping plus Syriac fluency alone.** Every automated method we tried — random sampling, top-1 deterministic mapping, beam search with a Peshitta-NT bigram LM, per-logion stochastic sampling weighted by that LM — produces 195–324 catchwords. The gap to Perrin (~178 catchwords) is real and unexplained by what an unbiased translator working from the lexical map can produce.
