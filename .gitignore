@@ -30,6 +30,9 @@ Thumbs.db
 .idea/
 *.swp
 
+# Claude Code runtime artifacts
+.claude/scheduled_tasks.lock
+
 # Large raw corpora — track via lfs or download script, not in main repo
 data/raw/peshitta/**/*.xml
 data/raw/peshitta_repo/
