@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
 """
-Build a Syriac→Coptic lexical translation map by IBM Model 1 EM on the same
+Build a Syriac→Coptic lexical translation map using BinaryAlign on the same
 ~7,800-verse parallel NT corpus used for the forward map.
 
-NOT a Bayes inversion of the forward map (would require marginal frequencies);
-this is a fresh EM run with source/target swapped.
+Migrated from IBM Model 1 EM to BinaryAlign (binary-classification word
+alignment on top of a multilingual encoder).  Source/target are swapped
+relative to build_lexical_map.py — this is a fresh BinaryAlign pass rather
+than a Bayes inversion of the forward map.
 
 Inputs:
   data/processed/parallel_corpus/sahidica_nt_coptic_tt.jsonl
   data/processed/parallel_corpus/peshitta_nt_lemmatized.jsonl
 
-Output:
+Output (schema unchanged from the IBM-1 version — kept stable for
+phase1_montecarlo and the round-trip scripts):
   data/processed/lexical_mapping/syriac_to_coptic.jsonl
     {"syriac_lemma": str, "syriac_parse": str|null,
      "candidates": [{"coptic_lemma": str, "prob": float}, ...],
@@ -18,23 +21,25 @@ Output:
 
 Usage:
   python scripts/build_reverse_lexical_map.py
+  python scripts/build_reverse_lexical_map.py --model xlm-roberta-large
 """
 
 from __future__ import annotations
 
+import argparse
 import json
-import math
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+from align_binary import BinaryAligner, BinaryAlignerConfig  # noqa: E402
+
 COPTIC_IN = REPO_ROOT / "data" / "processed" / "parallel_corpus" / "sahidica_nt_coptic_tt.jsonl"
 SYRIAC_IN = REPO_ROOT / "data" / "processed" / "parallel_corpus" / "peshitta_nt_lemmatized.jsonl"
 OUT = REPO_ROOT / "data" / "processed" / "lexical_mapping" / "syriac_to_coptic.jsonl"
 
-NULL_TOKEN = "__NULL__"
-N_ITERATIONS = 12
 MIN_TRANSLATION_PROB = 1e-4
 TOP_K_PER_LEMMA = 25
 
@@ -115,52 +120,52 @@ def pair_verses(coptic, syriac):
     return pairs
 
 
-def ibm1_em(pairs, n_iter):
-    """Source = Syriac, target = Coptic. NULL inserted on source side."""
-    src_vocab = {NULL_TOKEN}
-    tgt_vocab = set()
-    for src_lemmas, tgt_lemmas, _ in pairs:
-        src_vocab.update(src_lemmas)
-        tgt_vocab.update(tgt_lemmas)
-    print(f"  IBM-1: src(Syr)={len(src_vocab)}, tgt(Cop)={len(tgt_vocab)}, "
-          f"pairs={len(pairs)}")
+def binary_align_corpus(pairs, aligner: BinaryAligner):
+    """BinaryAlign on every verse pair, source = Syriac, target = Coptic.
+    Returns t[coptic][syriac] = P(coptic | syriac) — same shape the
+    IBM-1 routine returned, so the downstream re-keying logic is unchanged.
+    """
+    raw_score: dict[str, dict[str, float]] = defaultdict(lambda: defaultdict(float))
+    print(f"  BinaryAlign: pairs={len(pairs)}  "
+          f"model={aligner.cfg.model_name}  "
+          f"threshold={aligner.cfg.threshold}  "
+          f"symmetrize={aligner.cfg.symmetrize}")
+    n_aligned_pairs = 0
+    for idx, (src_lemmas, tgt_lemmas, _) in enumerate(pairs):
+        if not src_lemmas or not tgt_lemmas:
+            continue
+        result = aligner.align(src_lemmas, tgt_lemmas)
+        for i, j, p in result["pairs"]:
+            raw_score[tgt_lemmas[j]][src_lemmas[i]] += p
+            n_aligned_pairs += 1
+        if (idx + 1) % 200 == 0:
+            print(f"    aligned {idx+1}/{len(pairs)} verse pairs "
+                  f"({n_aligned_pairs} word-pair hits)")
+    print(f"  BinaryAlign: total aligned word-pairs = {n_aligned_pairs}")
 
-    t = defaultdict(lambda: defaultdict(lambda: 1.0 / len(src_vocab)))
-    for src_lemmas, tgt_lemmas, _ in pairs:
-        for tg in tgt_lemmas:
-            t_tg = t[tg]
-            t_tg[NULL_TOKEN]
-            for sr in src_lemmas:
-                t_tg[sr]
-
-    for it in range(n_iter):
-        count = defaultdict(lambda: defaultdict(float))
-        total = defaultdict(float)
-        log_lik = 0.0
-        for src_lemmas, tgt_lemmas, _ in pairs:
-            src_with_null = [NULL_TOKEN] + src_lemmas
-            for tg in tgt_lemmas:
-                t_tg = t[tg]
-                z = sum(t_tg[sr] for sr in src_with_null)
-                if z <= 0.0:
-                    continue
-                log_lik += math.log(z) - math.log(len(src_with_null))
-                for sr in src_with_null:
-                    delta = t_tg[sr] / z
-                    count[tg][sr] += delta
-                    total[sr] += delta
-        new_t = defaultdict(dict)
-        for tg, sr_counts in count.items():
-            for sr, val in sr_counts.items():
-                if total[sr] > 0:
-                    new_t[tg][sr] = val / total[sr]
-        t = defaultdict(lambda: defaultdict(float),
-                         {tg: defaultdict(float, d) for tg, d in new_t.items()})
-        print(f"  iter {it+1:2d}: log-lik = {log_lik:.0f}")
+    col_totals: dict[str, float] = defaultdict(float)
+    for tg, sr_dict in raw_score.items():
+        for sr, v in sr_dict.items():
+            col_totals[sr] += v
+    t: dict[str, dict[str, float]] = defaultdict(dict)
+    for tg, sr_dict in raw_score.items():
+        for sr, v in sr_dict.items():
+            if col_totals[sr] > 0:
+                t[tg][sr] = v / col_totals[sr]
     return t  # t[coptic][syriac] = P(coptic | syriac)
 
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--model", default="microsoft/mdeberta-v3-base",
+                    help="HF model name for the BinaryAlign backbone.")
+    ap.add_argument("--head-ckpt", default=None,
+                    help="Path to a trained BinaryAlign linear head.")
+    ap.add_argument("--threshold", type=float, default=0.5)
+    ap.add_argument("--no-symmetrize", action="store_true")
+    ap.add_argument("--limit", type=int, default=None)
+    args = ap.parse_args()
+
     if not COPTIC_IN.exists() or not SYRIAC_IN.exists():
         sys.exit("Missing inputs. Run parse_coptic_tt.py and "
                   "annotate_peshitta_lemmas.py first.")
@@ -176,18 +181,32 @@ def main():
     print("Joining on (book, chapter, verse)…")
     pairs = pair_verses(coptic, syriac)
     print(f"  {len(pairs)} aligned verse pairs")
+    if args.limit is not None:
+        pairs = pairs[: args.limit]
+        print(f"  --limit {args.limit}: truncated to {len(pairs)} pairs")
     if not pairs:
         sys.exit("No aligned verses.")
 
-    print(f"\nRunning IBM-1 EM ({N_ITERATIONS} iterations)…")
-    t = ibm1_em(pairs, N_ITERATIONS)
+    print(f"\nInitialising BinaryAlign aligner ({args.model})…")
+    cfg = BinaryAlignerConfig(
+        model_name=args.model,
+        head_ckpt=args.head_ckpt,
+        threshold=args.threshold,
+        symmetrize=not args.no_symmetrize,
+    )
+    aligner = BinaryAligner(cfg)
+    if not aligner._head_trained:
+        print("  [no trained head — using cosine-similarity proxy "
+              f"(T={cfg.cos_temperature}).  Supply --head-ckpt for full "
+              "BinaryAlign behaviour.]")
+
+    print(f"\nRunning BinaryAlign on parallel corpus…")
+    t = binary_align_corpus(pairs, aligner)
 
     # Re-key: t[coptic][syriac] → by_syriac[s] = [(coptic, prob), ...]
     by_syriac = defaultdict(list)
     for tg_coptic, sr_dict in t.items():
         for sr_syriac, p in sr_dict.items():
-            if sr_syriac == NULL_TOKEN:
-                continue
             if p < MIN_TRANSLATION_PROB:
                 continue
             by_syriac[sr_syriac].append((tg_coptic, p))
